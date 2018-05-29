@@ -5,13 +5,34 @@ $txtcol: #bfc7d1;
 $brdcol: #691D06;
 /* End Theme Color */
 
-
+/* Fonts */
 @font-face {
 	src: url(../assets/fonts/ACIDL___.otf);
 	font-family: ACIDLABEL;
 }
+/* End Fonts */
 
-html { 
+/* Main Eliments */
+main {
+	background-color: rgba(42, 42, 42, 0.9);
+	margin-top: 10px;
+	border-style: solid;
+	border-width: 10px;
+	border-color: rgba(105, 29, 6, 0.7);
+	border-radius: 3px;
+}
+
+h2, h3 {
+	font-family: ACIDLABEL;
+	color: $txtcol;
+	font-size: 25px;
+	font-weight: 400;
+	line-height: 30px;
+}
+/* End Main Eliments */
+
+/* Welcome Page */
+#welcome { 
   background: url(../images/background2.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -19,11 +40,12 @@ html {
   background-size: cover;
 }
 
-#wrapper {
-  width: 650px;
-  margin: 0 auto;
+#welcome #wrapper {
+	margin: 0 auto;
+	width: 650px;
 }
 
+/* Header */
 header {
 	background-color: rgba(105, 29, 6, 0.7);
 	border-radius: 3px;
@@ -40,6 +62,7 @@ header h1 {
 	font-weight: 400;
 	line-height: 72px;
 }
+
 
 .char1 {
 	float: left;
@@ -65,15 +88,11 @@ header img {
 	margin: 7px 0 2px 7px;
 	border-radius: 5px;
 }
+/* End Header */
 
 
-main {
-	background-color: rgba(42, 42, 42, 0.9);
-	margin-top: 10px;
-	border-style: solid;
-	border-width: 10px;
-	border-color: rgba(105, 29, 6, 0.7);
-	border-radius: 3px;
+#welcome main {
+	height: 375px;
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 }
@@ -82,15 +101,7 @@ main {
 	margin-left: 20px;
 }
 
-main h2 {
-	font-family: ACIDLABEL;
-	color: $txtcol;
-	font-size: 25px;
-	font-weight: 400;
-	line-height: 30px;
-}
-
-main p {
+.content p {
 	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
 	color: $txtcol;
 	font-size: 12px;
@@ -131,17 +142,6 @@ main p {
 	text-shadow: 0 0 25px red,  0 0 25px $brdcol;
 }
 
-
-
-
-/*.registerLink {
-	text-decoration: none;
-	display: none;
-	padding: 15px;
-	color: white;
-	transition: color 1000ms;
-}*/
-
 .registerLink:hover {
 	color: black;
 }
@@ -172,7 +172,7 @@ main p {
 }
 
 .modal {
-	width: 360px;
+	width: 380px;
 	height: 181px;
 	margin: auto;
 	position: absolute;
@@ -193,8 +193,8 @@ main p {
 	font-size: 25px;
 }
 
-input {
-	width: 180px;
+.modal form input[type=text], .modal form input[type=password] {
+	width: 190px;
 	height: 31px;
 	box-sizing: border-box;
 	border-radius: 3px;
@@ -203,7 +203,22 @@ input {
 	margin-top: -50px;
 }
 
-form h2 {
+.modal form input[type=submit] {
+	background: none;
+	border: none;
+	float: right;
+	margin-top: -10px;
+	font-family: ACIDLABEL;
+	color: $txtcol;
+	font-size: 20px;
+	font-weight: 400;
+	line-height: 30px;
+}
+
+.modal form input[type=submit]:hover {
+	cursor: pointer;	
+}
+.modal form h3 {
 	font-size: 23px;
 	text-align: center;
 	margin-right: 148px;
@@ -221,16 +236,16 @@ form h2 {
 	transition: background 500ms;
 }
 
-.clsoe:hover {
-	background: #444;
+.close:hover {
 	cursor: pointer;
 }
 
 .forgotPassword{
 	color: white;
 	display: inline-block;
-	text-align: left;
-	float: right;
+	float: left;
+	margin-left: 40px;
+	margin-top: 30px;
 	text-decoration: none;
 	font-size: 10pt;
 }
@@ -240,9 +255,92 @@ form h2 {
 	text-decoration: underline;
 }
 
-form img {
+.modal form img {
 	float: left;
-	margin-top: -65px;
-	margin-left: -10px;
+	margin-top: -75px;
 	width: 40px;
+}
+
+@media only screen and (max-width: 680px) {
+	
+	#welcome #wrapper {
+		width: 100%;
+	}
+	
+	#welcome main {
+		height: auto;
+		display: block;
+	}
+	
+	.content {
+		display: none;
+	}
+	
+	.login img {
+	width: 80%;
+	margin-left: 50px;
+	}	
+	
+	.signin {
+	padding-right: 510px;
+	margin-top: -640px;
+	}
+
+	.signup {
+		margin-top: -640px;
+		padding-right: 218px;
+	}
+	
+	
+}
+/* End Welcome Page */
+
+/* Sign Up Page */
+#signup { 
+  background: url(../images/background2.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#signup #wrapper {
+	margin: 0 auto;
+	width: 650px;
+}
+
+#signup main {	
+	height: 375px;
+	padding: 20px;
+}
+
+#signup h2 {
+	text-align: center;
+}
+
+
+
+#signup form input {
+	width: 180px;
+	height: 31px;
+	box-sizing: border-box;
+	border-radius: 3px;
+	border: 0px;
+}
+/* End Sign Up Page */
+
+
+/* Profile Page */
+#profile {
+	background: url(../images/background.jpg) no-repeat center center fixed; 
+	-webkit-background-size: auto;
+	-moz-background-size: auto;
+	-o-background-size: auto;
+	background-size: auto;
+}
+
+#profile #wrapper {	
+	width: 80%;
+	height: auto;
+	margin: 0 auto;
 }

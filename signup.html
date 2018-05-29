@@ -14,26 +14,32 @@
 <link href="img/favicon.ico" rel="icon" type="image/x-icon" />
 <!--End Favicon-->
 
-<title>Your Progress VS Mine</title>
+<title>Your Progress VS Mine | Signup</title>
 </head>
-<body>
+<body id="signup">
 <div id="wrapper">
   <header> <img src="images/header.jpg" alt="">
     <h1><span class="char1">Y</span><span class="char2">O</span><span class="char3">U</span><span class="char4">R</span> <span class="char5">PROGRESS VS MINE</span></h1>
   </header>
   <main>
     <h2>Sign Up</h2>
-    <div class="info">
-      <h2>Personal Info</h2>
-      <br>
-      <input type="radio" name="personal">
-      <h2>Training</h2>
-      <br>
-      <input type="radio" name="personal">
-      <h2>Your Progress</h2>
-      <br>
-      <input type="radio" name="personal">
-    </div>
+    <form action="assets/php/signup.php" method="post">
+      <div class="name"><h3>Name:</h3>
+      <h4>First</h4>
+      <input type="text" name="fname">
+      <h4>Last</h4>
+      <input type="text" name="lname"></div>
+      <h3>DOB:</h3>
+      <input type="text" name="dob">
+      <h3>Email:</h3>
+      <input type="text" name="email">
+      <h3>Male</h3>
+      <input type="radio" name="gender" value="male">
+      <h3>Female</h3>
+      <input type="radio" name="gender" value="female">
+      <h3>Qoute:</h3>
+      <input type="text" name="qoute">
+    </form>
   </main>
 </div>
 </body>
