@@ -1,0 +1,191 @@
+#welcome { 
+  background: url(../images/background2.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+	 #wrapper {
+		margin: 0 auto;
+		width: 650px;
+	}
+
+	 main {
+		height: 375px;
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+	}
+}
+
+.content {
+	margin-left: 20px;
+}
+
+	.logo  {
+		img {
+		width: 124%;
+		padding-top: 19px;
+		z-index: 1;
+		}
+	}
+
+	.signin {
+		float: right;
+		padding-right: 280px;
+		margin-top: -376px;
+		z-index: 2;
+	}
+
+	.signup {
+		float: right;
+		margin-top: -375px;
+		padding-right: 118px;
+		z-index: 2;
+	}
+
+	.signin h2 a, .signup h2 a {
+		position: absolute;
+		text-decoration: none;
+		color: $txtcol;
+		text-shadow: 1px 1px 2px black;
+	}
+
+	.signin h2 a:hover, .signup h2 a:hover {
+		text-shadow: 0 0 25px red,  0 0 25px $brdcol;
+	}
+
+	.registerLink:hover {
+		color: black;
+	}
+
+	/* Modal */
+
+	.login_container {
+		width: 100%;
+		height: 100%;
+		background: rgba(2, 70, 88, 0.8);
+		opacity: 0;
+		pointer-events: none;
+		transition: all 500ms ease;
+	}
+
+	.login_container:target {
+		opacity: 1;
+		pointer-events: auto;
+	}
+
+	.login_container > div {
+		transform: translate(0px, -50px);
+		transition:  all 500ms ease;
+	}
+
+	.login_container:target > div {
+		transform: translate(0px, 0px);
+	}
+
+	.login {
+		width: 380px;
+		height: 181px;
+		margin: auto;
+		position: absolute;
+		top: 0px; bottom: 150px;
+		right: 0px; left: 0px;
+		background-color: $blk;
+		box-shadow: 0 0 25px $brdcol,  0 0 25px $brdcol;
+		padding: 20px;
+	}
+
+	.login_heading {
+		widows: 100%;
+		display: block;
+		box-sizing: border-box;
+		text-align: center;
+		font-family: ACIDLABEL;
+		color: #bfc5d1;
+		font-size: 25px;
+	}
+
+	.login form input[type=text], .login form input[type=password] {
+		width: 190px;
+		height: 31px;
+		box-sizing: border-box;
+		border-radius: 3px;
+		border: 0px;
+		float: right;
+		margin-top: -50px;
+	}
+
+	.login form input[type=submit] {
+		background: none;
+		border: none;
+		float: right;
+		margin-top: -10px;
+		font-family: ACIDLABEL;
+		color: $txtcol;
+		font-size: 20px;
+		font-weight: 400;
+		line-height: 30px;
+	}
+
+	.login form input[type=submit]:hover {
+		cursor: pointer;	
+	}
+	.login form h3 {
+		font-size: 23px;
+		text-align: center;
+		margin-right: 148px;
+	}
+
+	.forgotPassword{
+		color: white;
+		display: inline-block;
+		float: left;
+		margin-left: 40px;
+		margin-top: 30px;
+		text-decoration: none;
+		font-size: 10pt;
+	}
+
+
+	.forgotPassword:hover {
+		text-decoration: underline;
+	}
+
+	.login form img {
+		float: left;
+		margin-top: -75px;
+		width: 40px;
+	}
+
+@media only screen and (max-width: 680px) {
+	
+		 #wrapper {
+			width: 100%;
+		}
+
+		 main {
+			height: auto;
+			display: block;
+		}
+
+		.content {
+			display: none;
+		}
+
+		.login img {
+		width: 80%;
+		margin-left: 50px;
+		}	
+
+		.signin {
+		padding-right: 510px;
+		margin-top: -640px;
+		}
+
+		.signup {
+			margin-top: -640px;
+			padding-right: 218px;
+		}
+
+
+	}

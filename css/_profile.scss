@@ -1,0 +1,436 @@
+#profile {
+	background: url(../images/background.jpg); 
+	-webkit-background-size: auto;
+	-moz-background-size: auto;
+	-o-background-size: auto;
+	background-size: auto;
+
+	 #wrapper {	
+		width: 80%;
+		height: auto;
+		margin: 0 auto;
+	}
+	
+	main {
+		padding: 10px;
+	}
+}
+
+.profile_img {
+	width: 15%;
+	border: 1px solid $txtcol;
+}
+
+.qouted {
+	float: right;
+	width: 80%;
+	margin-top: 50px;
+	padding: 20px;
+}
+
+.qouted  h1{
+	text-align: center;
+}
+
+ #profile h3 {
+	margin: 0;
+}
+
+/* Schedule */
+ .schedule {
+	display: flex;
+	margin: 0px;
+}
+
+#sunday, #monday, #tuesday, #wednesday, #thursday, #friday, #saturday {
+	width: 15%;
+	border: 1px solid $txtcol;
+	text-align: center;
+	position: relative;
+	display: inline-block;
+}
+
+.schedule img {
+	width: 80%;
+	margin: 10px;
+
+}
+
+.schedule h4 {
+	margin: 0;
+	background: $brdcol;
+	font-size: 20px;
+}
+
+.schedule p {
+	margin: 0px;
+	padding: 3px;
+	text-align: center;
+	border-bottom: 1px solid $txtcol;
+	font-size: 10px;
+	color: $txtcol;
+}
+
+.view_day:hover, .add_day:hover {
+	box-shadow: 0 0 15px $txtcol;
+	cursor: pointer;
+}
+
+.add_day {
+	height: 100%;
+	overflow: hidden;
+}
+
+.add_day h1 {
+	font-size: 90px;
+}
+
+.rest_day h1 {
+	padding-top: 60px;
+}
+
+.rest_day a, .add_day a, .view_day a {
+	text-decoration: none;
+}
+
+/* Dropdown Menu */
+.dropdown {
+	display: none;
+	position: absolute;
+	z-index: 1;
+	background: black;
+	width: 100%;
+	border: 1px solid $txtcol;
+}
+
+.dropdown a {
+	display: block;
+	border-bottom: 1px solid $txtcol;
+	text-decoration: none;
+	font-family: ACIDLABEL;
+	color: $txtcol;
+	font-size: 15px;
+	font-weight: 400;
+	line-height: 30px;
+}
+
+.dropdown:hover {
+	display: block;
+}
+
+.dropdown a:hover {
+	color: $hover;
+	box-shadow: 0 0 10px $txtcol;
+}
+
+.view_day:hover .dropdown {
+	display: block;
+}
+/* End Dropdown Menu */
+
+/* End Schedule */
+
+.flex {
+	display: flex;
+}
+
+.info, .leader {
+	width: 50%;
+	height: 250px;
+	border: 1px solid $txtcol;
+	margin: 80px 0px;
+}
+
+.info {
+	margin-right: 10px;
+}
+
+.leader {
+	margin-left: 10px;
+}
+
+.news {
+	height: 408px;
+	display: flex;
+}
+
+.news aside {
+	border: 1px solid $txtcol;
+	flex-basis: 20%;
+}
+
+.newsfeed {
+	flex-basis: 60%;
+	border: 1px solid $txtcol;
+	display: grid;
+	overflow: scroll;
+}
+
+.newsfeed::-webkit-scrollbar {
+	display: none;
+}
+
+
+.comment {
+	border: 1px solid $txtcol;
+	width: 100%;
+	height: 100px;
+	margin-top: 10px;
+}
+
+.comment img {
+	height: 100%;
+}
+
+.comment h4 {
+	margin-left: 90px;
+}
+
+
+
+
+
+
+
+
+
+
+.nutr, .sup {
+	width: 50%;
+	height: 250px;
+	border: 1px solid $txtcol;
+	margin: 80px 0px;
+}
+
+.nutr img, .sup img {
+	width: 100%;
+	height: 100%;
+}
+
+/* Floating View */
+.view_container {
+	width: 100%;
+	height: 100%;
+	background: rgba(2, 70, 88, 0.8);
+	opacity: 0;
+	pointer-events: none;
+	transition: all 500ms ease;
+}
+
+.view_container:target {
+	opacity: 1;
+	pointer-events: auto;
+}
+
+.view_container > div {
+	transform: translate(0px, -50px);
+	transition:  all 500ms ease;
+}
+
+.view_container:target > div {
+	transform: translate(0px, 0px);
+}
+
+.overlay {	
+	background-color: $background;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.view {
+	background: url(../images/background.jpg);
+	width: 630px;
+	height: 410px;
+	margin: auto;
+	position: absolute;
+	top: 0px; bottom: 150px;
+	right: 0px; left: 0px;
+	box-shadow: 0 0 25px $brdcol,  0 0 25px $brdcol;
+	z-index: 1;
+	
+	table {
+		text-align: center;
+		width: 90%;
+		border-collapse: collapse;
+		margin-left: 30px;
+	}
+	
+	th {
+		border: 0px;
+		padding-bottom: 20px;
+	}
+	
+	td {
+		border-right: 1px solid $txtcol;
+		padding: 10px;
+	}
+	
+	tr {
+		border-bottom: 1px solid $txtcol;
+	}
+	
+	tr:first-child, tr:last-child {
+		border-bottom: 0px;
+	}
+	
+	table, td:last-child, th:last-child {
+		border-right: 0px;
+	}
+	
+	th, td:first-child, td:last-child {		
+		font-family: ACIDLABEL;
+		color: $txtcol;
+	}
+	
+	.next-page {
+		width: 20%;
+		margin: auto;
+		padding-top: 20px;
+	}
+	
+	.follow {
+		float: right;
+		margin-top: -28px;
+		padding-right: 20px;
+	}
+}
+
+.view_heading {
+	display: flex;
+}
+
+.view-icon {
+	flex-basis: 300px;
+	border: 1px solid $txtcol;
+	padding: 15px 0px;
+}
+
+.view-icon img {
+	width: 100%;
+}
+
+.view_content {
+	padding: 15px 5px 0 10px;
+}
+
+.view_content h2, .view_content p {
+	margin: 0px;
+}
+/* End Floating View */
+
+/* Floating Add */
+.add_container {
+	width: 100%;
+	height: 100%;
+	background: rgba(2, 70, 88, 0.8);
+	opacity: 0;
+	pointer-events: none;
+	transition: all 500ms ease;
+}
+
+.add_container:target {
+	opacity: 1;
+	pointer-events: auto;
+}
+
+.add_container > div {
+	transform: translate(0px, -50px);
+	transition:  all 500ms ease;
+}
+
+.add_container:target > div {
+	transform: translate(0px, 0px);
+}
+
+.overlay {	
+	background-color: $background;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.add {
+	background: url(../images/background.jpg);
+	width: 630px;
+	height: 410px;
+	margin: auto;
+	position: absolute;
+	top: 0px; bottom: 150px;
+	right: 0px; left: 0px;
+	box-shadow: 0 0 25px $brdcol,  0 0 25px $brdcol;
+	z-index: 1;
+	
+	table {
+		text-align: center;
+		width: 90%;
+		border-collapse: collapse;
+		margin-left: 30px;
+	}
+	
+	th {
+		border: 0px;
+		padding-bottom: 20px;
+	}
+	
+	td {
+		border-right: 1px solid $txtcol;
+		padding: 10px;
+	}
+	
+	tr {
+		border-bottom: 1px solid $txtcol;
+	}
+	
+	tr:first-child, tr:last-child {
+		border-bottom: 0px;
+	}
+	
+	table, td:last-child, th:last-child {
+		border-right: 0px;
+	}
+	
+	th, td:first-child, td:last-child {		
+		font-family: ACIDLABEL;
+		color: $txtcol;
+	}
+	
+	.next-page {
+		width: 20%;
+		margin: auto;
+		padding-top: 20px;
+	}
+	
+	.follow {
+		float: right;
+		margin-top: -28px;
+		padding-right: 20px;
+	}
+}
+
+.add_heading {
+	display: flex;
+}
+
+.add-icon {
+	flex-basis: 300px;
+	border: 1px solid $txtcol;
+	padding: 15px 0px;
+}
+
+.add-icon img {
+	width: 100%;
+}
+
+.add_content {
+	padding: 15px 5px 0 10px;
+}
+
+.add_content h2, .add_content p {
+	margin: 0px;
+}
+/* End Floating View */
+
+

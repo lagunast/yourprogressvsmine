@@ -1,0 +1,178 @@
+#signup { 
+  background: url(../images/background2.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+	 #wrapper {
+		margin: 0 auto;
+		width: 650px;
+	}
+
+	 main {	
+		height: 375px;
+		padding: 0 20px;
+	}
+
+ 	h1 {
+		text-align: center;
+	}
+
+	 h3 {
+		text-align: center;
+	}
+}
+
+ form input {
+	height: 31px;
+	box-sizing: border-box;
+	border-radius: 3px;
+	border: 0px;
+	font-size: 15px;
+}
+
+/* First Name & Last Name */
+ .name h3 {
+	float: left;
+	margin-left: 15px;
+}
+
+ .name .first,  .name .last {
+	float: left;
+	margin-left: 20px;
+}
+
+ .name .last {
+	float: right;
+}
+
+ .name input,  .name input {
+	width: 230px;
+}
+
+ .name h4 {
+	margin: 0;
+}
+/* End First Name & Last Name */
+
+/* Date of Birth */
+ .dob {
+	float: left;
+}
+ .dob h3 {
+	float: left;
+	margin-left: -50px;
+}
+
+ .dob input{
+	float: right;
+	margin-top: 25px;
+	margin-left: 20px;
+	width: 140px;
+}
+/* End Date of Birth */
+
+/* Goal */
+ .goal {
+	float: right;
+}
+
+ .goal h3 {
+	float: left;
+	margin-top: 25px;
+}
+
+ .goal input {
+	margin-top: 25px;
+	margin-left: 15px;
+}
+/* End Goal */
+
+/* Email */
+.email {
+	float: left;
+}
+
+.email h3 {
+	float: left;
+	margin-top: 5px;
+	margin-left: 10px;
+}
+
+.email input {
+	margin-left: 20px;
+	margin-top: 10px;
+}
+/* End Email */ 
+
+/* Male */
+.male {
+	float: left;
+	margin-left: 65px;
+}
+
+ .male h3 {
+	float: left;
+	margin-top: 4px;
+}
+
+ .male input {
+	margin-left: 8px;
+	width: 20px;
+	margin-top: 7px;
+}
+/* End Male */
+
+/* Female */
+ .female {
+	float: right;
+	margin-top: 5px;
+}
+
+ .female h3 {
+	float: left;
+	margin-top: -.1px;
+}
+
+ .female input {
+	margin-left: 8px;
+	width: 20px;
+}
+/* End Female */
+
+/* Qoute */
+ .qoute {
+	float: left;
+	margin-top: 10px;
+}
+
+ .qoute h3 {
+	float: left;
+	margin-top: -5px;
+}
+
+ .qoute input {
+	margin-left: 15px;
+	width: 270px;
+	height: 90px;
+}
+/* End Qoute */
+
+/* Submit */
+ form input[type=submit] {
+	background: none;
+	border: none;
+	float: right;
+	font-family: ACIDLABEL;
+	font-size: 20px;
+	color: $txtcol;
+	font-weight: 400;
+	line-height: 30px;
+	margin-top: 35px;
+	margin-right: 60px;
+}
+
+ form input[type=submit]:hover {
+	cursor: pointer;	
+}
