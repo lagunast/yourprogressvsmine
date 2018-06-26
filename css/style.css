@@ -8,8 +8,8 @@
 /* End Fonts */
 /* Main Eliments */
 main {
-  background-color: rgba(42, 42, 42, 0.9);
   margin-top: 10px;
+  background-color: rgba(42, 42, 42, 0.9);
   border-style: solid;
   border-width: 10px;
   border-color: rgba(105, 29, 6, 0.7);
@@ -64,9 +64,12 @@ td {
 .next {
   float: right; }
 
-.next:hover, .back:hover {
-  color: #787878;
-  cursor: pointer; }
+.overlay {
+  background-color: rgba(42, 42, 42, 0.9);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
 
 /* End Main Eliments */
 /* Header */
@@ -157,11 +160,10 @@ header img {
 .registerLink:hover {
   color: black; }
 
-/* Modal */
+/* Floating Login Form */
 .login_container {
   width: 100%;
   height: 100%;
-  background: rgba(2, 70, 88, 0.8);
   opacity: 0;
   pointer-events: none;
   transition: all 500ms ease; }
@@ -178,17 +180,16 @@ header img {
   transform: translate(0px, 0px); }
 
 .login {
-  width: 380px;
-  height: 181px;
+  width: 410px;
+  height: 221px;
   margin: auto;
   position: absolute;
   top: 0px;
   bottom: 150px;
   right: 0px;
   left: 0px;
-  background-color: #2A2A2A;
-  box-shadow: 0 0 25px rgba(105, 29, 6, 0.7), 0 0 25px rgba(105, 29, 6, 0.7);
-  padding: 20px; }
+  background: url(../images/background.jpg);
+  box-shadow: 0 0 25px rgba(105, 29, 6, 0.7), 0 0 25px rgba(105, 29, 6, 0.7); }
 
 .login_heading {
   widows: 100%;
@@ -197,7 +198,11 @@ header img {
   text-align: center;
   font-family: ACIDLABEL;
   color: #bfc5d1;
-  font-size: 25px; }
+  font-size: 25px;
+  padding-top: 20px; }
+
+.login form {
+  padding: 0 20px; }
 
 .login form input[type=text], .login form input[type=password] {
   width: 190px;
@@ -209,10 +214,10 @@ header img {
   margin-top: -50px; }
 
 .login form input[type=submit] {
-  background: none;
-  border: none;
+  position: absolute;
   float: right;
-  margin-top: -10px;
+  margin-top: -5px;
+  margin-left: 255px;
   font-family: ACIDLABEL;
   color: #bfc7d1;
   font-size: 20px;
@@ -232,7 +237,7 @@ header img {
   display: inline-block;
   float: left;
   margin-left: 40px;
-  margin-top: 30px;
+  margin-top: 20px;
   text-decoration: none;
   font-size: 10pt; }
 
@@ -244,46 +249,51 @@ header img {
   margin-top: -75px;
   width: 40px; }
 
-@media only screen and (max-width: 680px) {
-  #wrapper {
-    width: 100%; }
+/* End Floating Login Form */
+/* Floating Signup Form */
+.signup_form_container {
+  width: 100%;
+  height: 100%;
+  background: rgba(2, 70, 88, 0.8);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 500ms ease; }
 
-  main {
-    height: auto;
-    display: block; }
+.signup_form_container:target {
+  opacity: 1;
+  pointer-events: auto; }
 
-  .content {
-    display: none; }
+.signup_form_container > div {
+  transform: translate(0px, -50px);
+  transition: all 500ms ease; }
 
-  .login img {
-    width: 80%;
-    margin-left: 50px; }
+.signup_form_container:target > div {
+  transform: translate(0px, 0px); }
 
-  .signin {
-    padding-right: 510px;
-    margin-top: -640px; }
+.signup_form {
+  background: url(../images/background.jpg);
+  width: 620px;
+  height: 381px;
+  margin: auto;
+  position: absolute;
+  top: 0px;
+  bottom: 150px;
+  right: 0px;
+  left: 0px;
+  box-shadow: 0 0 25px rgba(105, 29, 6, 0.7), 0 0 25px rgba(105, 29, 6, 0.7); }
 
-  .signup {
-    margin-top: -640px;
-    padding-right: 218px; } }
-/* End Welcome Page */
-/* Sign Up Page */
-#signup {
-  background: url(../images/background2.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover; }
-  #signup #wrapper {
-    margin: 0 auto;
-    width: 650px; }
-  #signup main {
-    height: 375px;
-    padding: 0 20px; }
-  #signup h1 {
-    text-align: center; }
-  #signup h3 {
-    text-align: center; }
+.signup_form_heading {
+  widows: 100%;
+  display: block;
+  box-sizing: border-box;
+  text-align: center;
+  font-family: ACIDLABEL;
+  color: #bfc5d1;
+  font-size: 25px;
+  padding-top: 20px; }
+
+.signup_form form {
+  padding: 20px; }
 
 form input {
   height: 31px;
@@ -399,6 +409,7 @@ form input {
 /* End Qoute */
 /* Submit */
 form input[type=submit] {
+  position: absolute;
   background: none;
   border: none;
   float: right;
@@ -407,26 +418,51 @@ form input[type=submit] {
   color: #bfc7d1;
   font-weight: 400;
   line-height: 30px;
-  margin-top: 35px;
-  margin-right: 60px; }
+  margin-top: 230px;
+  margin-left: 100px; }
 
 form input[type=submit]:hover {
   cursor: pointer; }
 
-/* End Sign Up Page */
+/* End Floating Signup Form */
+@media only screen and (max-width: 680px) {
+  .content {
+    display: none; }
+
+  .login img {
+    width: 80%;
+    margin: 0 auto; }
+
+  .signin {
+    padding-right: 510px;
+    margin-top: -640px; }
+
+  .signup {
+    margin-top: -640px;
+    padding-right: 218px; } }
+/* End Welcome Page */
 /* Profile Page */
 #profile {
   background: url(../images/background.jpg);
-  -webkit-background-size: auto;
-  -moz-background-size: auto;
-  -o-background-size: auto;
-  background-size: auto; }
+  background-attachment: fixed;
+  margin: 0; }
   #profile #wrapper {
     width: 80%;
     height: auto;
     margin: 0 auto; }
   #profile main {
     padding: 10px; }
+  #profile a {
+    font-family: ACIDLABEL;
+    color: #bfc7d1;
+    text-decoration: none; }
+  #profile a:hover {
+    color: #787878;
+    cursor: pointer; }
+
+.profile_head {
+  width: 100%;
+  overflow: hidden; }
 
 .profile_img {
   width: 15%;
@@ -434,9 +470,7 @@ form input[type=submit]:hover {
 
 .qouted {
   float: right;
-  width: 80%;
-  margin-top: 50px;
-  padding: 20px; }
+  width: 83%; }
 
 .qouted h1 {
   text-align: center; }
@@ -480,12 +514,11 @@ form input[type=submit]:hover {
 .add_day {
   height: 100%;
   overflow: hidden; }
-
-.add_day h1 {
-  font-size: 90px; }
+  .add_day h1 {
+    font-size: 100px; }
 
 .rest_day h1 {
-  padding-top: 60px; }
+  padding-top: 30%; }
 
 .rest_day a, .add_day a, .view_day a {
   text-decoration: none; }
@@ -513,7 +546,6 @@ form input[type=submit]:hover {
   display: block; }
 
 .dropdown a:hover {
-  color: #787878;
   box-shadow: 0 0 10px #bfc7d1; }
 
 .view_day:hover .dropdown {
@@ -539,35 +571,58 @@ form input[type=submit]:hover {
 .news {
   height: 408px;
   display: flex; }
+  .news aside {
+    border: 1px solid #bfc7d1;
+    flex-basis: 30%; }
 
-.news aside {
+.newsfeed_scroll {
+  flex-basis: 40%;
   border: 1px solid #bfc7d1;
-  flex-basis: 20%; }
+  display: grid; }
 
 .newsfeed {
-  flex-basis: 60%;
-  border: 1px solid #bfc7d1;
-  display: grid;
   overflow: scroll; }
 
 .newsfeed::-webkit-scrollbar {
   display: none; }
 
 .comment {
-  border: 1px solid #bfc7d1;
   width: 100%;
   height: 100px;
   margin-top: 10px; }
 
 .comment img {
-  height: 100%; }
+  height: 90%;
+  margin-left: 10px;
+  border-radius: 5px;
+  box-shadow: 3px 3px 0 black; }
 
 .comment h4 {
-  margin-left: 90px; }
+  border: 1px solid #bfc7d1;
+  margin: 5px 10px 10px 80px;
+  padding: 20px;
+  overflow: hidden; }
+
+.message {
+  border: 1px solid #bfc7d1; }
+  .message input {
+    height: 30px; }
+  .message input[type=text] {
+    width: 80%;
+    background: #bfc7d1; }
+  .message input[type=submit] {
+    width: 18%;
+    margin: 0;
+    background: #2A2A2A;
+    border: none;
+    font-family: ACIDLABEL;
+    color: #bfc7d1;
+    font-weight: 400;
+    line-height: 30px; }
 
 .nutr, .sup {
   width: 50%;
-  height: 250px;
+  height: auto;
   border: 1px solid #bfc7d1;
   margin: 80px 0px; }
 
@@ -579,7 +634,6 @@ form input[type=submit]:hover {
 .view_container {
   width: 100%;
   height: 100%;
-  background: rgba(2, 70, 88, 0.8);
   opacity: 0;
   pointer-events: none;
   transition: all 500ms ease; }
@@ -595,13 +649,6 @@ form input[type=submit]:hover {
 .view_container:target > div {
   transform: translate(0px, 0px); }
 
-.overlay {
-  background-color: rgba(42, 42, 42, 0.9);
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%; }
-
 .view {
   background: url(../images/background.jpg);
   width: 630px;
@@ -614,6 +661,11 @@ form input[type=submit]:hover {
   left: 0px;
   box-shadow: 0 0 25px rgba(105, 29, 6, 0.7), 0 0 25px rgba(105, 29, 6, 0.7);
   z-index: 1; }
+  .view .workout {
+    overflow: scroll;
+    height: 50%; }
+  .view .workout::-webkit-scrollbar {
+    display: none; }
   .view table {
     text-align: center;
     width: 90%;
@@ -631,13 +683,16 @@ form input[type=submit]:hover {
     border-bottom: 0px; }
   .view table, .view td:last-child, .view th:last-child {
     border-right: 0px; }
-  .view th, .view td:first-child, .view td:last-child {
+  .view th, .view td:first-child {
     font-family: ACIDLABEL;
-    color: #bfc7d1; }
+    color: #bfc7d1;
+    font-weight: 40; }
+  .view a {
+    font-weight: 40; }
   .view .next-page {
     width: 20%;
     margin: auto;
-    padding-top: 20px; }
+    padding-top: 5px; }
   .view .follow {
     float: right;
     margin-top: -28px;
@@ -680,13 +735,6 @@ form input[type=submit]:hover {
 
 .add_container:target > div {
   transform: translate(0px, 0px); }
-
-.overlay {
-  background-color: rgba(42, 42, 42, 0.9);
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%; }
 
 .add {
   background: url(../images/background.jpg);
@@ -747,4 +795,15 @@ form input[type=submit]:hover {
   margin: 0px; }
 
 /* End Floating View */
+@media only screen and (max-width: 900px) {
+  #profile #wrapper {
+    width: 100%; }
+  #profile main {
+    margin-top: 0; } }
+@media only screen and (max-width: 750px) {
+  .news aside {
+    flex-basis: 0%; }
+
+  .newsfeed_scroll {
+    flex-basis: 100%; } }
 /* End Profile Page */
