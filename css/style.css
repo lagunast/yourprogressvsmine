@@ -8,7 +8,7 @@
 /* End Fonts */
 /* Main Eliments */
 main {
-  margin-top: 10px;
+  margin: 10px 0;
   background-color: rgba(42, 42, 42, 0.9);
   border-style: solid;
   border-width: 10px;
@@ -214,10 +214,10 @@ header img {
   margin-top: -50px; }
 
 .login form input[type=submit] {
-  position: absolute;
+  position: relative;
   float: right;
   margin-top: -5px;
-  margin-left: 255px;
+  left: 5px;
   font-family: ACIDLABEL;
   color: #bfc7d1;
   font-size: 20px;
@@ -225,7 +225,8 @@ header img {
   line-height: 30px; }
 
 .login form input[type=submit]:hover {
-  cursor: pointer; }
+  cursor: pointer;
+  color: #787878; }
 
 .login form h3 {
   font-size: 23px;
@@ -409,7 +410,7 @@ form input {
 /* End Qoute */
 /* Submit */
 form input[type=submit] {
-  position: absolute;
+  position: relative;
   background: none;
   border: none;
   float: right;
@@ -418,8 +419,8 @@ form input[type=submit] {
   color: #bfc7d1;
   font-weight: 400;
   line-height: 30px;
-  margin-top: 230px;
-  margin-left: 100px; }
+  top: 40px;
+  left: 60px; }
 
 form input[type=submit]:hover {
   cursor: pointer; }
@@ -460,6 +461,7 @@ form input[type=submit]:hover {
     color: #787878;
     cursor: pointer; }
 
+/* Head */
 .profile_head {
   width: 100%;
   overflow: hidden; }
@@ -471,13 +473,13 @@ form input[type=submit]:hover {
 .qouted {
   float: right;
   width: 83%; }
-
-.qouted h1 {
-  text-align: center; }
+  .qouted h1 {
+    text-align: center; }
 
 #profile h3 {
   margin: 0; }
 
+/* End Head */
 /* Schedule */
 .schedule {
   display: flex;
@@ -553,6 +555,7 @@ form input[type=submit]:hover {
 
 /* End Dropdown Menu */
 /* End Schedule */
+/* Info and Scoreboard */
 .flex {
   display: flex; }
 
@@ -568,58 +571,150 @@ form input[type=submit]:hover {
 .leader {
   margin-left: 10px; }
 
-.news {
-  height: 408px;
+/* End Info and Scoreboard */
+/* Social Media Area */
+.social {
+  height: 568px;
   display: flex; }
-  .news aside {
+  .social h2 {
+    border-bottom: 1px solid #bfc7d1;
+    text-align: center;
+    padding: 5px 0;
+    margin: 0; }
+  .social aside {
     border: 1px solid #bfc7d1;
     flex-basis: 30%; }
 
-.newsfeed_scroll {
+/* Chatbox Area */
+.newsfeed {
   flex-basis: 40%;
   border: 1px solid #bfc7d1;
   display: grid; }
 
-.newsfeed {
-  overflow: scroll; }
+.chatbox {
+  width: 40%;
+  padding: 10px 20px;
+  min-width: 390px;
+  height: 505px;
+  margin: 0 auto; }
 
-.newsfeed::-webkit-scrollbar {
-  display: none; }
-
-.comment {
+.chatlogs {
+  padding: 10px;
   width: 100%;
-  height: 100px;
-  margin-top: 10px; }
+  height: 450px;
+  overflow-x: hidden;
+  overflow-y: scroll; }
 
-.comment img {
-  height: 90%;
-  margin-left: 10px;
+.chatlogs::-webkit-scrollbar {
+  width: 10px; }
+
+.chatlogs::-webkit-scrollbar-thumb {
   border-radius: 5px;
-  box-shadow: 3px 3px 0 black; }
+  background: rgba(255, 255, 255, 0.1); }
 
-.comment h4 {
-  border: 1px solid #bfc7d1;
-  margin: 5px 10px 10px 80px;
-  padding: 20px;
-  overflow: hidden; }
-
-.message {
-  border: 1px solid #bfc7d1; }
-  .message input {
-    height: 30px; }
-  .message input[type=text] {
+.chat {
+  display: flex;
+  flext-flow: row wrap;
+  align-items: flex-start;
+  margin-bottom: 10px; }
+  .chat .user-photo {
+    width: 60px;
+    height: 60px;
+    background: #ccc;
+    border-radius: 50%;
+    overflow: hidden; }
+  .chat .user-photo img {
+    width: 100%; }
+  .chat .chat-message {
     width: 80%;
-    background: #bfc7d1; }
-  .message input[type=submit] {
-    width: 18%;
-    margin: 0;
-    background: #2A2A2A;
-    border: none;
+    padding: 15px;
+    margin: 5px 10px 0;
+    border-radius: 10px;
+    border: 1px solid #bfc7d1;
     font-family: ACIDLABEL;
     color: #bfc7d1;
-    font-weight: 400;
-    line-height: 30px; }
+    font-size: 18px; }
 
+.friend .chat-message {
+  background: rgba(0, 0, 0, 0.7); }
+
+.self .chat-message {
+  background: rgba(105, 29, 6, 0.7);
+  order: -1; }
+
+.chat-form {
+  display: flex;
+  align-items: flex-start;
+  border-top: 1px solid #bfc7d1;
+  width: 110%;
+  margin-left: -20px; }
+  .chat-form textarea {
+    background: #bfc7d1;
+    width: 75%;
+    height: 22px;
+    resize: none;
+    padding: 10px;
+    font-family: ACIDLABEL;
+    font-size: 18px;
+    color: BLACK; }
+  .chat-form textarea:focus {
+    background: #fff; }
+  .chat-form textarea::-webkit-scrollbar {
+    width: 10px; }
+  .chat-form textarea::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.1); }
+  .chat-form button {
+    background: none;
+    padding: 8px 10px;
+    font-family: ACIDLABEL;
+    font-size: 20px;
+    color: #bfc7d1;
+    border: none;
+    margin: 0 10px; }
+  .chat-form button:hover {
+    color: #787878;
+    cursor: pointer; }
+  .chat-form button:onclick {
+    border: none; }
+
+/* End Chat Box Area */
+.users {
+  padding: 10px 10px 10px 20px;
+  height: 500px;
+  overflow-x: hidden;
+  overflow-y: scroll; }
+
+.users::-webkit-scrollbar {
+  width: 10px; }
+
+.users::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.1); }
+
+.online {
+  display: flex;
+  flext-flow: row wrap;
+  align-items: flex-start;
+  margin-bottom: 20px; }
+  .online .user-photo {
+    width: 50px;
+    height: 50px;
+    background: #ccc;
+    border-radius: 50%;
+    overflow: hidden; }
+  .online .user-photo img {
+    width: 100%; }
+  .online .name {
+    width: 80%;
+    padding: 5px;
+    margin: 5px 0px 0px 10px;
+    font-family: ACIDLABEL;
+    color: #bfc7d1;
+    font-size: 18px; }
+
+/* End Social Media Area */
+/* Nutrition and Supplements */
 .nutr, .sup {
   width: 50%;
   height: auto;
@@ -630,6 +725,7 @@ form input[type=submit]:hover {
   width: 100%;
   height: 100%; }
 
+/* End Nutrition and Supplements */
 /* Floating View */
 .view_container {
   width: 100%;
@@ -663,7 +759,8 @@ form input[type=submit]:hover {
   z-index: 1; }
   .view .workout {
     overflow: scroll;
-    height: 50%; }
+    height: 50%;
+    overflow: -moz-scrollbars-none; }
   .view .workout::-webkit-scrollbar {
     display: none; }
   .view table {
@@ -702,6 +799,8 @@ form input[type=submit]:hover {
   display: flex; }
 
 .view-icon {
+  -moz-flex-basis: 300px;
+  -webkit-flex-basis: 300px;
   flex-basis: 300px;
   border: 1px solid #bfc7d1;
   padding: 15px 0px; }
@@ -799,7 +898,7 @@ form input[type=submit]:hover {
   #profile #wrapper {
     width: 100%; }
   #profile main {
-    margin-top: 0; } }
+    margin: 0; } }
 @media only screen and (max-width: 750px) {
   .news aside {
     flex-basis: 0%; }
