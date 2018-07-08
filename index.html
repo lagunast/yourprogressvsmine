@@ -24,7 +24,7 @@
   <main>
     <div class="content">
       <h2>Welcome to the home of Your Progress VS Mine </h2>
-      <p>We’re here to help motivate you in any type of physical transformation. From Bodybuilding to Crossfit, Sports Trainiing to General Health. The idea is to let everyone show off and post idea’s to help everyone else. Create your profile and share your idea’s. share with us and show everyone why you are the best! The amount of likes, followers and simply your prgression provided on your profile will tell us all! This is not your everyday Social Network. This is the Network of Athlete’s! </p>
+      <p>We’re here to help motivate you in any type of physical transformation. From Bodybuilding to Crossfit, Sports Trainiing to General Health. The idea is to let everyone show off and post idea’s to help everyone else. Create your profile and share your idea’s.</p>
     </div>
     <div class="logo"><img src="images/logo.png" alt="">
       <div class="signin">
@@ -36,7 +36,7 @@
     </div>
     
     <!--Floating Login Form-->
-    <div class="login_container" id="modal">
+    <div class="container" id="modal">
       <div class="login">
         <div class="overlay"> <a href="#" class="close">X</a> <span class="login_heading">Sign In</span>
           <form action="assets/php/login.php" method="post">
@@ -53,7 +53,7 @@
     <!--End Floating Login Form--> 
     
     <!--Floating Signup Form-->
-    <div class="signup_form_container" id="signup">
+    <div class="container" id="signup">
       <div class="signup_form">
         <div class="overlay"> <a href="#" class="close">X</a> <span class="signup_form_heading">Sign Up</span>
         <form action="assets/php/signup.php" method="post">
@@ -74,7 +74,15 @@
           </div>
           <div class="goal">
             <h3>Goal:</h3>
-            <input type="text" name="goal">
+            <select name="goal">
+              <option value="Build Muscle">Build Muscle</option>
+              <option value="Lose Fat">Lose Fat</option>
+              <option value="Transform">Transform</option>
+              <option value="Improve">Improve</option>
+              <option value="Endurance">Endurance</option>
+              <option value="Flexibility">Flexibility</option>
+              <option value="Other">Other</option>
+            </select>
           </div>
           <div class="email">
             <h3>Email:</h3>
@@ -90,12 +98,13 @@
           </div>
           <div class="qoute">
             <h3>Qoute:</h3>
-            <input type="text" name="qoute">
+            <textarea id="qoute" name="qoute"></textarea>
           </div>
           <input type="submit" name="submit" value="Submit">
         </form>
       </div>
     </div>
+	  </div>
     <!--End Floating Signup Form--> 
     
   </main>

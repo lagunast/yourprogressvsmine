@@ -33,7 +33,7 @@
 
 .profile_img {
 	width: 15%;
-	border: 1px solid $txtcol;
+	border: $border;
 }
 
 .qouted {
@@ -57,7 +57,7 @@
 
 #sunday, #monday, #tuesday, #wednesday, #thursday, #friday, #saturday {
 	width: 15%;
-	border: 1px solid $txtcol;
+	border: $border;
 	text-align: center;
 	position: relative;
 	display: inline-block;
@@ -79,7 +79,7 @@
 	margin: 0px;
 	padding: 3px;
 	text-align: center;
-	border-bottom: 1px solid $txtcol;
+	border-bottom: $border;
 	font-size: 10px;
 	color: $txtcol;
 }
@@ -113,12 +113,12 @@
 	z-index: 1;
 	background: black;
 	width: 100%;
-	border: 1px solid $txtcol;
+	border: $border;
 }
 
 .dropdown a {
 	display: block;
-	border-bottom: 1px solid $txtcol;
+	border-bottom: $border;
 	text-decoration: none;
 	font-family: ACIDLABEL;
 	color: $txtcol;
@@ -150,56 +150,102 @@
 .info, .leader {
 	width: 50%;
 	height: 250px;
-	border: 1px solid $txtcol;
+	border: $border;
 	margin: 80px 0px;
 }
 
 .info {
 	margin-right: 10px;
+	
+	img {
+		float: left;
+		width: 20%;
+		border: $border;
+	}
+}
+
+.info_head {
 }
 
 .leader {
 	margin-left: 10px;
 }
+
+
 /* End Info and Scoreboard */
 
 /* Social Media Area */
 .social {
-	height: 568px;
+	height: 566px;
 	display: flex;
 	
 	h2 {
-		border-bottom: 1px solid $txtcol;
+		border-bottom: $border;
 		text-align: center;
 		padding: 5px 0;
 		margin: 0;
 	}
 
 	aside {
-		border: 1px solid $txtcol;
+		border: $border;
 		flex-basis: 30%;
 	}
 }
 
+/* Live Update */
+.update {
+	padding: 10px 10px 10px 20px;
+	height: 500px;
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+
+.update::-webkit-scrollbar {
+	width: 10px;
+}
+
+.update::-webkit-scrollbar-thumb {
+	border-radius: 5px;
+	background: rgba(255,255,255,.1);
+}
+
+.user_update {
+	display: flex;
+	flext-flow: row wrap;
+	align-items: flex-start;
+	margin-bottom: 20px;
+	
+	.name {
+		width: 100%;
+		padding: 5px;
+		margin: 5px 0px 0px 10px;
+		font-family: ACIDLABEL;
+		color: $txtcol;
+		font-size: 14px;
+		
+		span {
+			text-decoration: underline;
+		font-size: 18px;
+		}
+	}
+}
+/* End Live Update */
+
 /* Chatbox Area */
-.newsfeed {	
+.messenger {	
 	flex-basis: 40%;
-	border: 1px solid $txtcol;
-	display: grid;
+	height: auto;
+	border: $border;
 }
 
 .chatbox {
-	width: 40%;
-	padding: 10px 20px;
-	min-width: 390px;
-	height: 505px;	
-	margin: 0 auto;
+	padding: 0 20px;
+	display: grid;
 }
-
 .chatlogs {
 	padding: 10px;
 	width: 100%;
-	height: 450px;
+	height: 460px;
 	overflow-x: hidden;
 	overflow-y: scroll;
 }
@@ -237,10 +283,7 @@
 		padding: 15px;
 		margin: 5px 10px 0;
 		border-radius: 10px;
-		border: 1px solid $txtcol;
-		font-family: ACIDLABEL;
-		color: $txtcol;
-		font-size: 18px;
+		border: $border;
 	}
 }
 
@@ -261,12 +304,12 @@
 .chat-form {
 	display: flex;
 	align-items: flex-start;
-	border-top: 1px solid $txtcol;
-	width: 110%;
-	margin-left: -20px;
+	border-top: $border;
+	width: 100%;
 	
 	textarea {
 		background: $txtcol;
+		border-radius: 0px;
 		width: 75%;
 		height: 22px;
 		resize: none;
@@ -311,6 +354,7 @@
 }
 /* End Chat Box Area */
 
+/* Who's Online */
 .users {
 	padding: 10px 10px 10px 20px;
 	height: 500px;
@@ -354,6 +398,7 @@
 		font-size: 18px;
 	}
 }
+/* End Who's Online */
 
 /* End Social Media Area */
 
@@ -361,7 +406,7 @@
 .nutr, .sup {
 	width: 50%;
 	height: auto;
-	border: 1px solid $txtcol;
+	border: $border;
 	margin: 80px 0px;
 }
 
@@ -372,28 +417,6 @@
 /* End Nutrition and Supplements */
 
 /* Floating View */
-.view_container {
-	width: 100%;
-	height: 100%;
-	opacity: 0;
-	pointer-events: none;
-	transition: all 500ms ease;
-}
-
-.view_container:target {
-	opacity: 1;
-	pointer-events: auto;
-}
-
-.view_container > div {
-	transform: translate(0px, -50px);
-	transition:  all 500ms ease;
-}
-
-.view_container:target > div {
-	transform: translate(0px, 0px);
-}
-
 .view {
 	background: url(../images/background.jpg);
 	width: 630px;
@@ -428,12 +451,12 @@
 	}
 	
 	td {
-		border-right: 1px solid $txtcol;
+		border-right: $border;
 		padding: 10px;
 	}
 	
 	tr {
-		border-bottom: 1px solid $txtcol;
+		border-bottom: $border;
 	}
 	
 	tr:first-child, tr:last-child {
@@ -475,7 +498,7 @@
 	-moz-flex-basis: 300px;
 	-webkit-flex-basis: 300px;
 	flex-basis: 300px;
-	border: 1px solid $txtcol;
+	border: $border;
 	padding: 15px 0px;
 }
 
@@ -493,29 +516,6 @@
 /* End Floating View */
 
 /* Floating Add */
-.add_container {
-	width: 100%;
-	height: 100%;
-	background: rgba(2, 70, 88, 0.8);
-	opacity: 0;
-	pointer-events: none;
-	transition: all 500ms ease;
-}
-
-.add_container:target {
-	opacity: 1;
-	pointer-events: auto;
-}
-
-.add_container > div {
-	transform: translate(0px, -50px);
-	transition:  all 500ms ease;
-}
-
-.add_container:target > div {
-	transform: translate(0px, 0px);
-}
-
 .add {
 	background: url(../images/background.jpg);
 	width: 630px;
@@ -527,75 +527,93 @@
 	box-shadow: 0 0 25px $brdcol,  0 0 25px $brdcol;
 	z-index: 1;
 	
-	table {
-		text-align: center;
-		width: 90%;
-		border-collapse: collapse;
-		margin-left: 30px;
-	}
-	
-	th {
-		border: 0px;
-		padding-bottom: 20px;
-	}
-	
-	td {
-		border-right: 1px solid $txtcol;
-		padding: 10px;
-	}
-	
-	tr {
-		border-bottom: 1px solid $txtcol;
-	}
-	
-	tr:first-child, tr:last-child {
-		border-bottom: 0px;
-	}
-	
-	table, td:last-child, th:last-child {
-		border-right: 0px;
-	}
-	
-	th, td:first-child, td:last-child {		
-		font-family: ACIDLABEL;
-		color: $txtcol;
-	}
-	
 	.next-page {
 		width: 20%;
 		margin: auto;
-		padding-top: 20px;
+		padding-top: 10px;
+	}
+		
+	.back a {
+		color: $hover;
 	}
 	
-	.follow {
-		float: right;
-		margin-top: -28px;
-		padding-right: 20px;
+	form {
+		padding: 20px;
 	}
+	
+	input {
+		margin-left: 15px;
+	}
+	
+	.name {
+		display: flex;
+		padding-right: 20px;
+		padding-left: 70px;
+		
+		input {
+			width: 60%;
+		}
+	}
+	
+	/* Submit */
+	input[type=submit] {
+		bottom: 80px;
+		right: 20px;
+	}
+	/* End Submit */
 }
 
 .add_heading {
 	display: flex;
-}
-
-.add-icon {
-	flex-basis: 300px;
-	border: 1px solid $txtcol;
-	padding: 15px 0px;
-}
-
-.add-icon img {
 	width: 100%;
+	padding: 30px 0;
+	text-align: center;
+	
+	.desc-h {
+		padding: 0 40px;
+		border-right: $border;
+		text-shadow: 0 0 15px $txtcol;
+	}
+	
+	.details {
+		padding-left: 50px;
+	}
+	
 }
 
-.add_content {
-	padding: 15px 5px 0 10px;
+.add_top {
+	display: flex;
 }
 
-.add_content h2, .add_content p {
-	margin: 0px;
+
+
+.type {
+	display: flex;
+	
+	select {
+		margin-left: 15px;
+	}
 }
-/* End Floating View */
+
+.sets {
+	display: flex;
+	padding: 20px 0 20px 80px;
+	
+	input {
+		width: 5%;
+	}
+}
+
+.desc {
+	display: flex;
+	
+	textarea {
+		width: 50%;
+		height: 120px;
+		margin-left: 15px;
+	}
+}
+/* End Floating Add */
 
 
 
@@ -614,13 +632,8 @@
 
 @media only screen and (max-width: 750px) {
 	.news {
-		
 		aside {
 			flex-basis: 0%;
 		}
-	}
-
-	.newsfeed_scroll {
-		flex-basis: 100%;
 	}
 }

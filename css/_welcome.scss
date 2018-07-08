@@ -21,94 +21,61 @@
 	margin-left: 20px;
 }
 
-	.logo  {
-		img {
+.logo  {
+	img {
 		width: 124%;
 		padding-top: 19px;
 		z-index: 1;
-		}
 	}
-
-	.signin {
-		float: right;
-		padding-right: 280px;
-		margin-top: -376px;
-		z-index: 2;
-	}
-
-	.signup {
-		float: right;
-		margin-top: -375px;
-		padding-right: 118px;
-		z-index: 2;
-	}
-
-	.signin h2 a, .signup h2 a {
-		position: absolute;
-		text-decoration: none;
-		color: $txtcol;
-		text-shadow: 1px 1px 2px black;
-	}
-
-	.signin h2 a:hover, .signup h2 a:hover {
-		text-shadow: 0 0 25px red,  0 0 25px $brdcol;
-	}
-
-	.registerLink:hover {
-		color: black;
-	}
-
-/* Floating Login Form */
-
-	.login_container {
-		width: 100%;
-		height: 100%;
-		opacity: 0;
-		pointer-events: none;
-		transition: all 500ms ease;
-	}
-
-	.login_container:target {
-		opacity: 1;
-		pointer-events: auto;
-	}
-
-	.login_container > div {
-		transform: translate(0px, -50px);
-		transition:  all 500ms ease;
-	}
-
-	.login_container:target > div {
-		transform: translate(0px, 0px);
-	}
-
-	.login {
-		width: 410px;
-		height: 221px;
-		margin: auto;
-		position: absolute;
-		top: 0px; bottom: 150px;
-		right: 0px; left: 0px;
-		background: url(../images/background.jpg);
-		box-shadow: 0 0 25px $brdcol,  0 0 25px $brdcol;
-	}
-
-	.login_heading {
-		widows: 100%;
-		display: block;
-		box-sizing: border-box;
-		text-align: center;
-		font-family: ACIDLABEL;
-		color: #bfc5d1;
-		font-size: 25px;
-		padding-top: 20px;
-	}
-
-.login form {
-	padding: 0 20px;
 }
 
-	.login form input[type=text], .login form input[type=password] {
+.signin {
+	float: right;
+	padding-right: 280px;
+	margin-top: -376px;
+	z-index: 2;
+}
+
+.signup {
+	float: right;
+	margin-top: -375px;
+	padding-right: 118px;
+	z-index: 2;
+}
+
+.signin h2 a, .signup h2 a {
+	position: absolute;
+	text-decoration: none;
+	color: $txtcol;
+	text-shadow: 1px 1px 2px black;
+}
+
+.signin h2 a:hover, .signup h2 a:hover {
+	text-shadow: 0 0 25px red,  0 0 25px $brdcol;
+}
+
+/* Floating Login Form */
+.login {
+	width: 410px;
+	height: 221px;
+	margin: auto;
+	position: absolute;
+	top: 0px; bottom: 150px;
+	right: 0px; left: 0px;
+	background: url(../images/background.jpg);
+	box-shadow: 0 0 25px $brdcol,  0 0 25px $brdcol;
+		
+	form {
+		padding: 0 20px;
+	}
+		
+	h3 {
+		font-size: 23px;
+		text-align: center;
+		margin-right: 148px;
+	}
+		
+	input[type=text], input[type=password] {
 		width: 190px;
 		height: 31px;
 		box-sizing: border-box;
@@ -118,7 +85,7 @@
 		margin-top: -50px;
 	}
 
-	.login form input[type=submit] {
+	input[type=submit] {
 		position: relative;
 		float: right;
 		margin-top: -5px;
@@ -129,15 +96,28 @@
 		font-weight: 400;
 		line-height: 30px;
 	}
-
-	.login form input[type=submit]:hover {
+		
+	input[type=submit]:hover {
 		cursor: pointer;
 		color: $hover;
 	}
-	.login form h3 {
-		font-size: 23px;
+		
+	img {
+		float: left;
+		margin-top: -75px;
+		width: 40px;
+	}
+}
+
+	.login_heading {
+		widows: 100%;
+		display: block;
+		box-sizing: border-box;
 		text-align: center;
-		margin-right: 148px;
+		font-family: ACIDLABEL;
+		color: #bfc5d1;
+		font-size: 25px;
+		padding-top: 20px;
 	}
 
 	.forgotPassword{
@@ -154,51 +134,62 @@
 	.forgotPassword:hover {
 		text-decoration: underline;
 	}
-
-	.login form img {
-		float: left;
-		margin-top: -75px;
-		width: 40px;
-	}
 /* End Floating Login Form */
 
-
-
-
 /* Floating Signup Form */
-.signup_form_container {
-		width: 100%;
-		height: 100%;
-		background: rgba(2, 70, 88, 0.8);
-		opacity: 0;
-		pointer-events: none;
-		transition: all 500ms ease;
+.signup_form {		
+	background: url(../images/background.jpg);
+	width: 620px;
+	height: 381px;
+	margin: auto;
+	position: absolute;
+	top: 0px;
+	bottom: 150px;
+	right: 0px; 
+	left: 0px;
+	box-shadow: 0 0 25px $brdcol,  0 0 25px $brdcol;
+	
+	form {
+	padding: 20px;
 	}
+	
+	input, select {
+		height: 31px;
+	}
+	
+	/* First Name & Last Name */
+	.name {
+		h3 { 
+			float: left;
+			margin-left: 15px;
+		}
 
-	.signup_form_container:target {
-		opacity: 1;
-		pointer-events: auto;
-	}
+		.first, .last {
+			float: left;
+			margin-left: 20px;
+		}
 
-	.signup_form_container > div {
-		transform: translate(0px, -50px);
-		transition:  all 500ms ease;
-	}
+		.last {
+			float: right;
+		}
 
-	.signup_form_container:target > div {
-		transform: translate(0px, 0px);
-	}
+		input {
+			width: 200px;
+		}
 
-	.signup_form {		
-		background: url(../images/background.jpg);
-		width: 620px;
-		height: 381px;
-		margin: auto;
-		position: absolute;
-		top: 0px; bottom: 150px;
-		right: 0px; left: 0px;
-		box-shadow: 0 0 25px $brdcol,  0 0 25px $brdcol;
+		h4 {
+			margin: 0;
+		}
 	}
+	/* End First Name & Last Name */
+	
+	/* Submit */
+	input[type=submit] {
+		top: 40px;
+		right: 40px;
+	}
+	/* End Submit */
+}
 
 .signup_form_heading {
 	widows: 100%;
@@ -211,163 +202,117 @@
 	padding-top: 20px;
 }
 
-.signup_form form {
-	padding: 20px;
-}
-
-form input {
-	height: 31px;
-	box-sizing: border-box;
-	border-radius: 3px;
-	border: 0px;
-	font-size: 15px;
-}
-
-/* First Name & Last Name */
- .name h3 {
-	float: left;
-	margin-left: 15px;
-}
-
- .name .first,  .name .last {
-	float: left;
-	margin-left: 20px;
-}
-
- .name .last {
-	float: right;
-}
-
- .name input,  .name input {
-	width: 230px;
-}
-
- .name h4 {
-	margin: 0;
-}
-/* End First Name & Last Name */
-
 /* Date of Birth */
- .dob {
+.dob {
 	float: left;
-}
- .dob h3 {
-	float: left;
-	margin-left: -50px;
-}
 
- .dob input{
-	float: right;
-	margin-top: 25px;
-	margin-left: 20px;
-	width: 140px;
+	h3 {
+		float: left;
+		margin-left: -50px;
+	}
+
+	input{
+		float: right;
+		margin-top: 25px;
+		margin-left: 20px;
+		width: 165px;
+	}
 }
 /* End Date of Birth */
 
 /* Goal */
  .goal {
 	float: right;
-}
 
- .goal h3 {
-	float: left;
-	margin-top: 25px;
-}
+	 h3 {
+		float: left;
+		margin-top: 25px;
+	}
 
- .goal input {
-	margin-top: 25px;
-	margin-left: 15px;
+	 select {
+		margin-top: 25px;
+		margin-left: 15px;
+		width: 185px;
+	}
+	 
+	 option {
+		font-family: ACIDLABEL;
+	 }
 }
 /* End Goal */
 
 /* Email */
 .email {
 	float: left;
-}
+	width: 60%;
 
-.email h3 {
-	float: left;
-	margin-top: 5px;
-	margin-left: 10px;
-}
+	h3 {
+		float: left;
+		margin-top: 5px;
+		margin-left: 10px;
+	}
 
-.email input {
-	margin-left: 20px;
-	margin-top: 10px;
+	input {
+		margin-left: 15px;
+		margin-top: 10px;
+		width: 60%;
+	}
 }
 /* End Email */ 
 
 /* Male */
 .male {
 	float: left;
-	margin-left: 65px;
-}
-
- .male h3 {
-	float: left;
 	margin-top: 4px;
-}
+	
+	h3 {
+		float: left;
+		margin-top: 4px;
+	}
 
- .male input {
-	margin-left: 8px;
-	width: 20px;
-	margin-top: 7px;
+	input {
+		margin-left: 8px;
+		width: 20px;
+		margin-top: 7px;
+	}
 }
 /* End Male */
 
 /* Female */
- .female {
+.female {
 	float: right;
-	margin-top: 5px;
-}
+	margin-top: 8px;
 
- .female h3 {
-	float: left;
-	margin-top: -.1px;
-}
+	 h3 {
+		float: left;
+		margin-top: -.1px;
+	}
 
- .female input {
-	margin-left: 8px;
-	width: 20px;
+	input {
+		margin-left: 8px;
+		width: 20px;
+	}
 }
 /* End Female */
 
 /* Qoute */
- .qoute {
+.qoute {
 	float: left;
 	margin-top: 10px;
-}
+	
+	 h3 {
+		float: left;
+		margin-top: -5px;
+	}
 
- .qoute h3 {
-	float: left;
-	margin-top: -5px;
-}
-
- .qoute input {
-	margin-left: 15px;
-	width: 270px;
-	height: 90px;
+	textarea {
+		margin-left: 15px;
+		width: 270px;
+		height: 90px;
+	 }
 }
 /* End Qoute */
 
-/* Submit */
- form input[type=submit] {
-	position: relative;
-	background: none;
-	border: none;
-	float: right;
-	font-family: ACIDLABEL;
-	font-size: 20px;
-	color: $txtcol;
-	font-weight: 400;
-	line-height: 30px;
-	top: 40px;
-	left: 60px;
-}
-
- form input[type=submit]:hover {
-	cursor: pointer;	
-}
 /* End Floating Signup Form */
 
 
@@ -381,25 +326,12 @@ form input {
 
 
 
-@media only screen and (max-width: 680px) {
+@media only screen and (max-width: 800px) {
 	
-	.content {
-			display: none;
+	#welcome {
+		#wrapper {
+			width: 100%;
 		}
-
-		.login img {
-		width: 80%;
-		margin: 0 auto;
-		}	
-
-		.signin {
-		padding-right: 510px;
-		margin-top: -640px;
-		}
-
-		.signup {
-			margin-top: -640px;
-			padding-right: 218px;
-		}
+	}
 
 }
