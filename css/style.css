@@ -47,6 +47,10 @@ p {
   line-height: 25px;
   letter-spacing: 2px; }
 
+th {
+  font-family: ACIDLABEL;
+  color: #bfc7d1; }
+
 td {
   font-family: BASE;
   color: #bfc7d1; }
@@ -285,8 +289,8 @@ header {
 /* Floating Signup Form */
 .signup_form {
   background: url(../images/background.jpg);
-  width: 620px;
-  height: 381px;
+  width: 640px;
+  height: 460px;
   margin: auto;
   position: absolute;
   top: 0px;
@@ -296,6 +300,10 @@ header {
   box-shadow: 0 0 25px rgba(105, 29, 6, 0.7), 0 0 25px rgba(105, 29, 6, 0.7);
   /* First Name & Last Name */
   /* End First Name & Last Name */
+  /* Password */
+  /* End Password */
+  /* Image */
+  /* End Image */
   /* Submit */
   /* End Submit */ }
   .signup_form form {
@@ -314,9 +322,32 @@ header {
     width: 200px; }
   .signup_form .name h4 {
     margin: 0; }
+  .signup_form .password {
+    clear: both; }
+    .signup_form .password h3 {
+      float: left;
+      margin-left: 40px; }
+    .signup_form .password .password_one, .signup_form .password .password_two {
+      float: left;
+      margin-left: 20px; }
+    .signup_form .password .password_two {
+      float: right; }
+    .signup_form .password input {
+      width: 200px; }
+    .signup_form .password h4 {
+      margin: 0; }
+  .signup_form .image {
+    float: right;
+    margin-bottom: 0px; }
+    .signup_form .image h3 {
+      float: left; }
+    .signup_form .image input {
+      float: right;
+      width: 95px;
+      margin-top: 25px;
+      background: none; }
   .signup_form input[type=submit] {
-    top: 40px;
-    right: 40px; }
+    right: 50px; }
 
 .signup_form_heading {
   widows: 100%;
@@ -397,7 +428,8 @@ header {
 /* Qoute */
 .qoute {
   float: left;
-  margin-top: 10px; }
+  margin-top: 10px;
+  clear: both; }
   .qoute h3 {
     float: left;
     margin-top: -5px; }
@@ -451,10 +483,6 @@ header {
 
 /* End Head */
 /* Schedule */
-.schedule {
-  display: flex;
-  margin: 0px; }
-
 #sunday, #monday, #tuesday, #wednesday, #thursday, #friday, #saturday {
   width: 15%;
   border: 1px solid #bfc7d1;
@@ -462,22 +490,22 @@ header {
   position: relative;
   display: inline-block; }
 
-.schedule img {
-  width: 80%;
-  margin: 10px; }
-
-.schedule h4 {
-  margin: 0;
-  background: rgba(105, 29, 6, 0.7);
-  font-size: 20px; }
-
-.schedule p {
-  margin: 0px;
-  padding: 3px;
-  text-align: center;
-  border-bottom: 1px solid #bfc7d1;
-  font-size: 10px;
-  color: #bfc7d1; }
+.schedule {
+  display: flex;
+  margin: 0px; }
+  .schedule img {
+    width: 80%;
+    margin: 10px; }
+  .schedule h4 {
+    margin: 0;
+    background: rgba(105, 29, 6, 0.7); }
+  .schedule p {
+    margin: 0px;
+    padding: 3px;
+    text-align: center;
+    border-bottom: 1px solid #bfc7d1;
+    font-size: 10px;
+    color: #bfc7d1; }
 
 .view_day:hover, .add_day:hover {
   box-shadow: 0 0 15px #bfc7d1;
@@ -492,9 +520,6 @@ header {
 .rest_day h1 {
   padding-top: 30%; }
 
-.rest_day a, .add_day a, .view_day a {
-  text-decoration: none; }
-
 /* Dropdown Menu */
 .dropdown {
   display: none;
@@ -503,22 +528,20 @@ header {
   background: black;
   width: 100%;
   border: 1px solid #bfc7d1; }
-
-.dropdown a {
-  display: block;
-  border-bottom: 1px solid #bfc7d1;
-  text-decoration: none;
-  font-family: ACIDLABEL;
-  color: #bfc7d1;
-  font-size: 15px;
-  font-weight: 400;
-  line-height: 30px; }
+  .dropdown a {
+    display: block;
+    border-bottom: 1px solid #bfc7d1;
+    text-decoration: none;
+    font-family: ACIDLABEL;
+    color: #bfc7d1;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 30px; }
+  .dropdown a:hover {
+    box-shadow: 0 0 10px #bfc7d1; }
 
 .dropdown:hover {
   display: block; }
-
-.dropdown a:hover {
-  box-shadow: 0 0 10px #bfc7d1; }
 
 .view_day:hover .dropdown {
   display: block; }
@@ -543,20 +566,55 @@ header {
     border: 1px solid #bfc7d1; }
 
 .leader {
-  margin-left: 10px; }
+  margin-left: 10px;
+  text-align: center; }
+  .leader h2 {
+    margin: 0;
+    padding: 5px;
+    border-bottom: 1px solid #bfc7d1; }
+  .leader table {
+    text-align: center;
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto; }
+  .leader th {
+    border: 0px;
+    padding-bottom: 15px; }
+  .leader td {
+    border-right: 1px solid #bfc7d1;
+    padding: 10px; }
+  .leader tr {
+    border-bottom: 1px solid #bfc7d1; }
+  .leader tr:first-child, .leader tr:last-child {
+    border-bottom: 0px; }
+  .leader table, .leader td:last-child, .leader th:last-child {
+    border-right: 0px; }
+
+.score {
+  padding: 10px 10px 10px 20px;
+  height: 150px;
+  overflow-x: hidden;
+  overflow-y: scroll; }
+
+.score::-webkit-scrollbar {
+  width: 10px; }
+
+.score::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.1); }
 
 /* End Info and Scoreboard */
 /* Social Media Area */
 .social {
   height: 566px;
-  display: flex; }
+  display: flex;
+  border: 1px solid #bfc7d1; }
   .social h2 {
     border-bottom: 1px solid #bfc7d1;
     text-align: center;
     padding: 5px 0;
     margin: 0; }
   .social aside {
-    border: 1px solid #bfc7d1;
     flex-basis: 30%; }
 
 /* Live Update */
@@ -594,7 +652,8 @@ header {
 .messenger {
   flex-basis: 40%;
   height: auto;
-  border: 1px solid #bfc7d1; }
+  border-left: 1px solid #bfc7d1;
+  border-right: 1px solid #bfc7d1; }
 
 .chatbox {
   padding: 0 20px;
@@ -603,7 +662,7 @@ header {
 .chatlogs {
   padding: 10px;
   width: 100%;
-  height: 460px;
+  height: 463px;
   overflow-x: hidden;
   overflow-y: scroll; }
 
@@ -743,14 +802,18 @@ header {
   .view .workout {
     overflow: scroll;
     height: 50%;
-    overflow: -moz-scrollbars-none; }
+    overflow: -moz-scrollbars-none;
+    margin-top: 5px; }
   .view .workout::-webkit-scrollbar {
-    display: none; }
+    width: 10px; }
+  .view .workout::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.1); }
   .view table {
     text-align: center;
     width: 90%;
     border-collapse: collapse;
-    margin-left: 30px; }
+    margin: 0 auto; }
   .view th {
     border: 0px;
     padding-bottom: 20px; }
@@ -767,12 +830,9 @@ header {
     font-family: ACIDLABEL;
     color: #bfc7d1;
     font-weight: 40; }
-  .view a {
-    font-weight: 40; }
   .view .next-page {
     width: 20%;
-    margin: auto;
-    padding-top: 5px; }
+    margin: auto; }
   .view .follow {
     float: right;
     margin-top: -28px;
@@ -782,17 +842,14 @@ header {
   display: flex; }
 
 .view-icon {
-  -moz-flex-basis: 300px;
-  -webkit-flex-basis: 300px;
-  flex-basis: 300px;
   border: 1px solid #bfc7d1;
-  padding: 15px 0px; }
+  padding: 10px 0px; }
 
 .view-icon img {
   width: 100%; }
 
 .view_content {
-  padding: 15px 5px 0 10px; }
+  padding: 15px; }
 
 .view_content h2, .view_content p {
   margin: 0px; }

@@ -139,8 +139,8 @@
 /* Floating Signup Form */
 .signup_form {		
 	background: url(../images/background.jpg);
-	width: 620px;
-	height: 381px;
+	width: 640px;
+	height: 460px;
 	margin: auto;
 	position: absolute;
 	top: 0px;
@@ -183,10 +183,55 @@
 	}
 	/* End First Name & Last Name */
 	
+	/* Password */
+	.password {
+		clear: both;
+		
+		h3 { 
+			float: left;
+			margin-left: 40px;
+		}
+
+		.password_one, .password_two {
+			float: left;
+			margin-left: 20px;
+		}
+
+		.password_two {
+			float: right;
+		}
+
+		input {
+			width: 200px;
+		}
+
+		h4 {
+			margin: 0;
+		}
+	}
+/* End Password */
+	
+	/* Image */
+	.image {
+		float: right;
+		margin-bottom: 0px;
+		
+		h3 {
+			float: left;
+		}
+		
+		input {
+			float: right;
+			width: 95px;
+			margin-top: 25px;
+			background: none;
+		}
+	}
+	/* End Image */
+	
 	/* Submit */
 	input[type=submit] {
-		top: 40px;
-		right: 40px;
+		right: 50px;
 	}
 	/* End Submit */
 }
@@ -299,6 +344,7 @@
 .qoute {
 	float: left;
 	margin-top: 10px;
+	clear: both;
 	
 	 h3 {
 		float: left;

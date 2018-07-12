@@ -10,5 +10,5 @@ if( $username != 'Nick' ) {
 }
 
 else {
-	echo header("Location: ../../profile.html");
+	echo header("Location: ../../profile.php");
 }

@@ -50,11 +50,6 @@
 /* End Head */
 
 /* Schedule */
- .schedule {
-	display: flex;
-	margin: 0px;
-}
-
 #sunday, #monday, #tuesday, #wednesday, #thursday, #friday, #saturday {
 	width: 15%;
 	border: $border;
@@ -63,25 +58,29 @@
 	display: inline-block;
 }
 
-.schedule img {
-	width: 80%;
-	margin: 10px;
-
-}
-
-.schedule h4 {
-	margin: 0;
-	background: $brdcol;
-	font-size: 20px;
-}
-
-.schedule p {
+ .schedule {
+	display: flex;
 	margin: 0px;
-	padding: 3px;
-	text-align: center;
-	border-bottom: $border;
-	font-size: 10px;
-	color: $txtcol;
+
+	img {
+		width: 80%;
+		margin: 10px;
+
+	}
+
+	h4 {
+		margin: 0;
+		background: $brdcol;
+	}
+
+	p {
+		margin: 0px;
+		padding: 3px;
+		text-align: center;
+		border-bottom: $border;
+		font-size: 10px;
+		color: $txtcol;
+	}
 }
 
 .view_day:hover, .add_day:hover {
@@ -102,10 +101,6 @@
 	padding-top: 30%;
 }
 
-.rest_day a, .add_day a, .view_day a {
-	text-decoration: none;
-}
-
 /* Dropdown Menu */
 .dropdown {
 	display: none;
@@ -114,25 +109,25 @@
 	background: black;
 	width: 100%;
 	border: $border;
-}
 
-.dropdown a {
-	display: block;
-	border-bottom: $border;
-	text-decoration: none;
-	font-family: ACIDLABEL;
-	color: $txtcol;
-	font-size: 15px;
-	font-weight: 400;
-	line-height: 30px;
+	a {
+		display: block;
+		border-bottom: $border;
+		text-decoration: none;
+		font-family: ACIDLABEL;
+		color: $txtcol;
+		font-size: 15px;
+		font-weight: 400;
+		line-height: 30px;
+	}
+	
+	a:hover {
+		box-shadow: 0 0 10px $txtcol;
+	}
 }
 
 .dropdown:hover {
 	display: block;
-}
-
-.dropdown a:hover {
-	box-shadow: 0 0 10px $txtcol;
 }
 
 .view_day:hover .dropdown {
@@ -169,6 +164,59 @@
 
 .leader {
 	margin-left: 10px;
+	text-align: center;
+	
+	h2 {
+		margin: 0;
+		padding: 5px;
+		border-bottom: $border;
+	}
+	
+	table {
+		text-align: center;
+		width: 100%;
+		border-collapse: collapse;
+		margin: 0 auto;
+	}
+	
+	th {
+		border: 0px;
+		padding-bottom: 15px;
+	}
+	
+	td {
+		border-right: $border;
+		padding: 10px;
+	}
+	
+	tr {
+		border-bottom: $border;
+	}
+	
+	tr:first-child, tr:last-child {
+		border-bottom: 0px;
+	}
+	
+	table, td:last-child, th:last-child {
+		border-right: 0px;
+	}
+}
+
+.score {
+	
+	padding: 10px 10px 10px 20px;
+	height: 150px;
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+	
+.score::-webkit-scrollbar {
+	width: 10px;
+}
+
+.score::-webkit-scrollbar-thumb {
+	border-radius: 5px;
+	background: rgba(255,255,255,.1);
 }
 
 
@@ -178,6 +226,7 @@
 .social {
 	height: 566px;
 	display: flex;
+	border: $border;
 	
 	h2 {
 		border-bottom: $border;
@@ -187,7 +236,6 @@
 	}
 
 	aside {
-		border: $border;
 		flex-basis: 30%;
 	}
 }
@@ -235,7 +283,8 @@
 .messenger {	
 	flex-basis: 40%;
 	height: auto;
-	border: $border;
+	border-left: $border;
+	border-right: $border;
 }
 
 .chatbox {
@@ -245,7 +294,7 @@
 .chatlogs {
 	padding: 10px;
 	width: 100%;
-	height: 460px;
+	height: 463px;
 	overflow-x: hidden;
 	overflow-y: scroll;
 }
@@ -432,17 +481,23 @@
 		overflow: scroll;
 		height: 50%;
 		overflow:-moz-scrollbars-none;
+		margin-top: 5px;
 	}
 	
 	.workout::-webkit-scrollbar {
-		display: none;
+		width: 10px;
+	}
+
+	.workout::-webkit-scrollbar-thumb {
+		border-radius: 5px;
+		background: rgba(255,255,255,.1);
 	}
 	
 	table {
 		text-align: center;
 		width: 90%;
 		border-collapse: collapse;
-		margin-left: 30px;
+		margin: 0 auto;
 	}
 	
 	th {
@@ -473,14 +528,9 @@
 		font-weight: 40;
 	}
 	
-	a {
-		font-weight: 40;
-	}
-	
 	.next-page {
 		width: 20%;
 		margin: auto;
-		padding-top: 5px;
 	}
 	
 	.follow {
@@ -495,11 +545,8 @@
 }
 
 .view-icon {
-	-moz-flex-basis: 300px;
-	-webkit-flex-basis: 300px;
-	flex-basis: 300px;
 	border: $border;
-	padding: 15px 0px;
+	padding: 10px 0px;
 }
 
 .view-icon img {
@@ -507,7 +554,7 @@
 }
 
 .view_content {
-	padding: 15px 5px 0 10px;
+	padding: 15px;
 }
 
 .view_content h2, .view_content p {
