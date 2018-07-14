@@ -25,11 +25,11 @@ include_once 'header.php';
 			<div class="container" id="modal">
 				<div class="login">
 					<div class="overlay"> <a href="#" class="close">X</a> <span class="login_heading">Sign In</span>
-						<form action="assets/php/login.php" method="post">
+						<form action="include/login.php" method="post">
 							<h3>Email:</h3>
-							<input type="text" name="name">
+							<input type="text" name="email">
 							<h3>Password:</h3>
-							<input type="password" name="password">
+							<input type="password" name="pwd">
 							<input type="submit" name="submit" value="Enter">
 							<img src="images/signin.png" alt="">
 						</form>
