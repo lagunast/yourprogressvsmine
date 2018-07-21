@@ -9,16 +9,15 @@ if ( isset( $_POST[ 'submit' ] ) ) {
 	$dob = mysqli_real_escape_string( $conn, $_POST[ 'dob' ] );
 	$goal = mysqli_real_escape_string( $conn, $_POST[ 'goal' ] );
 	$email = mysqli_real_escape_string( $conn, $_POST[ 'email' ] );
-	$male = mysqli_real_escape_string( $conn, $_POST[ 'male' ] );
-	$female = mysqli_real_escape_string( $conn, $_POST[ 'female' ] );
+	$gender = mysqli_real_escape_string( $conn, $_POST[ 'gender' ] );
 	$pwd_one = mysqli_real_escape_string( $conn, $_POST[ 'pwd_one' ] );
 	$pwd_two = mysqli_real_escape_string( $conn, $_POST[ 'pwd_two' ] );
 	$qoute = mysqli_real_escape_string( $conn, $_POST[ 'qoute' ] );
-	$image = mysqli_real_escape_string( $conn, $_POST[ 'image' ] );
+	$uid = mysqli_real_escape_string( $conn, $_POST[ 'uid' ] );
 
 	//Error Handler
 	//Check for empty field
-	if ( empty( $first ) || empty( $last ) || empty( $dob ) || empty( $goal ) || empty( $email ) || empty( $pwd_one ) || empty( $pwd_two ) || empty( $qoute ) ) {
+	if ( empty( $first ) || empty( $last ) || empty( $dob ) || empty( $goal ) || empty( $email ) || empty( $gender ) || empty( $pwd_one ) || empty( $pwd_two ) || empty( $qoute ) ) {
 		header( "Location: ../index.php?signup=empty" );
 		exit();
 	} else {
@@ -38,7 +37,7 @@ if ( isset( $_POST[ 'submit' ] ) ) {
 					exit();
 				} else {
 					$pwd = md5( $pwd_one );
-					$sql = "SELECT * FROM users WHERE user_email = '$email'";
+					$sql = "SELECT * FROM users WHERE user_uid = '$uid'";
 					$result = mysqli_query( $conn, $sql );
 					$resultCheck = mysqli_num_rows( $result );
 
@@ -49,7 +48,7 @@ if ( isset( $_POST[ 'submit' ] ) ) {
 						//Hashing the password
 						$hashedPwd = password_hash($pwd, PASSWORD_DEFAULT);
 						//Insert the user into the database
-						$sql = "INSERT INTO users (user_first, user_last, user_date, user_goal, user_email, user_pwd, user_qoute) VALUES ('$first', '$last', '$dob', '$goal', '$email', '$hashedPwd', '$qoute');";
+						$sql = "INSERT INTO users (user_first, user_last, user_date, user_goal, user_email, user_gender, user_pwd, user_qoute, user_uid) VALUES ('$first', '$last', '$dob', '$goal', '$email', '$gender', '$hashedPwd', '$qoute', '$uid');";
 						mysqli_query( $conn, $sql );
 						header( "Location: ../profile.php?signup=success" );
 						exit();

@@ -27,27 +27,37 @@
 
 /* Head */
 .profile_head {
-	width: 100%;
-	overflow: hidden;
+	height: 250px;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	align-content: flex-start;
 }
 
 .profile_img {
-	width: 15%;
+	width: 160px;
 	border: $border;
 }
 
 .qouted {
-	float: right;
-	width: 83%;
 	h1{
+		padding-top: 30px;
 		text-align: center;
 	}
 }
-
- #profile h3 {
-	margin: 0;
-}
 /* End Head */
+
+.nav {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	width: 100%;
+	
+	a {
+		margin: 0 0 5px 20px;
+		font-size: 20px;
+	}
+}
 
 /* Schedule */
 #sunday, #monday, #tuesday, #wednesday, #thursday, #friday, #saturday {
@@ -90,15 +100,15 @@
 
 .add_day {
 	height: 100%;
-	overflow: hidden;
 	 
 	h1 {
-		font-size: 100px;
+		padding-top: 45%;
+		font-size: 120px;
 	}
 }
 
 .rest_day h1 {
-	padding-top: 30%;
+	padding-top: 40%;
 }
 
 /* Dropdown Menu */
@@ -138,10 +148,6 @@
 /* End Schedule */
 
 /* Info and Scoreboard */
-.flex {
-	display: flex;
-}
-
 .info, .leader {
 	width: 50%;
 	height: 250px;
@@ -566,19 +572,13 @@
 .add {
 	background: url(../images/background.jpg);
 	width: 630px;
-	height: 410px;
+	height: 400px;
 	margin: auto;
 	position: absolute;
 	top: 0px; bottom: 150px;
 	right: 0px; left: 0px;
 	box-shadow: 0 0 25px $brdcol,  0 0 25px $brdcol;
 	z-index: 1;
-	
-	.next-page {
-		width: 20%;
-		margin: auto;
-		padding-top: 10px;
-	}
 		
 	.back a {
 		color: $hover;
@@ -604,35 +604,34 @@
 	
 	/* Submit */
 	input[type=submit] {
+		margin: 0 auto;
 		bottom: 80px;
-		right: 20px;
 	}
 	/* End Submit */
-}
 
-.add_heading {
-	display: flex;
-	width: 100%;
-	padding: 30px 0;
-	text-align: center;
-	
-	.desc-h {
-		padding: 0 40px;
-		border-right: $border;
-		text-shadow: 0 0 15px $txtcol;
+	.add_heading {
+		display: flex;
+		width: 100%;
+		padding: 30px 0;
+		text-align: center;
+
+		.desc-h {
+			padding: 0 40px;
+			border-right: $border;
+			text-shadow: 0 0 15px $txtcol;
+		}
+
+		.details {
+			padding-left: 50px;
+		}
+
 	}
-	
-	.details {
-		padding-left: 50px;
+
+	.add_top {
+		display: flex;
 	}
-	
+
 }
-
-.add_top {
-	display: flex;
-}
-
-
 
 .type {
 	display: flex;
@@ -661,6 +660,169 @@
 	}
 }
 /* End Floating Add */
+
+/* Floating Add_Two */
+.add_two {
+	background: url(../images/background.jpg);
+	width: 630px;
+	height: 410px;
+	margin: auto;
+	position: absolute;
+	top: 0px; bottom: 150px;
+	right: 0px; left: 0px;
+	box-shadow: 0 0 25px $brdcol,  0 0 25px $brdcol;
+	z-index: 1;
+	
+	.next-page {
+		width: 20%;
+		margin: auto;
+	}
+		
+	.back a {
+		color: $hover;
+	}
+	
+	form {
+		padding: 20px;
+	}
+	
+	input {
+		margin-left: 15px;
+	}
+	
+	.name {
+		display: flex;
+		padding-right: 20px;
+		
+		input {
+			width: 60%;
+		}
+	}
+	
+	.equipment {
+		display: flex;
+		padding-right: 20px;
+		
+		input {
+			width: 60%;
+		}
+	}
+	
+	/* Submit */
+	input[type=submit] {
+		bottom: 80px;
+		right: 20px;
+	}
+	/* End Submit */
+
+	.add_heading {
+		display: flex;
+		width: 100%;
+		padding: 30px 0;
+		text-align: center;
+
+		.desc-h {
+			padding: 0 40px;
+			border-right: $border;
+		}
+
+		.details {
+			padding-left: 50px;
+			text-shadow: 0 0 15px $txtcol;
+		}
+
+	}
+
+	.add_top {
+		display: flex;
+	}
+	
+	.workout {
+		overflow: scroll;
+		height: 35%;
+		margin: 0 auto;
+		overflow:-moz-scrollbars-none;
+	}
+	
+	.workout::-webkit-scrollbar {
+		width: 10px;
+	}
+
+	.workout::-webkit-scrollbar-thumb {
+		border-radius: 5px;
+		background: rgba(255,255,255,.1);
+	}
+	
+	table {
+		text-align: center;
+		width: 90%;
+		border-collapse: collapse;
+		margin: 0 auto;
+	}
+	
+	th {
+		border: 0px;
+		padding-bottom: 20px;
+	}
+	
+	td {
+		border-right: $border;
+		padding: 10px;
+	}
+	
+	tr {
+		border-bottom: $border;
+	}
+	
+	tr:first-child, tr:last-child {
+		border-bottom: 0px;
+	}
+	
+	table, td:last-child, th:last-child {
+		border-right: 0px;
+	}
+	
+	th, td:first-child {		
+		font-family: ACIDLABEL;
+		color: $txtcol;
+		font-weight: 40;
+	}
+	
+	.done {
+		display: flex;
+		justify-content: center;
+	}
+}
+
+.setup {
+	display: flex;
+	padding-top: 10px;
+	border-bottom: $border;
+	
+	input[type=submit] {
+		top: 1px;
+	}
+}
+
+.sets_two, .reps, {
+	display: flex;
+	padding: 20px 0 20px 5px;
+	
+	input {
+		width: 10%;
+	}
+}
+
+.time {
+	display: flex;
+	padding: 20px 0 20px 0;
+	
+	input {
+		width: 35%;
+	}
+}
+/* End Floating Add_Two */
+
 
 
 

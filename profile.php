@@ -103,7 +103,7 @@ include_once 'header.php';
 					<h3 class="desc-h">Workout Description</h3>
 					<h3 class="details">Workout Details</h3>
 				</div>
-				<form action="assets/php/signup.php" method="post">
+				<form action="include/add.php" method="post">
 					<div class="add_top">
 						<div class="name">
 							<h3>Name:</h3>
@@ -128,15 +128,121 @@ include_once 'header.php';
 						<h3>Description:</h3>
 						<textarea id="desc" name="desc"></textarea>
 					</div>
+					<input type="submit" name="submit">
 				</form>
-				<div class="next-page">
-					<h3 class="back"><a href="#">Back</a></h3>
-					<h3 class="next"><a href="#">Next</a></h3>
-				</div>
 			</div>
 		</div>
 	</div>
 	<!--End Floating Add Form-->
+
+	<!--Floating Add_Two Form-->
+	<div class="container" id="add_two">
+		<div class="add_two">
+			<div class="overlay"><a href="#" class="close">X</a>
+				<div class="add_heading">
+					<h3 class="desc-h">Workout Description</h3>
+					<h3 class="details">Workout Details</h3>
+				</div>
+				<form action="include/add_two.php" method="post">
+					<div class="add_top">
+						<div class="name">
+							<h3>Name:</h3>
+							<input type="text" name="name">
+						</div>
+						<div class="equipment">
+							<h3>Equipment:</h3>
+							<input type="text" name="equipment">
+						</div>
+					</div>
+					<div class="setup">
+						<div class="sets_two">
+							<h3>Sets:</h3>
+							<input type="text" name="sets">
+						</div>
+						<div class="reps">
+							<h3>Reps:</h3>
+							<input type="text" name="reps">
+						</div>
+						<div class="time">
+							<h3>Time:</h3>
+							<input type="text" name="time">
+						</div>
+						<input type="submit" name="submit">
+					</div>
+				</form>
+
+				<div class="workout">
+					<table>
+						<tr>
+							<th></th>
+							<th>Sets</th>
+							<th>Reps</th>
+							<th>Time</th>
+							<th></th>
+						</tr>
+						<tr>
+							<td>Name of Exercise</td>
+							<td>5</td>
+							<td>12</td>
+							<td></td>
+							<td><a href="#">Edit</a>
+							</td>
+						</tr>
+						<tr>
+							<td>Name Of Exercise</td>
+							<td>3</td>
+							<td>10</td>
+							<td></td>
+							<td><a href="#">Edit</a>
+							</td>
+						</tr>
+						<tr>
+							<td>Name of Exercise</td>
+							<td>8</td>
+							<td></td>
+							<td>1:00</td>
+							<td><a href="#">Edit</a>
+							</td>
+						</tr>
+						<tr>
+							<td>Name of Exercise</td>
+							<td>2</td>
+							<td></td>
+							<td></td>
+							<td><a href="#">Edit</a>
+							</td>
+						</tr>
+						<tr>
+							<td>Name of Exercise</td>
+							<td>2</td>
+							<td></td>
+							<td></td>
+							<td><a href="#">Edit</a>
+							</td>
+						</tr>
+						<tr>
+							<td>Name of Exercise</td>
+							<td>2</td>
+							<td></td>
+							<td></td>
+							<td><a href="#">Edit</a>
+							</td>
+						</tr>
+						<tr>
+							<td>Name of Exercise</td>
+							<td>2</td>
+							<td></td>
+							<td></td>
+							<td><a href="#">Edit</a>
+							</td>
+						</tr>
+					</table>
+				</div>
+				<div class="done"><a>Done</a></div>
+			</div>
+		</div>
+	</div>
+	<!--End Floating Add_Two Form-->
 
 	<div id="wrapper">
 		<main>
@@ -147,7 +253,8 @@ include_once 'header.php';
 			</div>
 
 			<!-- Schedule -->
-			<h3>Week One of Twelve</h3>
+			<div class="nav"><a>Notifications</a>
+			<a>Logout</a></div>
 			<div class="schedule">
 				<div id="sunday">
 					<div class="rest_day">
@@ -219,13 +326,14 @@ include_once 'header.php';
 					<div class="add_day"><a href="#add">
           <h1>+</h1>
           </a>
+					
 					</div>
 				</div>
 			</div>
-			<div class="next-page">
+			<!--<div class="next-page">
 				<h3 class="back"><a href="#">Back</a></h3>
 				<h3 class="next"><a href="#">Next</a></h3>
-			</div>
+			</div>-->
 			<!-- End Schedule -->
 
 			<div class="flex">

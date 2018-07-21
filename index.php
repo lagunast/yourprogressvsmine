@@ -26,10 +26,14 @@ include_once 'header.php';
 				<div class="login">
 					<div class="overlay"> <a href="#" class="close">X</a> <span class="login_heading">Sign In</span>
 						<form action="include/login.php" method="post">
-							<h3>Email:</h3>
-							<input type="text" name="email">
-							<h3>Password:</h3>
-							<input type="password" name="pwd">
+							<div class="uid">
+								<h3>Username:</h3>
+								<input type="text" name="uid">
+							</div>
+							<div class="password">
+								<h3>Password:</h3>
+								<input type="password" name="pwd">
+							</div>
 							<input type="submit" name="submit" value="Enter">
 							<img src="images/signin.png" alt="">
 						</form>
@@ -43,6 +47,10 @@ include_once 'header.php';
 				<div class="signup_form">
 					<div class="overlay"> <a href="#" class="close">X</a> <span class="signup_form_heading">Sign Up</span>
 						<form action="include/signup.php" method="post">
+							<div class="uid">
+								<h3>User Name:</h3>
+								<input type="text" name="uid">
+							</div>
 							<div class="name">
 								<h3>Name:</h3>
 								<div class="first">
@@ -54,7 +62,7 @@ include_once 'header.php';
 									<input type="text" name="last">
 								</div>
 							</div>
-							<div class="dob">
+							<div class="flex"><div class="dob">
 								<h3>DOB:</h3>
 								<input type="date" name="dob">
 							</div>
@@ -69,8 +77,8 @@ include_once 'header.php';
 									<option value="Flexibility">Flexibility</option>
 									<option value="Other">Other</option>
 								</select>
-							</div>
-							<div class="email">
+							</div></div>
+							<div class="flex"><div class="email">
 								<h3>Email:</h3>
 								<input type="email" name="email">
 							</div>
@@ -81,7 +89,7 @@ include_once 'header.php';
 							<div class="female">
 								<h3>Female</h3>
 								<input type="radio" name="gender" value="female">
-							</div>
+							</div></div>
 							<div class="password">
 								<h3>PW:</h3>
 								<div class="password_one">
@@ -96,10 +104,6 @@ include_once 'header.php';
 							<div class="qoute">
 								<h3>Qoute:</h3>
 								<textarea id="qoute" name="qoute"></textarea>
-							</div>
-							<div class="image">
-								<h3>image:</h3>
-								<input type="file" name="image">
 							</div>
 							<input type="submit" name="submit" value="Submit">
 						</form>

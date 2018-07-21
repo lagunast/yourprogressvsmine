@@ -11,20 +11,20 @@
 	}
 
 	 main {
-		height: 375px;
+		height: 365px;
 		display: grid;
 		grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 	}
 }
 
 .content {
-	margin-left: 20px;
+	margin: 20px 0 0 20px;
 }
 
 .logo  {
 	img {
 		width: 124%;
-		padding-top: 19px;
+		padding-top: 20px;
 		z-index: 1;
 	}
 }
@@ -32,13 +32,13 @@
 .signin {
 	float: right;
 	padding-right: 280px;
-	margin-top: -376px;
+	margin-top: -360px;
 	z-index: 2;
 }
 
 .signup {
 	float: right;
-	margin-top: -375px;
+	margin-top: -360px;
 	padding-right: 118px;
 	z-index: 2;
 }
@@ -56,40 +56,46 @@
 
 /* Floating Login Form */
 .login {
-	width: 410px;
+	width: 420px;
 	height: 221px;
 	margin: auto;
 	position: absolute;
 	top: 0px; bottom: 150px;
 	right: 0px; left: 0px;
 	background: url(../images/background.jpg);
-	box-shadow: 0 0 25px $brdcol,  0 0 25px $brdcol;
+	border: $border2;
 		
 	form {
 		padding: 0 20px;
+		margin-top: 15px;
 	}
-		
-	h3 {
-		font-size: 23px;
-		text-align: center;
-		margin-right: 148px;
+	
+	.uid, .password {
+		display: flex;
+		justify-content: space-between;
+	}
+	
+	.uid {
+		margin-left: 35px;
+	}
+	
+	.password {
+		padding-top: 10px;
+		margin-left: 40px;
 	}
 		
 	input[type=text], input[type=password] {
-		width: 190px;
+		width: 195px;
 		height: 31px;
-		box-sizing: border-box;
 		border-radius: 3px;
 		border: 0px;
-		float: right;
-		margin-top: -50px;
 	}
+	
 
 	input[type=submit] {
 		position: relative;
 		float: right;
-		margin-top: -5px;
-		left: 5px;
+		top: 10px;
 		font-family: ACIDLABEL;
 		color: $txtcol;
 		font-size: 20px;
@@ -104,7 +110,7 @@
 		
 	img {
 		float: left;
-		margin-top: -75px;
+		margin-top: -43px;
 		width: 40px;
 	}
 }
@@ -124,8 +130,8 @@
 		color: white;
 		display: inline-block;
 		float: left;
-		margin-left: 40px;
-		margin-top: 20px;
+		margin-top: 60px;
+		margin-left: 20px;
 		text-decoration: none;
 		font-size: 10pt;
 	}
@@ -139,40 +145,60 @@
 /* Floating Signup Form */
 .signup_form {		
 	background: url(../images/background.jpg);
-	width: 640px;
-	height: 460px;
+	width: 650px;
+	height: 490px;
 	margin: auto;
 	position: absolute;
 	top: 0px;
 	bottom: 150px;
 	right: 0px; 
 	left: 0px;
-	box-shadow: 0 0 25px $brdcol,  0 0 25px $brdcol;
+	border: $border2;
 	
 	form {
-	padding: 20px;
+		padding: 20px;
 	}
 	
 	input, select {
 		height: 31px;
 	}
 	
+	/* User Name */
+	.uid {
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: center;
+		margin: 10px 0;
+		
+		h3 {
+			margin-right: 10px;
+		}
+		
+		input {
+			width: 200px;
+		}
+	}
+	/* End User Name */
+	
+		/* Image */
+	/*.image {
+		display: flex;
+		input {
+			width: 95px;
+			background: none;
+		}
+	}*/
+	/* End Image */
+	
 	/* First Name & Last Name */
 	.name {
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: space-between;
+		
 		h3 { 
-			float: left;
-			margin-left: 15px;
+			margin-top: 25px;
 		}
-
-		.first, .last {
-			float: left;
-			margin-left: 20px;
-		}
-
-		.last {
-			float: right;
-		}
-
 		input {
 			width: 200px;
 		}
@@ -186,21 +212,15 @@
 	/* Password */
 	.password {
 		clear: both;
+		display: flex;
+		justify-content: space-between;
+		margin: 10px 0;
 		
-		h3 { 
-			float: left;
-			margin-left: 40px;
+		h3 {			
+			margin-top: 25px;
+			margin-right: 25px;
 		}
-
-		.password_one, .password_two {
-			float: left;
-			margin-left: 20px;
-		}
-
-		.password_two {
-			float: right;
-		}
-
+		
 		input {
 			width: 200px;
 		}
@@ -211,27 +231,10 @@
 	}
 /* End Password */
 	
-	/* Image */
-	.image {
-		float: right;
-		margin-bottom: 0px;
-		
-		h3 {
-			float: left;
-		}
-		
-		input {
-			float: right;
-			width: 95px;
-			margin-top: 25px;
-			background: none;
-		}
-	}
-	/* End Image */
-	
 	/* Submit */
 	input[type=submit] {
-		right: 50px;
+		right: 40px;
+		bottom: 65px
 	}
 	/* End Submit */
 }
@@ -249,17 +252,15 @@
 
 /* Date of Birth */
 .dob {
-	float: left;
+	display: flex;
+	justify-content: space-between;
+	margin: 20px 0;
 
 	h3 {
-		float: left;
-		margin-left: -50px;
+		margin-right: 65px;
 	}
 
 	input{
-		float: right;
-		margin-top: 25px;
-		margin-left: 20px;
 		width: 165px;
 	}
 }
@@ -267,16 +268,14 @@
 
 /* Goal */
  .goal {
-	float: right;
-
+	display: flex;
+	margin: 20px 0 20px 20px;
+	 
 	 h3 {
-		float: left;
-		margin-top: 25px;
+		margin-right: 10px;
 	}
 
 	 select {
-		margin-top: 25px;
-		margin-left: 15px;
 		width: 185px;
 	}
 	 
@@ -288,18 +287,10 @@
 
 /* Email */
 .email {
-	float: left;
-	width: 60%;
-
-	h3 {
-		float: left;
-		margin-top: 5px;
-		margin-left: 10px;
-	}
+	display: flex;
+	justify-content: space-between;
 
 	input {
-		margin-left: 15px;
-		margin-top: 10px;
 		width: 60%;
 	}
 }
@@ -307,34 +298,21 @@
 
 /* Male */
 .male {
-	float: left;
-	margin-top: 4px;
-	
-	h3 {
-		float: left;
-		margin-top: 4px;
-	}
+	display: flex;
+	justify-content: center;
 
 	input {
-		margin-left: 8px;
 		width: 20px;
-		margin-top: 7px;
 	}
 }
 /* End Male */
 
 /* Female */
 .female {
-	float: right;
-	margin-top: 8px;
-
-	 h3 {
-		float: left;
-		margin-top: -.1px;
-	}
+	display: flex;
+	justify-content: center;
 
 	input {
-		margin-left: 8px;
 		width: 20px;
 	}
 }
@@ -342,17 +320,15 @@
 
 /* Qoute */
 .qoute {
-	float: left;
-	margin-top: 10px;
-	clear: both;
+	display: flex;
+	justify-content: flex-start;
+	margin-top: 20px;
 	
-	 h3 {
-		float: left;
-		margin-top: -5px;
+	h3 {
+		margin-right: 35px;
 	}
-
+	
 	textarea {
-		margin-left: 15px;
 		width: 270px;
 		height: 90px;
 	 }

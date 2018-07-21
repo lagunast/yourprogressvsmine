@@ -11,6 +11,10 @@
   src: url(../assets/fonts/Base_02.ttf);
   font-family: BASE; }
 /* End Fonts */
+* {
+  margin: 0;
+  padding: 0; }
+
 /* Main Eliments */
 main {
   margin: 10px 0;
@@ -54,6 +58,10 @@ th {
 td {
   font-family: BASE;
   color: #bfc7d1; }
+
+.flex {
+  display: flex;
+  justify-content: space-between; }
 
 .container {
   width: 100%;
@@ -186,27 +194,27 @@ header {
     margin: 0 auto;
     width: 650px; }
   #welcome main {
-    height: 375px;
+    height: 365px;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); }
 
 .content {
-  margin-left: 20px; }
+  margin: 20px 0 0 20px; }
 
 .logo img {
   width: 124%;
-  padding-top: 19px;
+  padding-top: 20px;
   z-index: 1; }
 
 .signin {
   float: right;
   padding-right: 280px;
-  margin-top: -376px;
+  margin-top: -360px;
   z-index: 2; }
 
 .signup {
   float: right;
-  margin-top: -375px;
+  margin-top: -360px;
   padding-right: 118px;
   z-index: 2; }
 
@@ -221,7 +229,7 @@ header {
 
 /* Floating Login Form */
 .login {
-  width: 410px;
+  width: 420px;
   height: 221px;
   margin: auto;
   position: absolute;
@@ -230,26 +238,27 @@ header {
   right: 0px;
   left: 0px;
   background: url(../images/background.jpg);
-  box-shadow: 0 0 25px rgba(105, 29, 6, 0.7), 0 0 25px rgba(105, 29, 6, 0.7); }
+  border: 5px solid rgba(105, 29, 6, 0.7); }
   .login form {
-    padding: 0 20px; }
-  .login h3 {
-    font-size: 23px;
-    text-align: center;
-    margin-right: 148px; }
+    padding: 0 20px;
+    margin-top: 15px; }
+  .login .uid, .login .password {
+    display: flex;
+    justify-content: space-between; }
+  .login .uid {
+    margin-left: 35px; }
+  .login .password {
+    padding-top: 10px;
+    margin-left: 40px; }
   .login input[type=text], .login input[type=password] {
-    width: 190px;
+    width: 195px;
     height: 31px;
-    box-sizing: border-box;
     border-radius: 3px;
-    border: 0px;
-    float: right;
-    margin-top: -50px; }
+    border: 0px; }
   .login input[type=submit] {
     position: relative;
     float: right;
-    margin-top: -5px;
-    left: 5px;
+    top: 10px;
     font-family: ACIDLABEL;
     color: #bfc7d1;
     font-size: 20px;
@@ -260,7 +269,7 @@ header {
     color: #787878; }
   .login img {
     float: left;
-    margin-top: -75px;
+    margin-top: -43px;
     width: 40px; }
 
 .login_heading {
@@ -277,8 +286,8 @@ header {
   color: white;
   display: inline-block;
   float: left;
-  margin-left: 40px;
-  margin-top: 20px;
+  margin-top: 60px;
+  margin-left: 20px;
   text-decoration: none;
   font-size: 10pt; }
 
@@ -289,65 +298,70 @@ header {
 /* Floating Signup Form */
 .signup_form {
   background: url(../images/background.jpg);
-  width: 640px;
-  height: 460px;
+  width: 650px;
+  height: 490px;
   margin: auto;
   position: absolute;
   top: 0px;
   bottom: 150px;
   right: 0px;
   left: 0px;
-  box-shadow: 0 0 25px rgba(105, 29, 6, 0.7), 0 0 25px rgba(105, 29, 6, 0.7);
+  border: 5px solid rgba(105, 29, 6, 0.7);
+  /* User Name */
+  /* End User Name */
+  /* Image */
+  /*.image {
+  	display: flex;
+  	input {
+  		width: 95px;
+  		background: none;
+  	}
+  }*/
+  /* End Image */
   /* First Name & Last Name */
   /* End First Name & Last Name */
   /* Password */
   /* End Password */
-  /* Image */
-  /* End Image */
   /* Submit */
   /* End Submit */ }
   .signup_form form {
     padding: 20px; }
   .signup_form input, .signup_form select {
     height: 31px; }
-  .signup_form .name h3 {
-    float: left;
-    margin-left: 15px; }
-  .signup_form .name .first, .signup_form .name .last {
-    float: left;
-    margin-left: 20px; }
-  .signup_form .name .last {
-    float: right; }
-  .signup_form .name input {
-    width: 200px; }
-  .signup_form .name h4 {
-    margin: 0; }
+  .signup_form .uid {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    margin: 10px 0; }
+    .signup_form .uid h3 {
+      margin-right: 10px; }
+    .signup_form .uid input {
+      width: 200px; }
+  .signup_form .name {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between; }
+    .signup_form .name h3 {
+      margin-top: 25px; }
+    .signup_form .name input {
+      width: 200px; }
+    .signup_form .name h4 {
+      margin: 0; }
   .signup_form .password {
-    clear: both; }
+    clear: both;
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0; }
     .signup_form .password h3 {
-      float: left;
-      margin-left: 40px; }
-    .signup_form .password .password_one, .signup_form .password .password_two {
-      float: left;
-      margin-left: 20px; }
-    .signup_form .password .password_two {
-      float: right; }
+      margin-top: 25px;
+      margin-right: 25px; }
     .signup_form .password input {
       width: 200px; }
     .signup_form .password h4 {
       margin: 0; }
-  .signup_form .image {
-    float: right;
-    margin-bottom: 0px; }
-    .signup_form .image h3 {
-      float: left; }
-    .signup_form .image input {
-      float: right;
-      width: 95px;
-      margin-top: 25px;
-      background: none; }
   .signup_form input[type=submit] {
-    right: 50px; }
+    right: 40px;
+    bottom: 65px; }
 
 .signup_form_heading {
   widows: 100%;
@@ -361,26 +375,22 @@ header {
 
 /* Date of Birth */
 .dob {
-  float: left; }
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0; }
   .dob h3 {
-    float: left;
-    margin-left: -50px; }
+    margin-right: 65px; }
   .dob input {
-    float: right;
-    margin-top: 25px;
-    margin-left: 20px;
     width: 165px; }
 
 /* End Date of Birth */
 /* Goal */
 .goal {
-  float: right; }
+  display: flex;
+  margin: 20px 0 20px 20px; }
   .goal h3 {
-    float: left;
-    margin-top: 25px; }
+    margin-right: 10px; }
   .goal select {
-    margin-top: 25px;
-    margin-left: 15px;
     width: 185px; }
   .goal option {
     font-family: ACIDLABEL; }
@@ -388,53 +398,36 @@ header {
 /* End Goal */
 /* Email */
 .email {
-  float: left;
-  width: 60%; }
-  .email h3 {
-    float: left;
-    margin-top: 5px;
-    margin-left: 10px; }
+  display: flex;
+  justify-content: space-between; }
   .email input {
-    margin-left: 15px;
-    margin-top: 10px;
     width: 60%; }
 
 /* End Email */
 /* Male */
 .male {
-  float: left;
-  margin-top: 4px; }
-  .male h3 {
-    float: left;
-    margin-top: 4px; }
+  display: flex;
+  justify-content: center; }
   .male input {
-    margin-left: 8px;
-    width: 20px;
-    margin-top: 7px; }
+    width: 20px; }
 
 /* End Male */
 /* Female */
 .female {
-  float: right;
-  margin-top: 8px; }
-  .female h3 {
-    float: left;
-    margin-top: -.1px; }
+  display: flex;
+  justify-content: center; }
   .female input {
-    margin-left: 8px;
     width: 20px; }
 
 /* End Female */
 /* Qoute */
 .qoute {
-  float: left;
-  margin-top: 10px;
-  clear: both; }
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 20px; }
   .qoute h3 {
-    float: left;
-    margin-top: -5px; }
+    margin-right: 35px; }
   .qoute textarea {
-    margin-left: 15px;
     width: 270px;
     height: 90px; }
 
@@ -465,23 +458,30 @@ header {
 
 /* Head */
 .profile_head {
-  width: 100%;
-  overflow: hidden; }
+  height: 250px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-content: flex-start; }
 
 .profile_img {
-  width: 15%;
+  width: 160px;
   border: 1px solid #bfc7d1; }
 
-.qouted {
-  float: right;
-  width: 83%; }
-  .qouted h1 {
-    text-align: center; }
-
-#profile h3 {
-  margin: 0; }
+.qouted h1 {
+  padding-top: 30px;
+  text-align: center; }
 
 /* End Head */
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  width: 100%; }
+  .nav a {
+    margin: 0 0 5px 20px;
+    font-size: 20px; }
+
 /* Schedule */
 #sunday, #monday, #tuesday, #wednesday, #thursday, #friday, #saturday {
   width: 15%;
@@ -512,13 +512,13 @@ header {
   cursor: pointer; }
 
 .add_day {
-  height: 100%;
-  overflow: hidden; }
+  height: 100%; }
   .add_day h1 {
-    font-size: 100px; }
+    padding-top: 45%;
+    font-size: 120px; }
 
 .rest_day h1 {
-  padding-top: 30%; }
+  padding-top: 40%; }
 
 /* Dropdown Menu */
 .dropdown {
@@ -549,9 +549,6 @@ header {
 /* End Dropdown Menu */
 /* End Schedule */
 /* Info and Scoreboard */
-.flex {
-  display: flex; }
-
 .info, .leader {
   width: 50%;
   height: 250px;
@@ -859,7 +856,7 @@ header {
 .add {
   background: url(../images/background.jpg);
   width: 630px;
-  height: 410px;
+  height: 400px;
   margin: auto;
   position: absolute;
   top: 0px;
@@ -870,10 +867,6 @@ header {
   z-index: 1;
   /* Submit */
   /* End Submit */ }
-  .add .next-page {
-    width: 20%;
-    margin: auto;
-    padding-top: 10px; }
   .add .back a {
     color: #787878; }
   .add form {
@@ -887,23 +880,21 @@ header {
     .add .name input {
       width: 60%; }
   .add input[type=submit] {
-    bottom: 80px;
-    right: 20px; }
-
-.add_heading {
-  display: flex;
-  width: 100%;
-  padding: 30px 0;
-  text-align: center; }
-  .add_heading .desc-h {
-    padding: 0 40px;
-    border-right: 1px solid #bfc7d1;
-    text-shadow: 0 0 15px #bfc7d1; }
-  .add_heading .details {
-    padding-left: 50px; }
-
-.add_top {
-  display: flex; }
+    margin: 0 auto;
+    bottom: 80px; }
+  .add .add_heading {
+    display: flex;
+    width: 100%;
+    padding: 30px 0;
+    text-align: center; }
+    .add .add_heading .desc-h {
+      padding: 0 40px;
+      border-right: 1px solid #bfc7d1;
+      text-shadow: 0 0 15px #bfc7d1; }
+    .add .add_heading .details {
+      padding-left: 50px; }
+  .add .add_top {
+    display: flex; }
 
 .type {
   display: flex; }
@@ -924,6 +915,111 @@ header {
     margin-left: 15px; }
 
 /* End Floating Add */
+/* Floating Add_Two */
+.add_two {
+  background: url(../images/background.jpg);
+  width: 630px;
+  height: 410px;
+  margin: auto;
+  position: absolute;
+  top: 0px;
+  bottom: 150px;
+  right: 0px;
+  left: 0px;
+  box-shadow: 0 0 25px rgba(105, 29, 6, 0.7), 0 0 25px rgba(105, 29, 6, 0.7);
+  z-index: 1;
+  /* Submit */
+  /* End Submit */ }
+  .add_two .next-page {
+    width: 20%;
+    margin: auto; }
+  .add_two .back a {
+    color: #787878; }
+  .add_two form {
+    padding: 20px; }
+  .add_two input {
+    margin-left: 15px; }
+  .add_two .name {
+    display: flex;
+    padding-right: 20px; }
+    .add_two .name input {
+      width: 60%; }
+  .add_two .equipment {
+    display: flex;
+    padding-right: 20px; }
+    .add_two .equipment input {
+      width: 60%; }
+  .add_two input[type=submit] {
+    bottom: 80px;
+    right: 20px; }
+  .add_two .add_heading {
+    display: flex;
+    width: 100%;
+    padding: 30px 0;
+    text-align: center; }
+    .add_two .add_heading .desc-h {
+      padding: 0 40px;
+      border-right: 1px solid #bfc7d1; }
+    .add_two .add_heading .details {
+      padding-left: 50px;
+      text-shadow: 0 0 15px #bfc7d1; }
+  .add_two .add_top {
+    display: flex; }
+  .add_two .workout {
+    overflow: scroll;
+    height: 35%;
+    margin: 0 auto;
+    overflow: -moz-scrollbars-none; }
+  .add_two .workout::-webkit-scrollbar {
+    width: 10px; }
+  .add_two .workout::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.1); }
+  .add_two table {
+    text-align: center;
+    width: 90%;
+    border-collapse: collapse;
+    margin: 0 auto; }
+  .add_two th {
+    border: 0px;
+    padding-bottom: 20px; }
+  .add_two td {
+    border-right: 1px solid #bfc7d1;
+    padding: 10px; }
+  .add_two tr {
+    border-bottom: 1px solid #bfc7d1; }
+  .add_two tr:first-child, .add_two tr:last-child {
+    border-bottom: 0px; }
+  .add_two table, .add_two td:last-child, .add_two th:last-child {
+    border-right: 0px; }
+  .add_two th, .add_two td:first-child {
+    font-family: ACIDLABEL;
+    color: #bfc7d1;
+    font-weight: 40; }
+  .add_two .done {
+    display: flex;
+    justify-content: center; }
+
+.setup {
+  display: flex;
+  padding-top: 10px;
+  border-bottom: 1px solid #bfc7d1; }
+  .setup input[type=submit] {
+    top: 1px; }
+
+.sets_two, .reps {
+  display: flex;
+  padding: 20px 0 20px 5px; }
+  .sets_two input, .reps input {
+    width: 10%; }
+
+.time {
+  display: flex;
+  padding: 20px 0 20px 0; }
+  .time input {
+    width: 35%; }
+
+/* End Floating Add_Two */
 @media only screen and (max-width: 900px) {
   #profile #wrapper {
     width: 100%; }

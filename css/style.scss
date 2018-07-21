@@ -10,6 +10,7 @@ $hover: #787878;
 
 /* Borders */
 $border: 1px solid $txtcol;
+$border2: 5px solid $brdcol;
 /* End Borders */
 
 /* Fonts */
@@ -23,6 +24,11 @@ $border: 1px solid $txtcol;
 	font-family: BASE;
 }
 /* End Fonts */
+
+* {
+	margin: 0;
+	padding: 0;
+}
 
 /* Main Eliments */
 main {
@@ -75,6 +81,11 @@ th {
 td {
 	font-family: BASE;
 	color: $txtcol;
+}
+
+.flex {
+	display: flex;
+	justify-content: space-between;
 }
 
 .container {
