@@ -57,6 +57,20 @@
 		margin: 0 0 5px 20px;
 		font-size: 20px;
 	}
+	
+	button {
+		 font-family: ACIDLABEL;
+		color: $txtcol;
+		 background: none;
+		border: none;
+		margin: 0 0 5px 20px;
+		font-size: 20px;
+	 }
+	
+	button:hover {
+		color: $hover;
+		cursor: pointer;
+	}
 }
 
 /* Schedule */

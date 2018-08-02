@@ -1,5 +1,6 @@
 <?php
 include_once 'header.php';
+include_once 'include/dbh.php';
 ?>
 
 <body id="profile">
@@ -238,7 +239,8 @@ include_once 'header.php';
 						</tr>
 					</table>
 				</div>
-				<div class="done"><a>Done</a></div>
+				<div class="done"><a>Done</a>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -246,7 +248,44 @@ include_once 'header.php';
 
 	<div id="wrapper">
 		<main>
-			<div class="profile_head"><img class="profile_img" src="images/collorrun social.jpg" alt="">
+			<div class="profile_head">
+				<!--<img class="profile_img" src="images/collorrun social.jpg" alt="">-->
+				<?php
+				$sql = "SELECT * FROM users";
+				$result = mysqli_query( $conn, $sql );
+				if ( mysqli_num_rows( $result ) > 0 ) {
+					while ( $row = mysqli_fetch_assoc( $result ) ) {
+						$id = $row[ 'user_id' ];
+						$sqlImg = "SELECT * FROM profileimg WHERE user_id = '$id'";
+						$resultImg = mysqli_query( $conn, $sqlImg );
+						while ( $rowImg = mysqli_fetch_assoc( $resultImg ) ) {
+							echo "<div>";
+							if ( $rowImg[ 'STATUS' ] == 0 ) {
+								echo "<img class='profile_img' src= 'uploads/profile" . $id . ".jpg?" . mt_rand() . "'>";
+							} else {
+								echo "<img class='profile_img' src='uploads/profiledefault.png'>";
+							}
+							echo $row[ 'user_first' ];
+							echo "</div>";
+						}
+					}
+				} else {
+					echo "There are no users yet!";
+				}
+				if ( isset( $_SESSION[ 'u_id' ] ) ) {
+					if ( $_SESSION[ 'u_id' ] == [ 'user_id' ] ) {
+						echo "You are Logged in as user #1";
+					}
+					echo "<form action='include/upload.php' method='post' enctype='multipart/form-data'>
+					<input type='file' name='file'>
+					<button type='submit' name='submit'>Upload</button>
+				</form>";
+				} else {
+					echo "<img class='profile_img' src='uploads/profiledefault.png'>";
+					echo "<p>You are not logged in!</p>";
+				}
+				?>
+
 				<div class="qouted">
 					<h1>"Today I will do what others won't so tomorrow I can do what others can't."</h1>
 				</div>
@@ -254,7 +293,12 @@ include_once 'header.php';
 
 			<!-- Schedule -->
 			<div class="nav"><a>Notifications</a>
-			<a>Logout</a></div>
+
+				<form action="include/logout.php" method="post">
+					<button type="submit" name="submitLogout">Logout</button>
+				</form>
+
+			</div>
 			<div class="schedule">
 				<div id="sunday">
 					<div class="rest_day">
@@ -327,6 +371,7 @@ include_once 'header.php';
           <h1>+</h1>
           </a>
 					
+
 					</div>
 				</div>
 			</div>

@@ -49,9 +49,17 @@ if ( isset( $_POST[ 'submit' ] ) ) {
 						$hashedPwd = password_hash($pwd, PASSWORD_DEFAULT);
 						//Insert the user into the database
 						$sql = "INSERT INTO users (user_first, user_last, user_date, user_goal, user_email, user_gender, user_pwd, user_qoute, user_uid) VALUES ('$first', '$last', '$dob', '$goal', '$email', '$gender', '$hashedPwd', '$qoute', '$uid');";
-						mysqli_query( $conn, $sql );
-						header( "Location: ../profile.php?signup=success" );
-						exit();
+						$imgResult = mysqli_query( $conn, $sql );
+						
+						if (mysqli_num_rows($imgResult) > 0) {
+							while ($row = mysqli_fetch_assoc($imgResult)) {
+								$userid = $row['user_id'];
+								$sql = "INSERT INTO profileimg (user_id, STATUS) VALUES ('$userid', 1)";
+								mysqli_query($conn, $sql);
+								header( "Location: ../profile.php?signup=success" );
+								exit();
+							}
+						}
 					}
 				}
 			}

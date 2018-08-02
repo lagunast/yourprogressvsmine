@@ -191,7 +191,7 @@ header {
   -o-background-size: cover;
   background-size: cover; }
   #welcome #wrapper {
-    margin: 0 auto;
+    margin: 10px auto;
     width: 650px; }
   #welcome main {
     height: 365px;
@@ -300,7 +300,7 @@ header {
   background: url(../images/background.jpg);
   width: 650px;
   height: 490px;
-  margin: auto;
+  margin: 10px auto;
   position: absolute;
   top: 0px;
   bottom: 150px;
@@ -481,6 +481,16 @@ header {
   .nav a {
     margin: 0 0 5px 20px;
     font-size: 20px; }
+  .nav button {
+    font-family: ACIDLABEL;
+    color: #bfc7d1;
+    background: none;
+    border: none;
+    margin: 0 0 5px 20px;
+    font-size: 20px; }
+  .nav button:hover {
+    color: #787878;
+    cursor: pointer; }
 
 /* Schedule */
 #sunday, #monday, #tuesday, #wednesday, #thursday, #friday, #saturday {

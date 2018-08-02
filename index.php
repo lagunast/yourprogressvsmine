@@ -103,7 +103,7 @@ include_once 'header.php';
 							</div>
 							<div class="qoute">
 								<h3>Qoute:</h3>
-								<textarea id="qoute" name="qoute"></textarea>
+								<textarea id="qoute" name="qoute" placeholder="Type your favorite qoute to help motivate you."></textarea>
 							</div>
 							<input type="submit" name="submit" value="Submit">
 						</form>
