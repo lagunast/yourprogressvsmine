@@ -27,11 +27,11 @@
 
 /* Head */
 .profile_head {
+    width: 100%;
 	height: 250px;
 	display: flex;
 	flex-flow: row nowrap;
-	justify-content: center;
-	align-content: flex-start;
+	justify-content: flex-start;
 }
 
 .profile_img {
@@ -40,10 +40,10 @@
 }
 
 .qouted {
-	h1{
-		padding-top: 30px;
-		text-align: center;
-	}
+    width: 100%;
+    padding: 30px 20px;
+    text-align: center;
+	
 }
 /* End Head */
 
@@ -171,15 +171,36 @@
 
 .info {
 	margin-right: 10px;
+    display: flex;
+    flex-flow: column;
 	
 	img {
 		float: left;
 		width: 20%;
+        height: 120px;
+        margin-right: 20px;
+        padding: 10px;
 		border: $border;
 	}
 }
 
 .info_head {
+    .flex {
+        justify-content: flex-start;
+        margin-top: 10px;
+        
+        h3 {
+            padding-right: 20px;
+        }
+    }
+}
+
+.today {
+    padding: 10px;
+    
+    td {
+        padding: 20px 20px 0 0;
+    }
 }
 
 .leader {
@@ -225,7 +246,7 @@
 .score {
 	
 	padding: 10px 10px 10px 20px;
-	height: 150px;
+	height: 180px;
 	overflow-x: hidden;
 	overflow-y: scroll;
 }
@@ -494,13 +515,12 @@
 	position: absolute;
 	top: 0px; bottom: 150px;
 	right: 0px; left: 0px;
-	box-shadow: 0 0 25px $brdcol,  0 0 25px $brdcol;
+    border: $border2;
 	z-index: 1;
 	
 	.workout {
 		overflow: scroll;
 		height: 50%;
-		overflow:-moz-scrollbars-none;
 		margin-top: 5px;
 	}
 	
@@ -591,7 +611,7 @@
 	position: absolute;
 	top: 0px; bottom: 150px;
 	right: 0px; left: 0px;
-	box-shadow: 0 0 25px $brdcol,  0 0 25px $brdcol;
+	border: $border2;
 	z-index: 1;
 		
 	.back a {
@@ -684,7 +704,7 @@
 	position: absolute;
 	top: 0px; bottom: 150px;
 	right: 0px; left: 0px;
-	box-shadow: 0 0 25px $brdcol,  0 0 25px $brdcol;
+	border: $border2;
 	z-index: 1;
 	
 	.next-page {
@@ -755,7 +775,6 @@
 		overflow: scroll;
 		height: 35%;
 		margin: 0 auto;
-		overflow:-moz-scrollbars-none;
 	}
 	
 	.workout::-webkit-scrollbar {
@@ -840,7 +859,7 @@
 
 
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1010px) {
 	#profile {
 		
 		#wrapper {	
@@ -853,10 +872,34 @@
 	}
 }
 
-@media only screen and (max-width: 750px) {
-	.news {
-		aside {
-			flex-basis: 0%;
-		}
-	}
+@media only screen and (max-width: 900px) {
+    .view, .add, .add_two {
+        width: 80%;
+    }
+    
+    .flex {
+        flex-wrap: wrap;
+    }
+    
+    .social {
+        flex-wrap: wrap;
+        
+        aside, .messenger {
+            flex-basis: 100%;
+        }
+    }
+    
+    .info, .leader {
+	    width: 100%;
+	    height: 250px;
+	    border: $border;
+	    margin: 80px 0px;
+        
+        .flex {
+            flex-flow: row;
+        }
+}
+    .nutr, .sup {
+        width: 100%;
+    }
 }

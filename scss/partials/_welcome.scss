@@ -1,3 +1,5 @@
+/* CSS Document */
+
 #welcome { 
   background: url(../images/background2.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
@@ -12,13 +14,18 @@
 
 	 main {
 		height: 365px;
-		display: grid;
+		display: grid; 
+         // I need to fix this 
 		grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 	}
 }
 
 .content {
 	margin: 20px 0 0 20px;
+    
+    p {
+        padding-top: 20px;
+    }
 }
 
 .logo  {
@@ -57,7 +64,7 @@
 /* Floating Login Form */
 .login {
 	width: 420px;
-	height: 221px;
+	height: 214px;
 	margin: auto;
 	position: absolute;
 	top: 0px; bottom: 150px;
@@ -110,7 +117,8 @@
 		
 	img {
 		float: left;
-		margin-top: -43px;
+        position: absolute;
+		margin-top: -40px;
 		width: 40px;
 	}
 }
@@ -128,10 +136,9 @@
 
 	.forgotPassword{
 		color: white;
-		display: inline-block;
 		float: left;
-		margin-top: 60px;
-		margin-left: 20px;
+		margin-top: 65px;
+		margin-left: 80px;
 		text-decoration: none;
 		font-size: 10pt;
 	}
@@ -198,6 +205,7 @@
 		
 		h3 { 
 			margin-top: 25px;
+            margin-right: -10px;
 		}
 		input {
 			width: 200px;
@@ -355,5 +363,14 @@
 			width: 100%;
 		}
 	}
+    
+    .signin {
+	    margin-top: -370px;
+	    padding-right: 310px;
+    }
 
+    .signup {
+	    margin-top: -370px;
+	    padding-right: 118px;
+    }
 }

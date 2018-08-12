@@ -10,7 +10,7 @@ include_once 'header.php';
 		<main>
 			<div class="content">
 				<h2>Welcome to the home of Your Progress VS Mine </h2>
-				<p>We’re here to help motivate you in any type of physical transformation. From Bodybuilding to Crossfit, Sports Trainiing to General Health. The idea is to let everyone show off and post idea’s to help everyone else. Create your profile and share your idea’s.</p>
+				<p>We’re here to help motivate you in any type of physical transformation. From Bodybuilding to Crossfit, Sports Trainiing to General Health.</p>
 			</div>
 			<div class="logo"><img src="images/logo.png" alt="">
 				<div class="signin">

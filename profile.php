@@ -282,13 +282,11 @@ include_once 'include/dbh.php';
 				</form>";
 				} else {
 					echo "<img class='profile_img' src='uploads/profiledefault.png'>";
-					echo "<p>You are not logged in!</p>";
+					echo "<div class='qouted'>";
+					echo "<h1>'You Are not logged in!'</h1>";
+					echo "</div>";
 				}
 				?>
-
-				<div class="qouted">
-					<h1>"Today I will do what others won't so tomorrow I can do what others can't."</h1>
-				</div>
 			</div>
 
 			<!-- Schedule -->
@@ -313,7 +311,7 @@ include_once 'include/dbh.php';
 							<img src="images/icon/Plyometrics.png" alt="">
 							<div>
 								<h4>Plyo</h4>
-								<div class="dropdown"> <a href="#view">View</a> <a href="#">Follow</a> </div>
+								<div class="dropdown"> <a href="#view">View</a> <a href="#">Edit</a> </div>
 							</div>
 						</a>
 					</div>
@@ -325,7 +323,7 @@ include_once 'include/dbh.php';
 							<img src="images/icon/Other.png" alt="">
 							<div>
 								<h4>Strength</h4>
-								<div class="dropdown"> <a href="#view">View</a> <a href="#">Follow</a> </div>
+								<div class="dropdown"> <a href="#view">View</a> <a href="#">Edit</a> </div>
 							</div>
 						</a>
 					</div>
@@ -337,7 +335,7 @@ include_once 'include/dbh.php';
 							<img src="images/icon/Cardio.png" alt="">
 							<div>
 								<h4>Cardio</h4>
-								<div class="dropdown"> <a href="#view">View</a> <a href="#">Follow</a> </div>
+								<div class="dropdown"> <a href="#view">View</a> <a href="#">Edit</a> </div>
 							</div>
 						</a>
 					</div>
@@ -349,7 +347,7 @@ include_once 'include/dbh.php';
 							<img src="images/icon/Abs.png" alt="">
 							<div>
 								<h4>Abs</h4>
-								<div class="dropdown"> <a href="#view">View</a> <a href="#">Follow</a> </div>
+								<div class="dropdown"> <a href="#view">View</a> <a href="#">Edit</a> </div>
 							</div>
 						</a>
 					</div>
@@ -361,7 +359,7 @@ include_once 'include/dbh.php';
 							<img src="images/icon/Stretching.png" alt="">
 							<div>
 								<h4>Stretch</h4>
-								<div class="dropdown"> <a href="#view">View</a> <a href="#">Follow</a> </div>
+								<div class="dropdown"> <a href="#view">View</a> <a href="#">Edit</a> </div>
 							</div>
 						</a>
 					</div>
@@ -399,16 +397,16 @@ include_once 'include/dbh.php';
 							<h4>220</h4>
 						</div>
 					</div>
-					<h3>Today's Workout</h3>
+					<div class="today"><h3>Today's Workout</h3>
 					<table>
 						<tr>
 							<td>Name of Exercise</td>
-							<td>Type</td>
-							<td>Sets</td>
+							<td>Cardio</td>
+							<td>5</td>
 							<td><a href="#">View</a>
 							</td>
 						</tr>
-					</table>
+					</table></div>
 				</div>
 				<!-- End User Info -->
 
@@ -449,10 +447,10 @@ include_once 'include/dbh.php';
 								</td>
 							</tr>
 							<tr>
-								<td>4</td>
-								<td>Jason Roberts</td>
-								<td>5</td>
-								<td>223</td>
+								<td>27</td>
+								<td>Nick Simpson</td>
+								<td>2</td>
+								<td>15</td>
 								<td><a href="#">View</a>
 								</td>
 							</tr>

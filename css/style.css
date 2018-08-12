@@ -1,4 +1,6 @@
 /* CSS Document */
+/* Imports */
+/* CSS Document */
 /* Theme Color */
 /* End Theme Color */
 /* Borders */
@@ -6,231 +8,138 @@
 /* Fonts */
 @font-face {
   src: url(../assets/fonts/ACIDL___.otf);
-  font-family: ACIDLABEL; }
+  font-family: ACIDLABEL;
+}
 @font-face {
   src: url(../assets/fonts/Base_02.ttf);
-  font-family: BASE; }
+  font-family: BASE;
+}
+@font-face {
+  src: url(../assets/fonts/TyposterROCK-ONDemo.otf);
+  font-family: ROCK;
+}
+@font-face {
+  src: url(../assets/fonts/VeryDamaged.ttf);
+  font-family: DAMAGE;
+}
 /* End Fonts */
-* {
+/* CSS Reset */
+/* line 2, ../scss/partials/_reset.scss */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
 
-/* Main Eliments */
-main {
-  margin: 10px 0;
-  background-color: rgba(42, 42, 42, 0.9);
-  border: 10px solid rgba(105, 29, 6, 0.7);
-  border-radius: 3px; }
+/* HTML5 display-role reset for older browsers */
+/* line 12, ../scss/partials/_reset.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
 
-h1, h2, h3, h4 {
-  color: #bfc7d1;
-  font-weight: 400;
-  line-height: 30px; }
+/* line 16, ../scss/partials/_reset.scss */
+body {
+  line-height: 1;
+}
 
-h1 {
-  font-size: 30px;
-  font-family: ACIDLABEL; }
+/* line 20, ../scss/partials/_reset.scss */
+ol, ul {
+  list-style: none;
+}
 
-h2 {
-  font-size: 25px;
-  font-family: ACIDLABEL; }
+/* line 24, ../scss/partials/_reset.scss */
+blockquote, q {
+  quotes: none;
+}
 
-h3 {
-  font-size: 20px;
-  font-family: ACIDLABEL; }
+/* line 28, ../scss/partials/_reset.scss */
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none;
+}
 
-h4 {
-  font-size: 15px;
-  font-family: BASE;
-  letter-spacing: 2px; }
+/* line 33, ../scss/partials/_reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
 
-p {
-  font-family: BASE;
-  color: #bfc7d1;
-  font-size: 12px;
-  line-height: 25px;
-  letter-spacing: 2px; }
-
-th {
-  font-family: ACIDLABEL;
-  color: #bfc7d1; }
-
-td {
-  font-family: BASE;
-  color: #bfc7d1; }
-
-.flex {
-  display: flex;
-  justify-content: space-between; }
-
-.container {
-  width: 100%;
-  height: 100%;
-  background: rgba(2, 70, 88, 0.8);
-  opacity: 0;
-  pointer-events: none;
-  transition: all 500ms ease; }
-
-.container:target {
-  opacity: 1;
-  pointer-events: auto; }
-
-.container > div {
-  transform: translate(0px, -50px);
-  transition: all 500ms ease; }
-
-.container:target > div {
-  transform: translate(0px, 0px); }
-
-.close {
-  color: #bfc5d1;
-  position: absolute;
-  padding: 7px 9px 11px 9px;
-  text-decoration: none;
-  font-family: ACIDLABEL;
-  top: -1px;
-  right: 1px;
-  border-radius: 50%;
-  transition: background 500ms; }
-
-.close:hover {
-  cursor: pointer; }
-
-.back {
-  float: left; }
-  .back input {
-    color: #787878; }
-
-.next {
-  float: right; }
-
-.overlay {
-  background-color: rgba(42, 42, 42, 0.9);
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%; }
-
-input, select, textarea {
-  background: #bfc7d1;
-  padding: 0 10px;
-  font-family: BASE;
-  font-size: 15px;
-  color: BLACK;
-  border-radius: 3px;
-  border: 0px; }
-
-textarea {
-  padding-top: 10px; }
-
-input:focus, select:focus, textarea:focus {
-  background: #fff; }
-
-/* Submit */
-input[type=submit] {
-  position: relative;
-  background: none;
-  border: none;
-  float: right;
-  font-family: ACIDLABEL;
-  color: #bfc7d1;
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 30px; }
-
-input[type=submit]:hover {
-  cursor: pointer;
-  color: #787878; }
-
-/* End Submit */
-/* End Main Eliments */
-/* Header */
-header {
-  background-color: rgba(105, 29, 6, 0.7);
-  border-radius: 3px; }
-  header h1 {
-    float: right;
-    position: absolute;
-    margin-top: -105px;
-    margin-left: 90px;
-    font-size: 40px;
-    line-height: 72px; }
-  header img {
-    width: 98%;
-    margin: 7px 0 2px 7px;
-    border-radius: 5px; }
-
-.char1 {
-  float: left;
-  margin-top: -25px;
-  transform: rotate(8deg); }
-
-.char2 {
-  float: left;
-  margin-top: -30px;
-  transform: rotate(-18deg); }
-
-.char3 {
-  float: left;
-  margin-top: -40px; }
-
-.char4 {
-  float: left;
-  margin-top: -40px; }
-
-.char5 {
-  float: right;
-  margin-left: -68px; }
-
-/* End Header */
+/* End CSS Reset */
 /* Welcome Page */
+/* CSS Document */
+/* line 3, ../scss/partials/_welcome.scss */
 #welcome {
   background: url(../images/background2.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover; }
-  #welcome #wrapper {
-    margin: 10px auto;
-    width: 650px; }
-  #welcome main {
-    height: 365px;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); }
+  background-size: cover;
+}
+/* line 10, ../scss/partials/_welcome.scss */
+#welcome #wrapper {
+  margin: 10px auto;
+  width: 650px;
+}
+/* line 15, ../scss/partials/_welcome.scss */
+#welcome main {
+  height: 365px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
 
+/* line 23, ../scss/partials/_welcome.scss */
 .content {
-  margin: 20px 0 0 20px; }
+  margin: 20px 0 0 20px;
+}
+/* line 26, ../scss/partials/_welcome.scss */
+.content p {
+  padding-top: 20px;
+}
 
+/* line 32, ../scss/partials/_welcome.scss */
 .logo img {
   width: 124%;
   padding-top: 20px;
-  z-index: 1; }
+  z-index: 1;
+}
 
+/* line 39, ../scss/partials/_welcome.scss */
 .signin {
   float: right;
   padding-right: 280px;
   margin-top: -360px;
-  z-index: 2; }
+  z-index: 2;
+}
 
+/* line 46, ../scss/partials/_welcome.scss */
 .signup {
   float: right;
   margin-top: -360px;
   padding-right: 118px;
-  z-index: 2; }
+  z-index: 2;
+}
 
+/* line 53, ../scss/partials/_welcome.scss */
 .signin h2 a, .signup h2 a {
   position: absolute;
   text-decoration: none;
   color: #bfc7d1;
-  text-shadow: 1px 1px 2px black; }
+  text-shadow: 1px 1px 2px black;
+}
 
+/* line 60, ../scss/partials/_welcome.scss */
 .signin h2 a:hover, .signup h2 a:hover {
-  text-shadow: 0 0 25px red, 0 0 25px rgba(105, 29, 6, 0.7); }
+  text-shadow: 0 0 25px red, 0 0 25px rgba(105, 29, 6, 0.7);
+}
 
 /* Floating Login Form */
+/* line 65, ../scss/partials/_welcome.scss */
 .login {
   width: 420px;
-  height: 221px;
+  height: 214px;
   margin: auto;
   position: absolute;
   top: 0px;
@@ -238,40 +147,59 @@ header {
   right: 0px;
   left: 0px;
   background: url(../images/background.jpg);
-  border: 5px solid rgba(105, 29, 6, 0.7); }
-  .login form {
-    padding: 0 20px;
-    margin-top: 15px; }
-  .login .uid, .login .password {
-    display: flex;
-    justify-content: space-between; }
-  .login .uid {
-    margin-left: 35px; }
-  .login .password {
-    padding-top: 10px;
-    margin-left: 40px; }
-  .login input[type=text], .login input[type=password] {
-    width: 195px;
-    height: 31px;
-    border-radius: 3px;
-    border: 0px; }
-  .login input[type=submit] {
-    position: relative;
-    float: right;
-    top: 10px;
-    font-family: ACIDLABEL;
-    color: #bfc7d1;
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 30px; }
-  .login input[type=submit]:hover {
-    cursor: pointer;
-    color: #787878; }
-  .login img {
-    float: left;
-    margin-top: -43px;
-    width: 40px; }
+  border: 5px solid rgba(105, 29, 6, 0.7);
+}
+/* line 75, ../scss/partials/_welcome.scss */
+.login form {
+  padding: 0 20px;
+  margin-top: 15px;
+}
+/* line 80, ../scss/partials/_welcome.scss */
+.login .uid, .login .password {
+  display: flex;
+  justify-content: space-between;
+}
+/* line 85, ../scss/partials/_welcome.scss */
+.login .uid {
+  margin-left: 35px;
+}
+/* line 89, ../scss/partials/_welcome.scss */
+.login .password {
+  padding-top: 10px;
+  margin-left: 40px;
+}
+/* line 94, ../scss/partials/_welcome.scss */
+.login input[type=text], .login input[type=password] {
+  width: 195px;
+  height: 31px;
+  border-radius: 3px;
+  border: 0px;
+}
+/* line 102, ../scss/partials/_welcome.scss */
+.login input[type=submit] {
+  position: relative;
+  float: right;
+  top: 10px;
+  font-family: ACIDLABEL;
+  color: #bfc7d1;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+}
+/* line 113, ../scss/partials/_welcome.scss */
+.login input[type=submit]:hover {
+  cursor: pointer;
+  color: #787878;
+}
+/* line 118, ../scss/partials/_welcome.scss */
+.login img {
+  float: left;
+  position: absolute;
+  margin-top: -40px;
+  width: 40px;
+}
 
+/* line 126, ../scss/partials/_welcome.scss */
 .login_heading {
   widows: 100%;
   display: block;
@@ -280,22 +208,27 @@ header {
   font-family: ACIDLABEL;
   color: #bfc5d1;
   font-size: 25px;
-  padding-top: 20px; }
+  padding-top: 20px;
+}
 
+/* line 137, ../scss/partials/_welcome.scss */
 .forgotPassword {
   color: white;
-  display: inline-block;
   float: left;
-  margin-top: 60px;
-  margin-left: 20px;
+  margin-top: 65px;
+  margin-left: 80px;
   text-decoration: none;
-  font-size: 10pt; }
+  font-size: 10pt;
+}
 
+/* line 147, ../scss/partials/_welcome.scss */
 .forgotPassword:hover {
-  text-decoration: underline; }
+  text-decoration: underline;
+}
 
 /* End Floating Login Form */
 /* Floating Signup Form */
+/* line 153, ../scss/partials/_welcome.scss */
 .signup_form {
   background: url(../images/background.jpg);
   width: 650px;
@@ -323,46 +256,77 @@ header {
   /* Password */
   /* End Password */
   /* Submit */
-  /* End Submit */ }
-  .signup_form form {
-    padding: 20px; }
-  .signup_form input, .signup_form select {
-    height: 31px; }
-  .signup_form .uid {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    margin: 10px 0; }
-    .signup_form .uid h3 {
-      margin-right: 10px; }
-    .signup_form .uid input {
-      width: 200px; }
-  .signup_form .name {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between; }
-    .signup_form .name h3 {
-      margin-top: 25px; }
-    .signup_form .name input {
-      width: 200px; }
-    .signup_form .name h4 {
-      margin: 0; }
-  .signup_form .password {
-    clear: both;
-    display: flex;
-    justify-content: space-between;
-    margin: 10px 0; }
-    .signup_form .password h3 {
-      margin-top: 25px;
-      margin-right: 25px; }
-    .signup_form .password input {
-      width: 200px; }
-    .signup_form .password h4 {
-      margin: 0; }
-  .signup_form input[type=submit] {
-    right: 40px;
-    bottom: 65px; }
+  /* End Submit */
+}
+/* line 165, ../scss/partials/_welcome.scss */
+.signup_form form {
+  padding: 20px;
+}
+/* line 169, ../scss/partials/_welcome.scss */
+.signup_form input, .signup_form select {
+  height: 31px;
+}
+/* line 174, ../scss/partials/_welcome.scss */
+.signup_form .uid {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  margin: 10px 0;
+}
+/* line 180, ../scss/partials/_welcome.scss */
+.signup_form .uid h3 {
+  margin-right: 10px;
+}
+/* line 184, ../scss/partials/_welcome.scss */
+.signup_form .uid input {
+  width: 200px;
+}
+/* line 201, ../scss/partials/_welcome.scss */
+.signup_form .name {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+/* line 206, ../scss/partials/_welcome.scss */
+.signup_form .name h3 {
+  margin-top: 25px;
+  margin-right: -10px;
+}
+/* line 210, ../scss/partials/_welcome.scss */
+.signup_form .name input {
+  width: 200px;
+}
+/* line 214, ../scss/partials/_welcome.scss */
+.signup_form .name h4 {
+  margin: 0;
+}
+/* line 221, ../scss/partials/_welcome.scss */
+.signup_form .password {
+  clear: both;
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+/* line 227, ../scss/partials/_welcome.scss */
+.signup_form .password h3 {
+  margin-top: 25px;
+  margin-right: 25px;
+}
+/* line 232, ../scss/partials/_welcome.scss */
+.signup_form .password input {
+  width: 200px;
+}
+/* line 236, ../scss/partials/_welcome.scss */
+.signup_form .password h4 {
+  margin: 0;
+}
+/* line 243, ../scss/partials/_welcome.scss */
+.signup_form input[type=submit] {
+  right: 40px;
+  bottom: 65px;
+}
 
+/* line 250, ../scss/partials/_welcome.scss */
 .signup_form_heading {
   widows: 100%;
   display: block;
@@ -371,429 +335,657 @@ header {
   font-family: ACIDLABEL;
   color: #bfc5d1;
   font-size: 25px;
-  padding-top: 20px; }
+  padding-top: 20px;
+}
 
 /* Date of Birth */
+/* line 262, ../scss/partials/_welcome.scss */
 .dob {
   display: flex;
   justify-content: space-between;
-  margin: 20px 0; }
-  .dob h3 {
-    margin-right: 65px; }
-  .dob input {
-    width: 165px; }
+  margin: 20px 0;
+}
+/* line 267, ../scss/partials/_welcome.scss */
+.dob h3 {
+  margin-right: 65px;
+}
+/* line 271, ../scss/partials/_welcome.scss */
+.dob input {
+  width: 165px;
+}
 
 /* End Date of Birth */
 /* Goal */
+/* line 278, ../scss/partials/_welcome.scss */
 .goal {
   display: flex;
-  margin: 20px 0 20px 20px; }
-  .goal h3 {
-    margin-right: 10px; }
-  .goal select {
-    width: 185px; }
-  .goal option {
-    font-family: ACIDLABEL; }
+  margin: 20px 0 20px 20px;
+}
+/* line 282, ../scss/partials/_welcome.scss */
+.goal h3 {
+  margin-right: 10px;
+}
+/* line 286, ../scss/partials/_welcome.scss */
+.goal select {
+  width: 185px;
+}
+/* line 290, ../scss/partials/_welcome.scss */
+.goal option {
+  font-family: ACIDLABEL;
+}
 
 /* End Goal */
 /* Email */
+/* line 297, ../scss/partials/_welcome.scss */
 .email {
   display: flex;
-  justify-content: space-between; }
-  .email input {
-    width: 60%; }
+  justify-content: space-between;
+}
+/* line 301, ../scss/partials/_welcome.scss */
+.email input {
+  width: 60%;
+}
 
 /* End Email */
 /* Male */
+/* line 308, ../scss/partials/_welcome.scss */
 .male {
   display: flex;
-  justify-content: center; }
-  .male input {
-    width: 20px; }
+  justify-content: center;
+}
+/* line 312, ../scss/partials/_welcome.scss */
+.male input {
+  width: 20px;
+}
 
 /* End Male */
 /* Female */
+/* line 319, ../scss/partials/_welcome.scss */
 .female {
   display: flex;
-  justify-content: center; }
-  .female input {
-    width: 20px; }
+  justify-content: center;
+}
+/* line 323, ../scss/partials/_welcome.scss */
+.female input {
+  width: 20px;
+}
 
 /* End Female */
 /* Qoute */
+/* line 330, ../scss/partials/_welcome.scss */
 .qoute {
   display: flex;
   justify-content: flex-start;
-  margin-top: 20px; }
-  .qoute h3 {
-    margin-right: 35px; }
-  .qoute textarea {
-    width: 270px;
-    height: 90px; }
+  margin-top: 20px;
+}
+/* line 335, ../scss/partials/_welcome.scss */
+.qoute h3 {
+  margin-right: 35px;
+}
+/* line 339, ../scss/partials/_welcome.scss */
+.qoute textarea {
+  width: 270px;
+  height: 90px;
+}
 
 /* End Qoute */
 /* End Floating Signup Form */
 @media only screen and (max-width: 800px) {
+  /* line 362, ../scss/partials/_welcome.scss */
   #welcome #wrapper {
-    width: 100%; } }
+    width: 100%;
+  }
+
+  /* line 367, ../scss/partials/_welcome.scss */
+  .signin {
+    margin-top: -370px;
+    padding-right: 310px;
+  }
+
+  /* line 372, ../scss/partials/_welcome.scss */
+  .signup {
+    margin-top: -370px;
+    padding-right: 118px;
+  }
+}
 /* End Welcome Page */
 /* Profile Page */
+/* line 1, ../scss/partials/_profile.scss */
 #profile {
   background: url(../images/background.jpg);
   background-attachment: fixed;
-  margin: 0; }
-  #profile #wrapper {
-    width: 80%;
-    height: auto;
-    margin: 0 auto; }
-  #profile main {
-    padding: 10px; }
-  #profile a {
-    font-family: ACIDLABEL;
-    color: #bfc7d1;
-    text-decoration: none; }
-  #profile a:hover {
-    color: #787878;
-    cursor: pointer; }
+  margin: 0;
+}
+/* line 6, ../scss/partials/_profile.scss */
+#profile #wrapper {
+  width: 80%;
+  height: auto;
+  margin: 0 auto;
+}
+/* line 12, ../scss/partials/_profile.scss */
+#profile main {
+  padding: 10px;
+}
+/* line 16, ../scss/partials/_profile.scss */
+#profile a {
+  font-family: ACIDLABEL;
+  color: #bfc7d1;
+  text-decoration: none;
+}
+/* line 22, ../scss/partials/_profile.scss */
+#profile a:hover {
+  color: #787878;
+  cursor: pointer;
+}
 
 /* Head */
+/* line 29, ../scss/partials/_profile.scss */
 .profile_head {
+  width: 100%;
   height: 250px;
   display: flex;
   flex-flow: row nowrap;
-  justify-content: center;
-  align-content: flex-start; }
+  justify-content: flex-start;
+}
 
+/* line 37, ../scss/partials/_profile.scss */
 .profile_img {
   width: 160px;
-  border: 1px solid #bfc7d1; }
+  border: 1px solid #bfc7d1;
+}
 
-.qouted h1 {
-  padding-top: 30px;
-  text-align: center; }
+/* line 42, ../scss/partials/_profile.scss */
+.qouted {
+  width: 100%;
+  padding: 30px 20px;
+  text-align: center;
+}
 
 /* End Head */
+/* line 50, ../scss/partials/_profile.scss */
 .nav {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  width: 100%; }
-  .nav a {
-    margin: 0 0 5px 20px;
-    font-size: 20px; }
-  .nav button {
-    font-family: ACIDLABEL;
-    color: #bfc7d1;
-    background: none;
-    border: none;
-    margin: 0 0 5px 20px;
-    font-size: 20px; }
-  .nav button:hover {
-    color: #787878;
-    cursor: pointer; }
+  width: 100%;
+}
+/* line 56, ../scss/partials/_profile.scss */
+.nav a {
+  margin: 0 0 5px 20px;
+  font-size: 20px;
+}
+/* line 61, ../scss/partials/_profile.scss */
+.nav button {
+  font-family: ACIDLABEL;
+  color: #bfc7d1;
+  background: none;
+  border: none;
+  margin: 0 0 5px 20px;
+  font-size: 20px;
+}
+/* line 70, ../scss/partials/_profile.scss */
+.nav button:hover {
+  color: #787878;
+  cursor: pointer;
+}
 
 /* Schedule */
+/* line 77, ../scss/partials/_profile.scss */
 #sunday, #monday, #tuesday, #wednesday, #thursday, #friday, #saturday {
   width: 15%;
   border: 1px solid #bfc7d1;
   text-align: center;
   position: relative;
-  display: inline-block; }
+  display: inline-block;
+}
 
+/* line 85, ../scss/partials/_profile.scss */
 .schedule {
   display: flex;
-  margin: 0px; }
-  .schedule img {
-    width: 80%;
-    margin: 10px; }
-  .schedule h4 {
-    margin: 0;
-    background: rgba(105, 29, 6, 0.7); }
-  .schedule p {
-    margin: 0px;
-    padding: 3px;
-    text-align: center;
-    border-bottom: 1px solid #bfc7d1;
-    font-size: 10px;
-    color: #bfc7d1; }
+  margin: 0px;
+}
+/* line 89, ../scss/partials/_profile.scss */
+.schedule img {
+  width: 80%;
+  margin: 10px;
+}
+/* line 95, ../scss/partials/_profile.scss */
+.schedule h4 {
+  margin: 0;
+  background: rgba(105, 29, 6, 0.7);
+}
+/* line 100, ../scss/partials/_profile.scss */
+.schedule p {
+  margin: 0px;
+  padding: 3px;
+  text-align: center;
+  border-bottom: 1px solid #bfc7d1;
+  font-size: 10px;
+  color: #bfc7d1;
+}
 
+/* line 110, ../scss/partials/_profile.scss */
 .view_day:hover, .add_day:hover {
   box-shadow: 0 0 15px #bfc7d1;
-  cursor: pointer; }
+  cursor: pointer;
+}
 
+/* line 115, ../scss/partials/_profile.scss */
 .add_day {
-  height: 100%; }
-  .add_day h1 {
-    padding-top: 45%;
-    font-size: 120px; }
+  height: 100%;
+}
+/* line 118, ../scss/partials/_profile.scss */
+.add_day h1 {
+  padding-top: 45%;
+  font-size: 120px;
+}
 
+/* line 124, ../scss/partials/_profile.scss */
 .rest_day h1 {
-  padding-top: 40%; }
+  padding-top: 40%;
+}
 
 /* Dropdown Menu */
+/* line 129, ../scss/partials/_profile.scss */
 .dropdown {
   display: none;
   position: absolute;
   z-index: 1;
   background: black;
   width: 100%;
-  border: 1px solid #bfc7d1; }
-  .dropdown a {
-    display: block;
-    border-bottom: 1px solid #bfc7d1;
-    text-decoration: none;
-    font-family: ACIDLABEL;
-    color: #bfc7d1;
-    font-size: 15px;
-    font-weight: 400;
-    line-height: 30px; }
-  .dropdown a:hover {
-    box-shadow: 0 0 10px #bfc7d1; }
+  border: 1px solid #bfc7d1;
+}
+/* line 137, ../scss/partials/_profile.scss */
+.dropdown a {
+  display: block;
+  border-bottom: 1px solid #bfc7d1;
+  text-decoration: none;
+  font-family: ACIDLABEL;
+  color: #bfc7d1;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 30px;
+}
+/* line 148, ../scss/partials/_profile.scss */
+.dropdown a:hover {
+  box-shadow: 0 0 10px #bfc7d1;
+}
 
+/* line 153, ../scss/partials/_profile.scss */
 .dropdown:hover {
-  display: block; }
+  display: block;
+}
 
+/* line 157, ../scss/partials/_profile.scss */
 .view_day:hover .dropdown {
-  display: block; }
+  display: block;
+}
 
 /* End Dropdown Menu */
 /* End Schedule */
 /* Info and Scoreboard */
+/* line 165, ../scss/partials/_profile.scss */
 .info, .leader {
   width: 50%;
   height: 250px;
   border: 1px solid #bfc7d1;
-  margin: 80px 0px; }
+  margin: 80px 0px;
+}
 
+/* line 172, ../scss/partials/_profile.scss */
 .info {
-  margin-right: 10px; }
-  .info img {
-    float: left;
-    width: 20%;
-    border: 1px solid #bfc7d1; }
+  margin-right: 10px;
+  display: flex;
+  flex-flow: column;
+}
+/* line 177, ../scss/partials/_profile.scss */
+.info img {
+  float: left;
+  width: 20%;
+  height: 120px;
+  margin-right: 20px;
+  padding: 10px;
+  border: 1px solid #bfc7d1;
+}
 
+/* line 188, ../scss/partials/_profile.scss */
+.info_head .flex {
+  justify-content: flex-start;
+  margin-top: 10px;
+}
+/* line 192, ../scss/partials/_profile.scss */
+.info_head .flex h3 {
+  padding-right: 20px;
+}
+
+/* line 198, ../scss/partials/_profile.scss */
+.today {
+  padding: 10px;
+}
+/* line 201, ../scss/partials/_profile.scss */
+.today td {
+  padding: 20px 20px 0 0;
+}
+
+/* line 206, ../scss/partials/_profile.scss */
 .leader {
   margin-left: 10px;
-  text-align: center; }
-  .leader h2 {
-    margin: 0;
-    padding: 5px;
-    border-bottom: 1px solid #bfc7d1; }
-  .leader table {
-    text-align: center;
-    width: 100%;
-    border-collapse: collapse;
-    margin: 0 auto; }
-  .leader th {
-    border: 0px;
-    padding-bottom: 15px; }
-  .leader td {
-    border-right: 1px solid #bfc7d1;
-    padding: 10px; }
-  .leader tr {
-    border-bottom: 1px solid #bfc7d1; }
-  .leader tr:first-child, .leader tr:last-child {
-    border-bottom: 0px; }
-  .leader table, .leader td:last-child, .leader th:last-child {
-    border-right: 0px; }
+  text-align: center;
+}
+/* line 210, ../scss/partials/_profile.scss */
+.leader h2 {
+  margin: 0;
+  padding: 5px;
+  border-bottom: 1px solid #bfc7d1;
+}
+/* line 216, ../scss/partials/_profile.scss */
+.leader table {
+  text-align: center;
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+/* line 223, ../scss/partials/_profile.scss */
+.leader th {
+  border: 0px;
+  padding-bottom: 15px;
+}
+/* line 228, ../scss/partials/_profile.scss */
+.leader td {
+  border-right: 1px solid #bfc7d1;
+  padding: 10px;
+}
+/* line 233, ../scss/partials/_profile.scss */
+.leader tr {
+  border-bottom: 1px solid #bfc7d1;
+}
+/* line 237, ../scss/partials/_profile.scss */
+.leader tr:first-child, .leader tr:last-child {
+  border-bottom: 0px;
+}
+/* line 241, ../scss/partials/_profile.scss */
+.leader table, .leader td:last-child, .leader th:last-child {
+  border-right: 0px;
+}
 
+/* line 246, ../scss/partials/_profile.scss */
 .score {
   padding: 10px 10px 10px 20px;
-  height: 150px;
+  height: 180px;
   overflow-x: hidden;
-  overflow-y: scroll; }
+  overflow-y: scroll;
+}
 
+/* line 254, ../scss/partials/_profile.scss */
 .score::-webkit-scrollbar {
-  width: 10px; }
+  width: 10px;
+}
 
+/* line 258, ../scss/partials/_profile.scss */
 .score::-webkit-scrollbar-thumb {
   border-radius: 5px;
-  background: rgba(255, 255, 255, 0.1); }
+  background: rgba(255, 255, 255, 0.1);
+}
 
 /* End Info and Scoreboard */
 /* Social Media Area */
+/* line 267, ../scss/partials/_profile.scss */
 .social {
   height: 566px;
   display: flex;
-  border: 1px solid #bfc7d1; }
-  .social h2 {
-    border-bottom: 1px solid #bfc7d1;
-    text-align: center;
-    padding: 5px 0;
-    margin: 0; }
-  .social aside {
-    flex-basis: 30%; }
+  border: 1px solid #bfc7d1;
+}
+/* line 272, ../scss/partials/_profile.scss */
+.social h2 {
+  border-bottom: 1px solid #bfc7d1;
+  text-align: center;
+  padding: 5px 0;
+  margin: 0;
+}
+/* line 279, ../scss/partials/_profile.scss */
+.social aside {
+  flex-basis: 30%;
+}
 
 /* Live Update */
+/* line 285, ../scss/partials/_profile.scss */
 .update {
   padding: 10px 10px 10px 20px;
   height: 500px;
   overflow-x: hidden;
-  overflow-y: scroll; }
+  overflow-y: scroll;
+}
 
+/* line 292, ../scss/partials/_profile.scss */
 .update::-webkit-scrollbar {
-  width: 10px; }
+  width: 10px;
+}
 
+/* line 296, ../scss/partials/_profile.scss */
 .update::-webkit-scrollbar-thumb {
   border-radius: 5px;
-  background: rgba(255, 255, 255, 0.1); }
+  background: rgba(255, 255, 255, 0.1);
+}
 
+/* line 301, ../scss/partials/_profile.scss */
 .user_update {
   display: flex;
   flext-flow: row wrap;
   align-items: flex-start;
-  margin-bottom: 20px; }
-  .user_update .name {
-    width: 100%;
-    padding: 5px;
-    margin: 5px 0px 0px 10px;
-    font-family: ACIDLABEL;
-    color: #bfc7d1;
-    font-size: 14px; }
-    .user_update .name span {
-      text-decoration: underline;
-      font-size: 18px; }
+  margin-bottom: 20px;
+}
+/* line 307, ../scss/partials/_profile.scss */
+.user_update .name {
+  width: 100%;
+  padding: 5px;
+  margin: 5px 0px 0px 10px;
+  font-family: ACIDLABEL;
+  color: #bfc7d1;
+  font-size: 14px;
+}
+/* line 315, ../scss/partials/_profile.scss */
+.user_update .name span {
+  text-decoration: underline;
+  font-size: 18px;
+}
 
 /* End Live Update */
 /* Chatbox Area */
+/* line 324, ../scss/partials/_profile.scss */
 .messenger {
   flex-basis: 40%;
   height: auto;
   border-left: 1px solid #bfc7d1;
-  border-right: 1px solid #bfc7d1; }
+  border-right: 1px solid #bfc7d1;
+}
 
+/* line 331, ../scss/partials/_profile.scss */
 .chatbox {
   padding: 0 20px;
-  display: grid; }
+  display: grid;
+}
 
+/* line 335, ../scss/partials/_profile.scss */
 .chatlogs {
   padding: 10px;
   width: 100%;
   height: 463px;
   overflow-x: hidden;
-  overflow-y: scroll; }
+  overflow-y: scroll;
+}
 
+/* line 343, ../scss/partials/_profile.scss */
 .chatlogs::-webkit-scrollbar {
-  width: 10px; }
+  width: 10px;
+}
 
+/* line 347, ../scss/partials/_profile.scss */
 .chatlogs::-webkit-scrollbar-thumb {
   border-radius: 5px;
-  background: rgba(255, 255, 255, 0.1); }
+  background: rgba(255, 255, 255, 0.1);
+}
 
+/* line 353, ../scss/partials/_profile.scss */
 .chat {
   display: flex;
   flext-flow: row wrap;
   align-items: flex-start;
-  margin-bottom: 10px; }
-  .chat .user-photo {
-    width: 60px;
-    height: 60px;
-    background: #ccc;
-    border-radius: 50%;
-    overflow: hidden; }
-  .chat .user-photo img {
-    width: 100%; }
-  .chat .chat-message {
-    width: 80%;
-    padding: 15px;
-    margin: 5px 10px 0;
-    border-radius: 10px;
-    border: 1px solid #bfc7d1; }
+  margin-bottom: 10px;
+}
+/* line 359, ../scss/partials/_profile.scss */
+.chat .user-photo {
+  width: 60px;
+  height: 60px;
+  background: #ccc;
+  border-radius: 50%;
+  overflow: hidden;
+}
+/* line 367, ../scss/partials/_profile.scss */
+.chat .user-photo img {
+  width: 100%;
+}
+/* line 371, ../scss/partials/_profile.scss */
+.chat .chat-message {
+  width: 80%;
+  padding: 15px;
+  margin: 5px 10px 0;
+  border-radius: 10px;
+  border: 1px solid #bfc7d1;
+}
 
+/* line 382, ../scss/partials/_profile.scss */
 .friend .chat-message {
-  background: rgba(0, 0, 0, 0.7); }
+  background: rgba(0, 0, 0, 0.7);
+}
 
+/* line 388, ../scss/partials/_profile.scss */
 .self .chat-message {
   background: rgba(105, 29, 6, 0.7);
-  order: -1; }
+  order: -1;
+}
 
+/* line 394, ../scss/partials/_profile.scss */
 .chat-form {
   display: flex;
   align-items: flex-start;
   border-top: 1px solid #bfc7d1;
-  width: 100%; }
-  .chat-form textarea {
-    background: #bfc7d1;
-    border-radius: 0px;
-    width: 75%;
-    height: 22px;
-    resize: none;
-    padding: 10px;
-    font-family: ACIDLABEL;
-    font-size: 18px;
-    color: BLACK; }
-  .chat-form textarea:focus {
-    background: #fff; }
-  .chat-form textarea::-webkit-scrollbar {
-    width: 10px; }
-  .chat-form textarea::-webkit-scrollbar-thumb {
-    border-radius: 5px;
-    background: rgba(255, 255, 255, 0.1); }
-  .chat-form button {
-    background: none;
-    padding: 8px 10px;
-    font-family: ACIDLABEL;
-    font-size: 20px;
-    color: #bfc7d1;
-    border: none;
-    margin: 0 10px; }
-  .chat-form button:hover {
-    color: #787878;
-    cursor: pointer; }
-  .chat-form button:onclick {
-    border: none; }
+  width: 100%;
+}
+/* line 400, ../scss/partials/_profile.scss */
+.chat-form textarea {
+  background: #bfc7d1;
+  border-radius: 0px;
+  width: 75%;
+  height: 22px;
+  resize: none;
+  padding: 10px;
+  font-family: ACIDLABEL;
+  font-size: 18px;
+  color: BLACK;
+}
+/* line 412, ../scss/partials/_profile.scss */
+.chat-form textarea:focus {
+  background: #fff;
+}
+/* line 416, ../scss/partials/_profile.scss */
+.chat-form textarea::-webkit-scrollbar {
+  width: 10px;
+}
+/* line 420, ../scss/partials/_profile.scss */
+.chat-form textarea::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.1);
+}
+/* line 425, ../scss/partials/_profile.scss */
+.chat-form button {
+  background: none;
+  padding: 8px 10px;
+  font-family: ACIDLABEL;
+  font-size: 20px;
+  color: #bfc7d1;
+  border: none;
+  margin: 0 10px;
+}
+/* line 436, ../scss/partials/_profile.scss */
+.chat-form button:hover {
+  color: #787878;
+  cursor: pointer;
+}
+/* line 441, ../scss/partials/_profile.scss */
+.chat-form button:onclick {
+  border: none;
+}
 
 /* End Chat Box Area */
 /* Who's Online */
+/* line 448, ../scss/partials/_profile.scss */
 .users {
   padding: 10px 10px 10px 20px;
   height: 500px;
   overflow-x: hidden;
-  overflow-y: scroll; }
+  overflow-y: scroll;
+}
 
+/* line 455, ../scss/partials/_profile.scss */
 .users::-webkit-scrollbar {
-  width: 10px; }
+  width: 10px;
+}
 
+/* line 459, ../scss/partials/_profile.scss */
 .users::-webkit-scrollbar-thumb {
   border-radius: 5px;
-  background: rgba(255, 255, 255, 0.1); }
+  background: rgba(255, 255, 255, 0.1);
+}
 
+/* line 464, ../scss/partials/_profile.scss */
 .online {
   display: flex;
   flext-flow: row wrap;
   align-items: flex-start;
-  margin-bottom: 20px; }
-  .online .user-photo {
-    width: 50px;
-    height: 50px;
-    background: #ccc;
-    border-radius: 50%;
-    overflow: hidden; }
-  .online .user-photo img {
-    width: 100%; }
-  .online .name {
-    width: 80%;
-    padding: 5px;
-    margin: 5px 0px 0px 10px;
-    font-family: ACIDLABEL;
-    color: #bfc7d1;
-    font-size: 18px; }
+  margin-bottom: 20px;
+}
+/* line 470, ../scss/partials/_profile.scss */
+.online .user-photo {
+  width: 50px;
+  height: 50px;
+  background: #ccc;
+  border-radius: 50%;
+  overflow: hidden;
+}
+/* line 478, ../scss/partials/_profile.scss */
+.online .user-photo img {
+  width: 100%;
+}
+/* line 482, ../scss/partials/_profile.scss */
+.online .name {
+  width: 80%;
+  padding: 5px;
+  margin: 5px 0px 0px 10px;
+  font-family: ACIDLABEL;
+  color: #bfc7d1;
+  font-size: 18px;
+}
 
 /* End Who's Online */
 /* End Social Media Area */
 /* Nutrition and Supplements */
+/* line 496, ../scss/partials/_profile.scss */
 .nutr, .sup {
   width: 50%;
   height: auto;
   border: 1px solid #bfc7d1;
-  margin: 80px 0px; }
+  margin: 80px 0px;
+}
 
+/* line 503, ../scss/partials/_profile.scss */
 .nutr img, .sup img {
   width: 100%;
-  height: 100%; }
+  height: 100%;
+}
 
 /* End Nutrition and Supplements */
 /* Floating View */
+/* line 510, ../scss/partials/_profile.scss */
 .view {
   background: url(../images/background.jpg);
   width: 630px;
@@ -804,65 +996,100 @@ header {
   bottom: 150px;
   right: 0px;
   left: 0px;
-  box-shadow: 0 0 25px rgba(105, 29, 6, 0.7), 0 0 25px rgba(105, 29, 6, 0.7);
-  z-index: 1; }
-  .view .workout {
-    overflow: scroll;
-    height: 50%;
-    overflow: -moz-scrollbars-none;
-    margin-top: 5px; }
-  .view .workout::-webkit-scrollbar {
-    width: 10px; }
-  .view .workout::-webkit-scrollbar-thumb {
-    border-radius: 5px;
-    background: rgba(255, 255, 255, 0.1); }
-  .view table {
-    text-align: center;
-    width: 90%;
-    border-collapse: collapse;
-    margin: 0 auto; }
-  .view th {
-    border: 0px;
-    padding-bottom: 20px; }
-  .view td {
-    border-right: 1px solid #bfc7d1;
-    padding: 10px; }
-  .view tr {
-    border-bottom: 1px solid #bfc7d1; }
-  .view tr:first-child, .view tr:last-child {
-    border-bottom: 0px; }
-  .view table, .view td:last-child, .view th:last-child {
-    border-right: 0px; }
-  .view th, .view td:first-child {
-    font-family: ACIDLABEL;
-    color: #bfc7d1;
-    font-weight: 40; }
-  .view .next-page {
-    width: 20%;
-    margin: auto; }
-  .view .follow {
-    float: right;
-    margin-top: -28px;
-    padding-right: 20px; }
+  border: 5px solid rgba(105, 29, 6, 0.7);
+  z-index: 1;
+}
+/* line 521, ../scss/partials/_profile.scss */
+.view .workout {
+  overflow: scroll;
+  height: 50%;
+  margin-top: 5px;
+}
+/* line 527, ../scss/partials/_profile.scss */
+.view .workout::-webkit-scrollbar {
+  width: 10px;
+}
+/* line 531, ../scss/partials/_profile.scss */
+.view .workout::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.1);
+}
+/* line 536, ../scss/partials/_profile.scss */
+.view table {
+  text-align: center;
+  width: 90%;
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+/* line 543, ../scss/partials/_profile.scss */
+.view th {
+  border: 0px;
+  padding-bottom: 20px;
+}
+/* line 548, ../scss/partials/_profile.scss */
+.view td {
+  border-right: 1px solid #bfc7d1;
+  padding: 10px;
+}
+/* line 553, ../scss/partials/_profile.scss */
+.view tr {
+  border-bottom: 1px solid #bfc7d1;
+}
+/* line 557, ../scss/partials/_profile.scss */
+.view tr:first-child, .view tr:last-child {
+  border-bottom: 0px;
+}
+/* line 561, ../scss/partials/_profile.scss */
+.view table, .view td:last-child, .view th:last-child {
+  border-right: 0px;
+}
+/* line 565, ../scss/partials/_profile.scss */
+.view th, .view td:first-child {
+  font-family: ACIDLABEL;
+  color: #bfc7d1;
+  font-weight: 40;
+}
+/* line 571, ../scss/partials/_profile.scss */
+.view .next-page {
+  width: 20%;
+  margin: auto;
+}
+/* line 576, ../scss/partials/_profile.scss */
+.view .follow {
+  float: right;
+  margin-top: -28px;
+  padding-right: 20px;
+}
 
+/* line 583, ../scss/partials/_profile.scss */
 .view_heading {
-  display: flex; }
+  display: flex;
+}
 
+/* line 587, ../scss/partials/_profile.scss */
 .view-icon {
   border: 1px solid #bfc7d1;
-  padding: 10px 0px; }
+  padding: 10px 0px;
+}
 
+/* line 592, ../scss/partials/_profile.scss */
 .view-icon img {
-  width: 100%; }
+  width: 100%;
+}
 
+/* line 596, ../scss/partials/_profile.scss */
 .view_content {
-  padding: 15px; }
+  padding: 15px;
+}
 
+/* line 600, ../scss/partials/_profile.scss */
 .view_content h2, .view_content p {
-  margin: 0px; }
+  margin: 0px;
+}
 
 /* End Floating View */
 /* Floating Add */
+/* line 606, ../scss/partials/_profile.scss */
 .add {
   background: url(../images/background.jpg);
   width: 630px;
@@ -873,59 +1100,93 @@ header {
   bottom: 150px;
   right: 0px;
   left: 0px;
-  box-shadow: 0 0 25px rgba(105, 29, 6, 0.7), 0 0 25px rgba(105, 29, 6, 0.7);
+  border: 5px solid rgba(105, 29, 6, 0.7);
   z-index: 1;
   /* Submit */
-  /* End Submit */ }
-  .add .back a {
-    color: #787878; }
-  .add form {
-    padding: 20px; }
-  .add input {
-    margin-left: 15px; }
-  .add .name {
-    display: flex;
-    padding-right: 20px;
-    padding-left: 70px; }
-    .add .name input {
-      width: 60%; }
-  .add input[type=submit] {
-    margin: 0 auto;
-    bottom: 80px; }
-  .add .add_heading {
-    display: flex;
-    width: 100%;
-    padding: 30px 0;
-    text-align: center; }
-    .add .add_heading .desc-h {
-      padding: 0 40px;
-      border-right: 1px solid #bfc7d1;
-      text-shadow: 0 0 15px #bfc7d1; }
-    .add .add_heading .details {
-      padding-left: 50px; }
-  .add .add_top {
-    display: flex; }
+  /* End Submit */
+}
+/* line 617, ../scss/partials/_profile.scss */
+.add .back a {
+  color: #787878;
+}
+/* line 621, ../scss/partials/_profile.scss */
+.add form {
+  padding: 20px;
+}
+/* line 625, ../scss/partials/_profile.scss */
+.add input {
+  margin-left: 15px;
+}
+/* line 629, ../scss/partials/_profile.scss */
+.add .name {
+  display: flex;
+  padding-right: 20px;
+  padding-left: 70px;
+}
+/* line 634, ../scss/partials/_profile.scss */
+.add .name input {
+  width: 60%;
+}
+/* line 640, ../scss/partials/_profile.scss */
+.add input[type=submit] {
+  margin: 0 auto;
+  bottom: 80px;
+}
+/* line 646, ../scss/partials/_profile.scss */
+.add .add_heading {
+  display: flex;
+  width: 100%;
+  padding: 30px 0;
+  text-align: center;
+}
+/* line 652, ../scss/partials/_profile.scss */
+.add .add_heading .desc-h {
+  padding: 0 40px;
+  border-right: 1px solid #bfc7d1;
+  text-shadow: 0 0 15px #bfc7d1;
+}
+/* line 658, ../scss/partials/_profile.scss */
+.add .add_heading .details {
+  padding-left: 50px;
+}
+/* line 664, ../scss/partials/_profile.scss */
+.add .add_top {
+  display: flex;
+}
 
+/* line 670, ../scss/partials/_profile.scss */
 .type {
-  display: flex; }
-  .type select {
-    margin-left: 15px; }
+  display: flex;
+}
+/* line 673, ../scss/partials/_profile.scss */
+.type select {
+  margin-left: 15px;
+}
 
+/* line 678, ../scss/partials/_profile.scss */
 .sets {
   display: flex;
-  padding: 20px 0 20px 80px; }
-  .sets input {
-    width: 5%; }
+  padding: 20px 0 20px 80px;
+}
+/* line 682, ../scss/partials/_profile.scss */
+.sets input {
+  width: 5%;
+}
 
+/* line 687, ../scss/partials/_profile.scss */
 .desc {
-  display: flex; }
-  .desc textarea {
-    width: 50%;
-    height: 120px;
-    margin-left: 15px; }
+  display: flex;
+}
+/* line 690, ../scss/partials/_profile.scss */
+.desc textarea {
+  width: 50%;
+  height: 120px;
+  margin-left: 15px;
+}
 
 /* End Floating Add */
 /* Floating Add_Two */
+/* line 699, ../scss/partials/_profile.scss */
 .add_two {
   background: url(../images/background.jpg);
   width: 630px;
@@ -936,106 +1197,440 @@ header {
   bottom: 150px;
   right: 0px;
   left: 0px;
-  box-shadow: 0 0 25px rgba(105, 29, 6, 0.7), 0 0 25px rgba(105, 29, 6, 0.7);
+  border: 5px solid rgba(105, 29, 6, 0.7);
   z-index: 1;
   /* Submit */
-  /* End Submit */ }
-  .add_two .next-page {
-    width: 20%;
-    margin: auto; }
-  .add_two .back a {
-    color: #787878; }
-  .add_two form {
-    padding: 20px; }
-  .add_two input {
-    margin-left: 15px; }
-  .add_two .name {
-    display: flex;
-    padding-right: 20px; }
-    .add_two .name input {
-      width: 60%; }
-  .add_two .equipment {
-    display: flex;
-    padding-right: 20px; }
-    .add_two .equipment input {
-      width: 60%; }
-  .add_two input[type=submit] {
-    bottom: 80px;
-    right: 20px; }
-  .add_two .add_heading {
-    display: flex;
-    width: 100%;
-    padding: 30px 0;
-    text-align: center; }
-    .add_two .add_heading .desc-h {
-      padding: 0 40px;
-      border-right: 1px solid #bfc7d1; }
-    .add_two .add_heading .details {
-      padding-left: 50px;
-      text-shadow: 0 0 15px #bfc7d1; }
-  .add_two .add_top {
-    display: flex; }
-  .add_two .workout {
-    overflow: scroll;
-    height: 35%;
-    margin: 0 auto;
-    overflow: -moz-scrollbars-none; }
-  .add_two .workout::-webkit-scrollbar {
-    width: 10px; }
-  .add_two .workout::-webkit-scrollbar-thumb {
-    border-radius: 5px;
-    background: rgba(255, 255, 255, 0.1); }
-  .add_two table {
-    text-align: center;
-    width: 90%;
-    border-collapse: collapse;
-    margin: 0 auto; }
-  .add_two th {
-    border: 0px;
-    padding-bottom: 20px; }
-  .add_two td {
-    border-right: 1px solid #bfc7d1;
-    padding: 10px; }
-  .add_two tr {
-    border-bottom: 1px solid #bfc7d1; }
-  .add_two tr:first-child, .add_two tr:last-child {
-    border-bottom: 0px; }
-  .add_two table, .add_two td:last-child, .add_two th:last-child {
-    border-right: 0px; }
-  .add_two th, .add_two td:first-child {
-    font-family: ACIDLABEL;
-    color: #bfc7d1;
-    font-weight: 40; }
-  .add_two .done {
-    display: flex;
-    justify-content: center; }
+  /* End Submit */
+}
+/* line 710, ../scss/partials/_profile.scss */
+.add_two .next-page {
+  width: 20%;
+  margin: auto;
+}
+/* line 715, ../scss/partials/_profile.scss */
+.add_two .back a {
+  color: #787878;
+}
+/* line 719, ../scss/partials/_profile.scss */
+.add_two form {
+  padding: 20px;
+}
+/* line 723, ../scss/partials/_profile.scss */
+.add_two input {
+  margin-left: 15px;
+}
+/* line 727, ../scss/partials/_profile.scss */
+.add_two .name {
+  display: flex;
+  padding-right: 20px;
+}
+/* line 731, ../scss/partials/_profile.scss */
+.add_two .name input {
+  width: 60%;
+}
+/* line 736, ../scss/partials/_profile.scss */
+.add_two .equipment {
+  display: flex;
+  padding-right: 20px;
+}
+/* line 740, ../scss/partials/_profile.scss */
+.add_two .equipment input {
+  width: 60%;
+}
+/* line 746, ../scss/partials/_profile.scss */
+.add_two input[type=submit] {
+  bottom: 80px;
+  right: 20px;
+}
+/* line 752, ../scss/partials/_profile.scss */
+.add_two .add_heading {
+  display: flex;
+  width: 100%;
+  padding: 30px 0;
+  text-align: center;
+}
+/* line 758, ../scss/partials/_profile.scss */
+.add_two .add_heading .desc-h {
+  padding: 0 40px;
+  border-right: 1px solid #bfc7d1;
+}
+/* line 763, ../scss/partials/_profile.scss */
+.add_two .add_heading .details {
+  padding-left: 50px;
+  text-shadow: 0 0 15px #bfc7d1;
+}
+/* line 770, ../scss/partials/_profile.scss */
+.add_two .add_top {
+  display: flex;
+}
+/* line 774, ../scss/partials/_profile.scss */
+.add_two .workout {
+  overflow: scroll;
+  height: 35%;
+  margin: 0 auto;
+}
+/* line 780, ../scss/partials/_profile.scss */
+.add_two .workout::-webkit-scrollbar {
+  width: 10px;
+}
+/* line 784, ../scss/partials/_profile.scss */
+.add_two .workout::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.1);
+}
+/* line 789, ../scss/partials/_profile.scss */
+.add_two table {
+  text-align: center;
+  width: 90%;
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+/* line 796, ../scss/partials/_profile.scss */
+.add_two th {
+  border: 0px;
+  padding-bottom: 20px;
+}
+/* line 801, ../scss/partials/_profile.scss */
+.add_two td {
+  border-right: 1px solid #bfc7d1;
+  padding: 10px;
+}
+/* line 806, ../scss/partials/_profile.scss */
+.add_two tr {
+  border-bottom: 1px solid #bfc7d1;
+}
+/* line 810, ../scss/partials/_profile.scss */
+.add_two tr:first-child, .add_two tr:last-child {
+  border-bottom: 0px;
+}
+/* line 814, ../scss/partials/_profile.scss */
+.add_two table, .add_two td:last-child, .add_two th:last-child {
+  border-right: 0px;
+}
+/* line 818, ../scss/partials/_profile.scss */
+.add_two th, .add_two td:first-child {
+  font-family: ACIDLABEL;
+  color: #bfc7d1;
+  font-weight: 40;
+}
+/* line 824, ../scss/partials/_profile.scss */
+.add_two .done {
+  display: flex;
+  justify-content: center;
+}
 
+/* line 830, ../scss/partials/_profile.scss */
 .setup {
   display: flex;
   padding-top: 10px;
-  border-bottom: 1px solid #bfc7d1; }
-  .setup input[type=submit] {
-    top: 1px; }
+  border-bottom: 1px solid #bfc7d1;
+}
+/* line 835, ../scss/partials/_profile.scss */
+.setup input[type=submit] {
+  top: 1px;
+}
 
+/* line 840, ../scss/partials/_profile.scss */
 .sets_two, .reps {
   display: flex;
-  padding: 20px 0 20px 5px; }
-  .sets_two input, .reps input {
-    width: 10%; }
+  padding: 20px 0 20px 5px;
+}
+/* line 844, ../scss/partials/_profile.scss */
+.sets_two input, .reps input {
+  width: 10%;
+}
 
+/* line 849, ../scss/partials/_profile.scss */
 .time {
   display: flex;
-  padding: 20px 0 20px 0; }
-  .time input {
-    width: 35%; }
+  padding: 20px 0 20px 0;
+}
+/* line 853, ../scss/partials/_profile.scss */
+.time input {
+  width: 35%;
+}
 
 /* End Floating Add_Two */
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1010px) {
+  /* line 865, ../scss/partials/_profile.scss */
   #profile #wrapper {
-    width: 100%; }
+    width: 100%;
+  }
+  /* line 869, ../scss/partials/_profile.scss */
   #profile main {
-    margin: 0; } }
-@media only screen and (max-width: 750px) {
-  .news aside {
-    flex-basis: 0%; } }
+    margin: 0;
+  }
+}
+@media only screen and (max-width: 900px) {
+  /* line 876, ../scss/partials/_profile.scss */
+  .view, .add, .add_two {
+    width: 80%;
+  }
+
+  /* line 880, ../scss/partials/_profile.scss */
+  .flex {
+    flex-wrap: wrap;
+  }
+
+  /* line 884, ../scss/partials/_profile.scss */
+  .social {
+    flex-wrap: wrap;
+  }
+  /* line 887, ../scss/partials/_profile.scss */
+  .social aside, .social .messenger {
+    flex-basis: 100%;
+  }
+
+  /* line 892, ../scss/partials/_profile.scss */
+  .info, .leader {
+    width: 100%;
+    height: 250px;
+    border: 1px solid #bfc7d1;
+    margin: 80px 0px;
+  }
+  /* line 898, ../scss/partials/_profile.scss */
+  .info .flex, .leader .flex {
+    flex-flow: row;
+  }
+
+  /* line 902, ../scss/partials/_profile.scss */
+  .nutr, .sup {
+    width: 100%;
+  }
+}
 /* End Profile Page */
+/* End Imports */
+/* Main Eliments */
+/* line 20, ../scss/style.scss */
+main {
+  margin: 10px 0;
+  background-color: rgba(42, 42, 42, 0.9);
+  border: 10px solid rgba(105, 29, 6, 0.7);
+  border-radius: 3px;
+}
+
+/* line 27, ../scss/style.scss */
+h1, h2, h3, h4 {
+  color: #bfc7d1;
+  font-weight: 400;
+  line-height: 30px;
+}
+
+/* line 33, ../scss/style.scss */
+h1 {
+  font-size: 30px;
+  font-family: ACIDLABEL;
+}
+
+/* line 38, ../scss/style.scss */
+h2 {
+  font-size: 25px;
+  font-family: ACIDLABEL;
+}
+
+/* line 43, ../scss/style.scss */
+h3 {
+  font-size: 20px;
+  font-family: ACIDLABEL;
+}
+
+/* line 48, ../scss/style.scss */
+h4 {
+  font-size: 15px;
+  font-family: BASE;
+  letter-spacing: 2px;
+}
+
+/* line 54, ../scss/style.scss */
+p {
+  font-family: ROCK;
+  color: #bfc7d1;
+  font-size: 15px;
+  line-height: 25px;
+  letter-spacing: 3px;
+}
+
+/* line 62, ../scss/style.scss */
+th {
+  font-family: ACIDLABEL;
+  color: #bfc7d1;
+}
+
+/* line 67, ../scss/style.scss */
+td {
+  font-family: ROCK;
+  color: #bfc7d1;
+}
+
+/* line 72, ../scss/style.scss */
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* line 77, ../scss/style.scss */
+.container {
+  width: 100%;
+  height: 100%;
+  background: rgba(2, 70, 88, 0.8);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 500ms ease;
+}
+
+/* line 86, ../scss/style.scss */
+.container:target {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* line 91, ../scss/style.scss */
+.container > div {
+  transform: translate(0px, -50px);
+  transition: all 500ms ease;
+}
+
+/* line 96, ../scss/style.scss */
+.container:target > div {
+  transform: translate(0px, 0px);
+}
+
+/* line 102, ../scss/style.scss */
+.close {
+  color: #bfc5d1;
+  position: absolute;
+  padding: 7px 9px 11px 9px;
+  text-decoration: none;
+  font-family: ACIDLABEL;
+  top: -1px;
+  right: 1px;
+  border-radius: 50%;
+  transition: background 500ms;
+}
+
+/* line 114, ../scss/style.scss */
+.close:hover {
+  cursor: pointer;
+}
+
+/* line 118, ../scss/style.scss */
+.back {
+  float: left;
+}
+/* line 121, ../scss/style.scss */
+.back input {
+  color: #787878;
+}
+
+/* line 126, ../scss/style.scss */
+.next {
+  float: right;
+}
+
+/* line 132, ../scss/style.scss */
+.overlay {
+  background-color: rgba(42, 42, 42, 0.9);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 140, ../scss/style.scss */
+input, select, textarea {
+  background: #bfc7d1;
+  padding: 0 10px;
+  font-family: BASE;
+  font-size: 15px;
+  color: BLACK;
+  border-radius: 3px;
+  border: 0px;
+}
+
+/* line 150, ../scss/style.scss */
+textarea {
+  padding-top: 10px;
+}
+
+/* line 154, ../scss/style.scss */
+input:focus, select:focus, textarea:focus {
+  background: #fff;
+}
+
+/* Submit */
+/* line 159, ../scss/style.scss */
+input[type=submit] {
+  position: relative;
+  background: none;
+  border: none;
+  float: right;
+  font-family: ACIDLABEL;
+  color: #bfc7d1;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+}
+
+/* line 171, ../scss/style.scss */
+input[type=submit]:hover {
+  cursor: pointer;
+  color: #787878;
+}
+
+/* End Submit */
+/* End Main Eliments */
+/* Header */
+/* line 180, ../scss/style.scss */
+header {
+  background-color: rgba(105, 29, 6, 0.7);
+  border-radius: 3px;
+}
+/* line 184, ../scss/style.scss */
+header h1 {
+  float: right;
+  position: absolute;
+  margin-top: -105px;
+  margin-left: 90px;
+  font-size: 40px;
+  line-height: 72px;
+}
+/* line 193, ../scss/style.scss */
+header img {
+  width: 98%;
+  margin: 7px 0 2px 7px;
+  border-radius: 5px;
+}
+
+/* line 200, ../scss/style.scss */
+.char1 {
+  float: left;
+  margin-top: -25px;
+  transform: rotate(8deg);
+}
+
+/* line 204, ../scss/style.scss */
+.char2 {
+  float: left;
+  margin-top: -30px;
+  transform: rotate(-18deg);
+}
+
+/* line 208, ../scss/style.scss */
+.char3 {
+  float: left;
+  margin-top: -40px;
+}
+
+/* line 211, ../scss/style.scss */
+.char4 {
+  float: left;
+  margin-top: -40px;
+}
+
+/* line 214, ../scss/style.scss */
+.char5 {
+  float: right;
+  margin-left: -68px;
+}
+
+/* End Header */
