@@ -67,7 +67,7 @@ if ( isset( $_POST[ 'submit' ] ) ) {
       }
       else {
         //Insert the user into the database
-        $sql = "INSERT INTO users (user_first, user_last, user_date, user_goal, user_email, user_gender, user_pwd, user_qoute, user_uVALUES(?, ?, ? ?, ?, ?, ?, ?, ?)";
+        $sql = "INSERT INTO users (user_first, user_last, user_date, user_goal, user_email, user_gender, user_pwd, user_qoute, user_uid) VALUES(?, ?, ? ?, ?, ?, ?, ?, ?)";
         $stmt = mysqli_stmt_init( $conn );
         // Check for another sql error
         if ( !mysqli_stmt_prepare( $stmt, $sql ) ) {
