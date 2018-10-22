@@ -2,7 +2,7 @@
 
 if ( isset( $_POST[ 'submit' ] ) ) {
 
-	include_once 'dbh.php';
+	include_once 'dbh_inc.php';
 
 	$name = mysqli_real_escape_string( $conn, $_POST[ 'name' ] );
 	$equip = mysqli_real_escape_string( $conn, $_POST[ 'equipment' ] );

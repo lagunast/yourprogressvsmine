@@ -10,7 +10,7 @@ include_once 'header.php';
 		<main>
 			<div class="content">
 				<h2>Welcome to the home of Your Progress VS Mine </h2>
-				<p>We’re here to help motivate you in any type of physical transformation. From Bodybuilding to Crossfit, Sports Trainiing to General Health.</p>
+				<p>We’re here to help motivate you in any type of physical transformation. From Bodybuilding to Crossfit, Sports Trainiing to General Health. The idea is to let everyone show off and post idea’s to help everyone else. Create your profile and share your idea’s.</p>
 			</div>
 			<div class="logo"><img src="images/logo.png" alt="">
 				<div class="signin">
@@ -27,12 +27,12 @@ include_once 'header.php';
 					<div class="overlay"> <a href="#" class="close">X</a> <span class="login_heading">Sign In</span>
 						<form action="include/login.php" method="post">
 							<div class="uid">
-								<h3>Username:</h3>
-								<input type="text" name="uid">
+								<label for="uid">Username:</label>
+								<input type="text" name="uid" required>
 							</div>
 							<div class="password">
-								<h3>Password:</h3>
-								<input type="password" name="pwd">
+								<label for="pwd">Password:</label>
+								<input type="password" name="pwd" required>
 							</div>
 							<input type="submit" name="submit" value="Enter">
 							<img src="images/signin.png" alt="">
@@ -46,28 +46,39 @@ include_once 'header.php';
 			<div class="container" id="signup">
 				<div class="signup_form">
 					<div class="overlay"> <a href="#" class="close">X</a> <span class="signup_form_heading">Sign Up</span>
+					<?php
+                      if (isset($_GET['signup'])) {
+                        if ($_GET['signup']=='empty') {
+                          echo '<p>Fill in all fields!</p>';
+                        } else if ($_GET['signup']=='password') {
+                          echo '<p>Passwords do not match!</p>';
+                        }
+                      } else if ($_GET['signup']=='success') {
+                          echo '<p>Login succesful!</p>';
+                        }
+                      ?>
 						<form action="include/signup.php" method="post">
 							<div class="uid">
-								<h3>User Name:</h3>
-								<input type="text" name="uid">
+								<label for="uid">User Name:</label>
+								<input type="text" name="uid" required>
 							</div>
 							<div class="name">
 								<h3>Name:</h3>
 								<div class="first">
 									<h4>First</h4>
-									<input type="text" name="first">
+									<input type="text" name="first" required>
 								</div>
 								<div class="last">
 									<h4>Last</h4>
-									<input type="text" name="last">
+									<input type="text" name="last" required>
 								</div>
 							</div>
 							<div class="flex"><div class="dob">
-								<h3>DOB:</h3>
-								<input type="date" name="dob">
+								<label for="dob">DOB:</label>
+								<input type="date" name="dob" required>
 							</div>
 							<div class="goal">
-								<h3>Goal:</h3>
+								<label for="goal">Goal:</label>
 								<select name="goal">
 									<option value="Build Muscle">Build Muscle</option>
 									<option value="Lose Fat">Lose Fat</option>
@@ -79,31 +90,31 @@ include_once 'header.php';
 								</select>
 							</div></div>
 							<div class="flex"><div class="email">
-								<h3>Email:</h3>
-								<input type="email" name="email">
+								<label for="email">Email:</label>
+								<input type="email" name="email" required>
 							</div>
 							<div class="male">
-								<h3>Male</h3>
+								<label for="gender">Male</label>
 								<input type="radio" name="gender" value="male">
 							</div>
 							<div class="female">
-								<h3>Female</h3>
+								<label for="gender">Female</label>
 								<input type="radio" name="gender" value="female">
 							</div></div>
 							<div class="password">
 								<h3>PW:</h3>
 								<div class="password_one">
 									<h4>Enter Password</h4>
-									<input type="password" name="pwd_one">
+									<input type="password" name="pwd_one" required>
 								</div>
 								<div class="password_two">
 									<h4>Password Again</h4>
-									<input type="password" name="pwd_two">
+									<input type="password" name="pwd_two" required>
 								</div>
 							</div>
 							<div class="qoute">
-								<h3>Qoute:</h3>
-								<textarea id="qoute" name="qoute" placeholder="Type your favorite qoute to help motivate you."></textarea>
+								<label for="qoute">Qoute:</label>
+								<textarea id="qoute" name="qoute"></textarea>
 							</div>
 							<input type="submit" name="submit" value="Submit">
 						</form>
