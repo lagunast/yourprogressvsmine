@@ -1,70 +1,70 @@
-/* CSS Document */
-
 /* Imports */
 @import 'bourbon/bourbon';
 @import 'partials/variables';
 @import 'partials/reset.scss';
+@import 'partials/myjqueryui.scss';
 /* End Imports */
 
 /* Main Eliments */
 main {
-  margin: 10px 0;
   background-color: $background;
   border: 10px solid $brdcol;
   border-radius: 3px;
+  margin: 10px 0;
 }
 
 h1,
 h2,
 h3,
-h4 {
+h4,
+label{
   color: $txtcol;
   font-weight: 400;
   line-height: 30px;
 }
 
 h1 {
-  font-size: 30px;
   font-family: ACIDLABEL;
+  font-size: 30px;
 }
 
 h2 {
-  font-size: 25px;
   font-family: ACIDLABEL;
+  font-size: 25px;
 }
 
 h3 {
-  font-size: 20px;
   font-family: ACIDLABEL;
+  font-size: 20px;
 }
 
 h4 {
-  font-size: 15px;
   font-family: BASE;
+  font-size: 15px;
   letter-spacing: 2px;
 }
 
 p {
-  font-family: ROCK;
   color: $txtcol;
+  font-family: cityburn, sans-serif;
   font-size: 15px;
-  line-height: 25px;
   letter-spacing: 3px;
+  line-height: 25px;
 }
 
 label {
-  font-size: 20px;
   font-family: ACIDLABEL;
+  font-size: 20px;
 }
 
 th {
-  font-family: ACIDLABEL;
   color: $txtcol;
+  font-family: ACIDLABEL;
 }
 
 td {
-  font-family: ROCK;
   color: $txtcol;
+  font-family: ROCK;
 }
 
 .flex {
@@ -73,39 +73,18 @@ td {
 }
 
 .container {
-  width: 100%;
-  height: 100%;
-  background: rgba(2, 70, 88, 0.8);
-  opacity: 0;
-  pointer-events: none;
-  transition: all 500ms ease;
+  display: none;
 }
-
-.container:target {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-.container > div {
-  transform: translate(0px, -50px);
-  transition: all 500ms ease;
-}
-
-.container:target > div {
-  transform: translate(0px, 0px);
-}
-
-
 
 .close {
-  color: #bfc5d1;
-  position: absolute;
-  padding: 7px 9px 11px 9px;
-  text-decoration: none;
-  font-family: ACIDLABEL;
-  top: -1px;
-  right: 1px;
   border-radius: 50%;
+  color: #bfc5d1;
+  font-family: ACIDLABEL;
+  padding: 7px 9px 11px 9px;
+  position: absolute;
+  right: 1px;
+  text-decoration: none;
+  top: -23px;
   transition: background 500ms;
 }
 
@@ -125,26 +104,21 @@ td {
   float: right;
 }
 
-
-
-.overlay {
-  background-color: $background;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
 input,
 select,
 textarea {
   background: $txtcol;
-  padding: 0 10px;
-  font-family: BASE;
-  font-size: 15px;
-  color: BLACK;
-  border-radius: 3px;
   border: 0px;
+  border-radius: 3px;
+  color: BLACK;
+  font-family: cityburn !important;
+  font-size: 25px;
+  padding: 0 10px;
+}
+
+input[type="password"] {
+  font-family: ACIDLABEL !important;
+  font-size: 30px;
 }
 
 textarea {
@@ -159,75 +133,24 @@ textarea:focus {
 
 /* Submit */
 input[type=submit] {
-  position: relative;
   background: none;
   border: none;
+  color: $txtcol;
   float: right;
   font-family: ACIDLABEL;
-  color: $txtcol;
   font-size: 20px;
   font-weight: 400;
   line-height: 30px;
+  position: relative;
 }
 
 input[type=submit]:hover {
-  cursor: pointer;
   color: $hover;
+  cursor: pointer;
 }
-
 /* End Submit */
 
 /* End Main Eliments */
-
-/* Header */
-header {
-  background-color: $brdcol;
-  border-radius: 3px;
-
-  h1 {
-    float: right;
-    position: absolute;
-    margin-top: -105px;
-    margin-left: 90px;
-    font-size: 40px;
-    line-height: 72px;
-  }
-
-  img {
-    width: 98%;
-    margin: 7px 0 2px 7px;
-    border-radius: 5px;
-  }
-}
-
-.char1 {
-  float: left;
-  margin-top: -25px;
-  transform: rotate(8deg);
-}
-
-.char2 {
-  float: left;
-  margin-top: -30px;
-  transform: rotate(-18deg);
-}
-
-.char3 {
-  float: left;
-  margin-top: -40px;
-}
-
-.char4 {
-  float: left;
-  margin-top: -40px;
-}
-
-.char5 {
-  float: right;
-  margin-left: -68px;
-}
-
-/* End Header */
 
 /* Welcome Page */
 @import 'partials/welcome';
@@ -245,4 +168,3 @@ header {
 /* Mobile View */
 @import 'partials/mobile';
 /* End Mobile View */
-

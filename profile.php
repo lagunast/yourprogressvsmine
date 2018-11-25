@@ -6,8 +6,7 @@ include_once 'header.php';
 
     <!--Floating View Form-->
     <div class="container" id="view">
-      <div class="view">
-        <div class="overlay"><a href="#" class="close">X</a>
+      <div class="view"><a href="#" class="close">X</a>
           <div class="view_heading">
             <div class="view-icon"><img src="images/icon/Strength.png" alt="">
             </div>
@@ -92,97 +91,6 @@ include_once 'header.php';
           </div>
         </div>
       </div>
-    </div>
-    <!--End Floating View Form-->
-    <!--Floating View Form-->
-    <div class="container" id="view">
-      <div class="view">
-        <div class="overlay"><a href="#" class="close">X</a>
-          <div class="view_heading">
-            <div class="view-icon"><img src="images/icon/Strength.png" alt="">
-            </div>
-            <div class="view_content">
-              <h2>Name</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum veritatis asperiores tempore, atque modi, voluptatum a magni suscipit, repudiandae culpa esse. Placeat, doloremque?</p>
-            </div>
-          </div>
-          <div class="workout">
-            <table>
-              <tr>
-                <th></th>
-                <th>Sets</th>
-                <th>Reps</th>
-                <th>Time</th>
-                <th></th>
-              </tr>
-              <tr>
-                <td>Name of Exercise</td>
-                <td>5</td>
-                <td>12</td>
-                <td></td>
-                <td><a href="#">View</a>
-                </td>
-              </tr>
-              <tr>
-                <td>Name Of Exercise</td>
-                <td>3</td>
-                <td>10</td>
-                <td></td>
-                <td><a href="#">View</a>
-                </td>
-              </tr>
-              <tr>
-                <td>Name of Exercise</td>
-                <td>8</td>
-                <td></td>
-                <td>1:00</td>
-                <td><a href="#">View</a>
-                </td>
-              </tr>
-              <tr>
-                <td>Name of Exercise</td>
-                <td>2</td>
-                <td></td>
-                <td></td>
-                <td><a href="#">View</a>
-                </td>
-              </tr>
-              <tr>
-                <td>Name of Exercise</td>
-                <td>2</td>
-                <td></td>
-                <td></td>
-                <td><a href="#">View</a>
-                </td>
-              </tr>
-              <tr>
-                <td>Name of Exercise</td>
-                <td>2</td>
-                <td></td>
-                <td></td>
-                <td><a href="#">View</a>
-                </td>
-              </tr>
-              <tr>
-                <td>Name of Exercise</td>
-                <td>2</td>
-                <td></td>
-                <td></td>
-                <td><a href="#">View</a>
-                </td>
-              </tr>
-            </table>
-          </div>
-          <div class="next-page">
-            <h3 class="back"><a href="#">Back</a></h3>
-            <h3 class="next"><a href="#">Next</a></h3>
-          </div>
-          <div class="follow">
-            <h3><a href="#">Follow</a></h3>
-          </div>
-        </div>
-      </div>
-    </div>
     <!--End Floating View Form-->
 
     <!--Floating Add Form-->
@@ -339,9 +247,19 @@ include_once 'header.php';
       <main>
         <!--Profile Head-->
         <div class="profile_head">
-          <img class="profile_img" src="images/collorrun social.jpg" alt="">
+
+<!--Gets users profile Picture-->
+<?php
+  $fileExt = 'jpg' or 'jpeg' or 'png' or 'gif';
+  if (isset($_SESSION['u_id'])) {
+    echo '<a href="#userPic"><img class="profile_img" src="uploads/'.$_SESSION['u_uid'].'_profile.'.$fileExt.'" alt=""></a>';
+  } else {
+    echo '<img class="profile_img" src="uploads/profiledefault.png" alt="">';
+  }
+?>
           <div class='qouted'>
             <h1>
+<!--Gets users qoute-->
 <?php
   if (isset($_SESSION['u_id'])) {
     echo $_SESSION[ 'u_qoute' ];
@@ -353,6 +271,12 @@ include_once 'header.php';
           </div>
         </div>
         <!--End Profile Head-->
+
+<div class="container" id="userPic">        <form action="include/upload.php" method="post" enctype="multipart/form-data">
+          <input type="file" name="file">
+          <button type="submit" name="submit">Upload</button>
+        </form></div>
+
         <!-- Schedule -->
         <div class="nav"><a>Notifications</a>
 
@@ -451,23 +375,27 @@ include_once 'header.php';
               <div class="flex">
                 <h3>Name:</h3>
                 <h4>
-<?php
+
+<!--Get users first and last name-->
+ <?php
   if (isset($_SESSION['u_id'])) {
     echo $_SESSION[ 'u_first' ]. ' ';
     echo $_SESSION[ 'u_last' ];
   } else {
-    echo 'You are logged out!';
+    echo 'Your Name';
   }
 ?>              </h4>
               </div>
               <div class="flex">
                 <h3>Goal:</h3>
                 <h4>
-<?php
+
+<!--Get users goal-->
+ <?php
   if (isset($_SESSION['u_id'])) {
     echo $_SESSION[ 'u_goal' ];
   } else {
-    echo 'You are logged out!';
+    echo 'Your Goal';
   }
 ?>
                 </h4>
@@ -586,41 +514,57 @@ include_once 'header.php';
           </aside>
           <!-- End Live Updates -->
 
-          <!-- Chat Box -->
+                   <!-- Chat Box -->
           <div class="messenger">
             <h2>Chat</h2>
             <div class="chatbox">
               <div class="chatlogs">
                 <div class="chat friend">
-                  <div class="user-photo"><img src="images/collorrun social.jpg" alt="">
+                  <div class="user-photo"><img class="profile_img" src="uploads/profiledefault.png" alt="">
                   </div>
                   <p class="chat-message">What's up, Brother..!!</p>
                 </div>
                 <div class="chat self">
-                  <div class="user-photo"><img src="images/collorrun social.jpg" alt="">
+                  <div class="user-photo">
+<!--Gets users profile Picture-->
+<?php
+  if (isset($_SESSION['u_id'])) {
+    echo '<img class="profile_img" src="uploads/'.$_SESSION['u_uid'].'_profile.jpg" alt="">';
+  } else {
+    echo '<img class="profile_img" src="uploads/profiledefault.png" alt="">';
+  }
+?>
                   </div>
                   <p class="chat-message">What's up 1234..!!</p>
                 </div>
                 <div class="chat friend">
-                  <div class="user-photo"><img src="images/collorrun social.jpg" alt="">
+                  <div class="user-photo"><img class="profile_img" src="uploads/profiledefault.png" alt="">
                   </div>
-                  <p class="chat-message">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. </p>
+                  <p class="chat-message"></p>
                 </div>
                 <div class="chat friend">
-                  <div class="user-photo"><img src="images/collorrun social.jpg" alt="">
+                  <div class="user-photo"><img class="profile_img" src="uploads/profiledefault.png" alt="">
                   </div>
                   <p class="chat-message">What's up, Brother..!!</p>
                 </div>
-                <div class="chat self">
-                  <div class="user-photo"><img src="images/collorrun social.jpg" alt="">
-                  </div>
-                  <p class="chat-message">What's up..!!</p>
-                </div>
+<?php
+  if (isset($_SESSION['u_id'])) {
+    echo '<div class="chat self">';
+    echo '<div class="user-photo">';
+    //Gets users profile Picture
+    echo '<img class="profile_img" src="uploads/'.$_SESSION['u_uid'].'_profile.jpg" alt="">';
+    echo '</div>';
+    echo '<p class="chat-message">Whats up..!!</p>';
+    echo '</div>';
+  } else {
+    echo '<img class="profile_img" src="uploads/profiledefault.png" alt="">';
+  }
+?>
               </div>
             </div>
             <div class="chat-form">
               <textarea></textarea>
-              <button>Submit</button>
+              <button id="btn">Submit</button>
             </div>
           </div>
           <!-- End Chat Box -->

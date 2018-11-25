@@ -1,18 +1,117 @@
+@media only screen and (max-width: 900px) {
+
+  #profile {
+
+    #wrapper {
+      width: 100%;
+    }
+
+    main {
+      margin: 0;
+    }
+  }
+}// end screen width 900px
+
 @media only screen and (max-width: 800px) {
+
+
+  .flex {
+    flex-wrap: wrap;
+  }
+
+  .social {
+    border: none;
+    display: inline;
+
+    aside,
+    .messenger {
+      margin-top: 100px;
+      border: $border;
+    }
+  }
+
+  .info,
+  .leader {
+    border: $border;
+    height: 250px;
+    margin: 80px 0px;
+    width: 100%;
+
+    .flex {
+      flex-flow: row;
+    }
+  }
+
+  .nutr,
+  .sup {
+    width: 100%;
+  }
+}// end screen width 800px
+
+@media only screen and (max-width: 700px) {
 
   #welcome {
     #wrapper {
-      width: 50%;
+      margin: 0;
+      width: 100%;
+    }
+
+    main {
+      height: auto;
+    }
+  }
+
+  //end #welcome
+
+  header {
+    h1 {
+      margin-left: 15%;
     }
   }
 
   .signin {
-    margin-top: -370px;
-    padding-right: 310px;
+    left: 12%;
   }
 
   .signup {
-    margin-top: -370px;
-    padding-right: 118px;
+    left: 63%;
   }
-}
+}// end screen width 700px
+
+@media only screen and (max-width: 630px) {
+
+  #welcome {
+    main {
+      margin: 0;
+    }
+  }
+
+  header {
+    h1 {
+      font-size: 35px;
+      margin-left: 15%;
+    }
+  }
+
+  .logo {
+    img {
+      width: 100%;
+      margin-left: 5%;
+    }
+  }
+
+  .signin {
+    left: 17%;
+    top: 30px;
+  }
+
+  .signup {
+    left: 59%;
+    top: 30px;
+  }
+
+  .signin h2 a,
+  .signup h2 a {
+    font-size: 30px;
+  }
+}// end screen width 600px

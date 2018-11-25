@@ -1,0 +1,85 @@
+@media only screen and (max-width: 500px) {
+
+  header {
+    h1 {
+      font-size: 30px;
+      margin-left: 18%;
+    }
+  }
+
+  .char1 {
+    margin-top: -15px;
+  }
+
+  .char2 {
+    margin-top: -20px;
+  }
+
+  .char3 {
+    margin-top: -25px;
+  }
+
+  .char4 {
+    margin-top: -25px;
+  }
+
+  .char5 {
+    margin-left: -50px;
+  }
+
+  .signin {
+    left: 16%;
+  }
+
+  .signup {
+    left: 58%;
+  }
+
+  .signin h2 a,
+  .signup h2 a {
+    font-size: 25px;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+
+  header {
+    h1 {
+      font-size: 25px;
+      margin-left: 20%;
+    }
+  }
+
+  .signin {
+    left: 14%;
+  }
+
+  .signup {
+    left: 56%;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+
+  header {
+    h1 {
+      font-size: 20px;
+      margin-left: 20%;
+    }
+  }
+
+  .signin {
+    left: 13%;
+    top: 24px;
+  }
+
+  .signup {
+    left: 55%;
+    top: 24px;
+  }
+
+  .signin h2 a,
+  .signup h2 a {
+    font-size: 20px;
+  }
+}

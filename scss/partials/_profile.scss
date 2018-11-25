@@ -4,9 +4,9 @@
   margin: 0;
 
   #wrapper {
-    width: 80%;
     height: auto;
     margin: 0 auto;
+    width: 80%;
   }
 
   main {
@@ -14,8 +14,8 @@
   }
 
   a {
-    font-family: ACIDLABEL;
     color: $txtcol;
+    font-family: ACIDLABEL;
     text-decoration: none;
   }
 
@@ -27,23 +27,24 @@
 
 /* Head */
 .profile_head {
-  width: 100%;
-  height: 250px;
   display: flex;
   flex-flow: row nowrap;
+  height: 250px;
   justify-content: flex-start;
+  width: 100%;
 }
 
 .profile_img {
-  width: 160px;
   border: $border;
+  width: 160px;
 }
 
 .qouted {
-  width: 100%;
-  padding: 30px 20px;
+  align-items: center;
+  display: grid;
+  padding: 0 20px;
   text-align: center;
-
+  width: 100%;
 }
 
 /* End Head */
@@ -55,17 +56,17 @@
   width: 100%;
 
   a {
-    margin: 0 0 5px 20px;
     font-size: 20px;
+    margin: 0 0 5px 20px;
   }
 
   button {
-    font-family: ACIDLABEL;
-    color: $txtcol;
     background: none;
     border: none;
-    margin: 0 0 5px 20px;
+    color: $txtcol;
+    font-family: ACIDLABEL;
     font-size: 20px;
+    margin: 0 0 5px 20px;
   }
 
   button:hover {
@@ -82,11 +83,11 @@
 #thursday,
 #friday,
 #saturday {
-  width: 15%;
   border: $border;
-  text-align: center;
-  position: relative;
   display: inline-block;
+  position: relative;
+  text-align: center;
+  width: 15%;
 }
 
 .schedule {
@@ -94,23 +95,23 @@
   margin: 0px;
 
   img {
-    width: 80%;
     margin: 10px;
+    width: 80%;
 
   }
 
   h4 {
-    margin: 0;
     background: $brdcol;
+    margin: 0;
   }
 
   p {
+    border-bottom: $border;
+    color: $txtcol;
+    font-size: 10px;
     margin: 0px;
     padding: 3px;
     text-align: center;
-    border-bottom: $border;
-    font-size: 10px;
-    color: $txtcol;
   }
 }
 
@@ -124,8 +125,8 @@
   height: 100%;
 
   h1 {
-    padding-top: 45%;
     font-size: 120px;
+    padding-top: 45%;
   }
 }
 
@@ -135,22 +136,22 @@
 
 /* Dropdown Menu */
 .dropdown {
+  background: black;
+  border: $border;
   display: none;
   position: absolute;
-  z-index: 1;
-  background: black;
   width: 100%;
-  border: $border;
+  z-index: 1;
 
   a {
-    display: block;
     border-bottom: $border;
-    text-decoration: none;
-    font-family: ACIDLABEL;
     color: $txtcol;
+    display: block;
+    font-family: ACIDLABEL;
     font-size: 15px;
     font-weight: 400;
     line-height: 30px;
+    text-decoration: none;
   }
 
   a:hover {
@@ -173,24 +174,24 @@
 /* Info and Scoreboard */
 .info,
 .leader {
-  width: 50%;
-  height: 250px;
   border: $border;
+  height: 250px;
   margin: 80px 0px;
+  width: 50%;
 }
 
 .info {
-  margin-right: 10px;
   display: flex;
   flex-flow: column;
+  margin-right: 10px;
 
   img {
+    border: $border;
     float: left;
-    width: 20%;
     height: 120px;
     margin-right: 20px;
     padding: 10px;
-    border: $border;
+    width: 20%;
   }
 }
 
@@ -218,16 +219,16 @@
   text-align: center;
 
   h2 {
+    border-bottom: $border;
     margin: 0;
     padding: 5px;
-    border-bottom: $border;
   }
 
   table {
-    text-align: center;
-    width: 100%;
     border-collapse: collapse;
     margin: 0 auto;
+    text-align: center;
+    width: 100%;
   }
 
   th {
@@ -258,8 +259,8 @@
 
 .score {
 
-  padding: 10px 10px 10px 20px;
   height: 180px;
+  padding: 10px 10px 10px 20px;
   overflow-x: hidden;
   overflow-y: scroll;
 }
@@ -269,8 +270,8 @@
 }
 
 .score::-webkit-scrollbar-thumb {
-  border-radius: 5px;
   background: rgba(255, 255, 255, .1);
+  border-radius: 5px;
 }
 
 
@@ -278,15 +279,15 @@
 
 /* Social Media Area */
 .social {
-  height: 566px;
-  display: flex;
   border: $border;
+  display: flex;
+  height: 566px;
 
   h2 {
     border-bottom: $border;
-    text-align: center;
-    padding: 5px 0;
     margin: 0;
+    padding: 5px 0;
+    text-align: center;
   }
 
   aside {
@@ -296,10 +297,10 @@
 
 /* Live Update */
 .update {
-  padding: 10px 10px 10px 20px;
   height: 500px;
   overflow-x: hidden;
   overflow-y: scroll;
+  padding: 10px 10px 10px 20px;
 }
 
 .update::-webkit-scrollbar {
@@ -307,27 +308,27 @@
 }
 
 .update::-webkit-scrollbar-thumb {
-  border-radius: 5px;
   background: rgba(255, 255, 255, .1);
+  border-radius: 5px;
 }
 
 .user_update {
+  align-items: flex-start;
   display: flex;
   flext-flow: row wrap;
-  align-items: flex-start;
   margin-bottom: 20px;
 
   .name {
-    width: 100%;
-    padding: 5px;
-    margin: 5px 0px 0px 10px;
-    font-family: ACIDLABEL;
     color: $txtcol;
+    font-family: ACIDLABEL;
     font-size: 14px;
+    margin: 5px 0px 0px 10px;
+    padding: 5px;
+    width: 100%;
 
     span {
-      text-decoration: underline;
       font-size: 18px;
+      text-decoration: underline;
     }
   }
 }
@@ -336,23 +337,23 @@
 
 /* Chatbox Area */
 .messenger {
-  flex-basis: 40%;
-  height: auto;
   border-left: $border;
   border-right: $border;
+  flex-basis: 40%;
+  height: auto;
 }
 
 .chatbox {
-  padding: 0 20px;
   display: grid;
+  padding: 0 20px;
 }
 
 .chatlogs {
-  padding: 10px;
-  width: 100%;
   height: 463px;
   overflow-x: hidden;
   overflow-y: scroll;
+  padding: 10px;
+  width: 100%;
 }
 
 .chatlogs::-webkit-scrollbar {
@@ -360,23 +361,23 @@
 }
 
 .chatlogs::-webkit-scrollbar-thumb {
-  border-radius: 5px;
   background: rgba(255, 255, 255, .1);
+  border-radius: 5px;
 }
 
 
 .chat {
+  align-items: flex-start;
   display: flex;
   flext-flow: row wrap;
-  align-items: flex-start;
   margin-bottom: 10px;
 
   .user-photo {
-    width: 60px;
-    height: 60px;
     background: #ccc;
     border-radius: 50%;
+    height: 60px;
     overflow: hidden;
+    width: 60px;
   }
 
   .user-photo img {
@@ -384,11 +385,11 @@
   }
 
   .chat-message {
-    width: 80%;
-    padding: 15px;
-    margin: 5px 10px 0;
-    border-radius: 10px;
     border: $border;
+    border-radius: 10px;
+    margin: 5px 10px 0;
+    padding: 15px;
+    width: 80%;
   }
 }
 
@@ -407,21 +408,21 @@
 }
 
 .chat-form {
-  display: flex;
   align-items: flex-start;
   border-top: $border;
+  display: flex;
   width: 100%;
 
   textarea {
     background: $txtcol;
     border-radius: 0px;
-    width: 75%;
-    height: 22px;
-    resize: none;
-    padding: 10px;
+    color: BLACK;
     font-family: ACIDLABEL;
     font-size: 18px;
-    color: BLACK;
+    height: 22px;
+    padding: 10px;
+    resize: none;
+    width: 75%;
   }
 
   textarea:focus {
@@ -433,18 +434,18 @@
   }
 
   textarea::-webkit-scrollbar-thumb {
-    border-radius: 5px;
     background: rgba(255, 255, 255, .1);
+    border-radius: 5px;
   }
 
   button {
     background: none;
-    padding: 8px 10px;
+    border: none;
+    color: $txtcol;
     font-family: ACIDLABEL;
     font-size: 20px;
-    color: $txtcol;
-    border: none;
     margin: 0 10px;
+    padding: 8px 10px;
 
   }
 
@@ -462,10 +463,10 @@
 
 /* Who's Online */
 .users {
-  padding: 10px 10px 10px 20px;
   height: 500px;
   overflow-x: hidden;
   overflow-y: scroll;
+  padding: 10px 10px 10px 20px;
 }
 
 .users::-webkit-scrollbar {
@@ -473,22 +474,22 @@
 }
 
 .users::-webkit-scrollbar-thumb {
-  border-radius: 5px;
   background: rgba(255, 255, 255, .1);
+  border-radius: 5px;
 }
 
 .online {
+  align-items: flex-start;
   display: flex;
   flext-flow: row wrap;
-  align-items: flex-start;
   margin-bottom: 20px;
 
   .user-photo {
-    width: 50px;
-    height: 50px;
     background: #ccc;
     border-radius: 50%;
+    height: 50px;
     overflow: hidden;
+    width: 50px;
   }
 
   .user-photo img {
@@ -496,12 +497,12 @@
   }
 
   .name {
-    width: 80%;
-    padding: 5px;
-    margin: 5px 0px 0px 10px;
-    font-family: ACIDLABEL;
     color: $txtcol;
+    font-family: ACIDLABEL;
     font-size: 18px;
+    margin: 5px 0px 0px 10px;
+    padding: 5px;
+    width: 80%;
   }
 }
 
@@ -512,38 +513,31 @@
 /* Nutrition and Supplements */
 .nutr,
 .sup {
-  width: 50%;
-  height: auto;
   border: $border;
+  height: auto;
   margin: 80px 0px;
+  width: 50%;
 }
 
 .nutr img,
 .sup img {
-  width: 100%;
   height: 100%;
+  width: 100%;
 }
 
 /* End Nutrition and Supplements */
 
 /* Floating View */
 .view {
-  background: url(../images/background.jpg);
-  width: 630px;
   height: 410px;
-  margin: auto;
-  position: absolute;
-  top: 0px;
-  bottom: 150px;
-  right: 0px;
-  left: 0px;
-  border: $border2;
-  z-index: 1;
+  margin: 0;
+  padding: 0;
+  width: 630px;
 
   .workout {
-    overflow: scroll;
     height: 50%;
     margin-top: 5px;
+    overflow: scroll;
   }
 
   .workout::-webkit-scrollbar {
@@ -551,15 +545,15 @@
   }
 
   .workout::-webkit-scrollbar-thumb {
-    border-radius: 5px;
     background: rgba(255, 255, 255, .1);
+    border-radius: 5px;
   }
 
   table {
-    text-align: center;
-    width: 90%;
     border-collapse: collapse;
     margin: 0 auto;
+    text-align: center;
+    width: 90%;
   }
 
   th {
@@ -589,14 +583,14 @@
 
   th,
   td:first-child {
-    font-family: ACIDLABEL;
     color: $txtcol;
+    font-family: ACIDLABEL;
     font-weight: 40;
   }
 
   .next-page {
-    width: 20%;
     margin: auto;
+    width: 20%;
   }
 
   .follow {
@@ -632,17 +626,10 @@
 
 /* Floating Add */
 .add {
-  background: url(../images/background.jpg);
-  width: 630px;
   height: 400px;
-  margin: auto;
-  position: absolute;
-  top: 0px;
-  bottom: 150px;
-  right: 0px;
   left: 0px;
-  border: $border2;
-  z-index: 1;
+  margin: 0;
+  width: 630px;
 
   .back a {
     color: $hover;
@@ -658,8 +645,8 @@
 
   .name {
     display: flex;
-    padding-right: 20px;
     padding-left: 70px;
+    padding-right: 20px;
 
     input {
       width: 60%;
@@ -668,21 +655,21 @@
 
   /* Submit */
   input[type=submit] {
-    margin: 0 auto;
     bottom: 80px;
+    margin: 0 auto;
   }
 
   /* End Submit */
 
   .add_heading {
     display: flex;
-    width: 100%;
     padding: 30px 0;
     text-align: center;
+    width: 100%;
 
     .desc-h {
-      padding: 0 40px;
       border-right: $border;
+      padding: 0 40px;
       text-shadow: 0 0 15px $txtcol;
     }
 
@@ -719,9 +706,9 @@
   display: flex;
 
   textarea {
-    width: 50%;
     height: 120px;
     margin-left: 15px;
+    width: 50%;
   }
 }
 
@@ -730,20 +717,20 @@
 /* Floating Add_Two */
 .add_two {
   background: url(../images/background.jpg);
-  width: 630px;
+  border: $border2;
+  bottom: 150px;
   height: 410px;
+  left: 0px;
   margin: auto;
   position: absolute;
-  top: 0px;
-  bottom: 150px;
   right: 0px;
-  left: 0px;
-  border: $border2;
+  top: 0px;
+  width: 630px;
   z-index: 1;
 
   .next-page {
-    width: 20%;
     margin: auto;
+    width: 20%;
   }
 
   .back a {
@@ -786,13 +773,13 @@
 
   .add_heading {
     display: flex;
-    width: 100%;
     padding: 30px 0;
     text-align: center;
+    width: 100%;
 
     .desc-h {
-      padding: 0 40px;
       border-right: $border;
+      padding: 0 40px;
     }
 
     .details {
@@ -807,9 +794,9 @@
   }
 
   .workout {
-    overflow: scroll;
     height: 35%;
     margin: 0 auto;
+    overflow: scroll;
   }
 
   .workout::-webkit-scrollbar {
@@ -817,15 +804,15 @@
   }
 
   .workout::-webkit-scrollbar-thumb {
-    border-radius: 5px;
     background: rgba(255, 255, 255, .1);
+    border-radius: 5px;
   }
 
   table {
-    text-align: center;
-    width: 90%;
     border-collapse: collapse;
     margin: 0 auto;
+    text-align: center;
+    width: 90%;
   }
 
   th {
@@ -855,8 +842,8 @@
 
   th,
   td:first-child {
-    font-family: ACIDLABEL;
     color: $txtcol;
+    font-family: ACIDLABEL;
     font-weight: 40;
   }
 
@@ -867,9 +854,9 @@
 }
 
 .setup {
+  border-bottom: $border;
   display: flex;
   padding-top: 10px;
-  border-bottom: $border;
 
   input[type=submit] {
     top: 1px;
@@ -897,58 +884,3 @@
 }
 
 /* End Floating Add_Two */
-
-
-
-
-@media only screen and (max-width: 1010px) {
-  #profile {
-
-    #wrapper {
-      width: 100%;
-    }
-
-    main {
-      margin: 0;
-    }
-  }
-}
-
-@media only screen and (max-width: 900px) {
-
-  .view,
-  .add,
-  .add_two {
-    width: 80%;
-  }
-
-  .flex {
-    flex-wrap: wrap;
-  }
-
-  .social {
-    flex-wrap: wrap;
-
-    aside,
-    .messenger {
-      flex-basis: 100%;
-    }
-  }
-
-  .info,
-  .leader {
-    width: 100%;
-    height: 250px;
-    border: $border;
-    margin: 80px 0px;
-
-    .flex {
-      flex-flow: row;
-    }
-  }
-
-  .nutr,
-  .sup {
-    width: 100%;
-  }
-}

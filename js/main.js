@@ -1,9 +1,50 @@
 // JavaScript Document
 
 $('document').ready(function () {
-  todayDate();
   showContainer();
+  validForm();
+  todayDate();
+  chatBox();
 });
+
+function showContainer() {
+
+  $('a').click(function () {
+    var linkPath = $(this).attr('href');
+    var titleName = [];
+
+    if (linkPath === '#modal') {
+      titleName = 'Sign In';
+    } else if (linkPath === '#signup') {
+      titleName = 'Sign Up';
+    } else if (linkPath === '#view') {
+      titleName = 'Workout Details';
+    } else if (linkPath === '#add') {
+      titleName = 'Create Workout';
+    } else if (linkPath === '#userPic') {
+      titleName = 'Upload Image';
+    }
+
+    $(linkPath).dialog({
+      title: titleName,
+      autoOpen: true,
+      dialogClass: 'X',
+      draggable: false,
+      modal: true,
+      resizable: false,
+      width: 'auto'
+    });
+  });
+}
+
+function validForm() {
+  $('#pickDate').datepicker({
+    buttonImageOnly: true,
+    changeYear: true,
+    showOtherMonths: true,
+    yearRange: '-50:+0'
+  });
+}
 
 function todayDate() {
 
@@ -17,29 +58,22 @@ function todayDate() {
 
 }
 
-//function showContainer() {
-//  $('.container').hide();
-//
-//  $('#tuesday').click(function() {
-//    $('.container').show();
-//  });
-//}
+function chatBox() {
 
-//.container {
-//  width: 100%;
-//  height: 100%;
-//  background: rgba(2, 70, 88, 0.8);
-//  opacity: 0;
-//  pointer-events: none;
-//  transition: all 500ms ease; }
-//
-//.container:target {
-//  opacity: 1;
-//  pointer-events: auto; }
-//
-//.container > div {
-//  transform: translate(0px, -50px);
-//  transition: all 500ms ease; }
-//
-//.container:target > div {
-//  transform: translate(0px, 0px); }
+//  $('.chat-form textarea').keyup(function() {
+//    var chat = $('.chat-form textarea').val();
+//    $.post('chat.php', {
+//      message: chat
+//    }, function() {
+//      $('.chat-message').html(data);
+//    });
+//  })
+
+  var chatCount = 1;
+   $('#btn').click(function() {
+     chatCount = chatCount +1;
+    $('.chat-message').load('include/chat.php', {
+      chatNewCount: chatCount
+    });
+  });
+}

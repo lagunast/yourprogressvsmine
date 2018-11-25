@@ -1,11 +1,9 @@
-/* CSS Document */
-
 /* Theme Color */
-$txtcol: #bfc7d1;
+$background: rgba(42, 42, 42, 0.9);
 $brdcol: rgba(105, 29, 6, 0.7);
 $blk: #2A2A2A;
-$background: rgba(42, 42, 42, 0.9);
 $hover: #787878;
+$txtcol: #bfc7d1;
 /* End Theme Color */
 
 /* Borders */
@@ -32,6 +30,11 @@ $border2: 5px solid $brdcol;
 @font-face {
   src: url(../assets/fonts/VeryDamaged.ttf);
   font-family: DAMAGE;
+}
+
+@font-face {
+  src: url(../assets/fonts/cityburn.ttf);
+  font-family: cityburn;
 }
 
 /* End Fonts */

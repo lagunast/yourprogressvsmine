@@ -13,6 +13,11 @@ if ( isset( $_POST[ 'submit' ] ) ) {
     header( "Location: ../index.php?error=emptyfields" );
     exit();
   }
+  //Login admin user
+  else if (($_POST['uid'] == 'admin') && ($_POST['pwd'] == '123')) {
+    header( "Location: ../admin.php?admin=sucess" );
+    exit();
+  }
   else {
     // Prepare SQL
     $sql = "SELECT * FROM users WHERE user_uid =? OR user_email =?;";
