@@ -34,7 +34,7 @@ if (isset($_POST['submit'])) {
         $fileDestination = '../uploads/'.$userName.'_profile.'.$fileActualExt;
         move_uploaded_file($fileTmpName, $fileDestination);
         header('Location: ../profile.php?uploadsuccess');
-      } echo 'Your file is to big. Please try again.';
+      } echo 'Your file is to big. Please try a different image.';
     } else {
       echo 'There was an error uploading your file. Please try again.';
     }

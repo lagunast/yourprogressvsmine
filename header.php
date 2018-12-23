@@ -26,6 +26,7 @@
     <!--JavaScript-->
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/jquery-ui.js"></script>
+    <script src="js/jquery.validate.js"></script>
     <script src="js/main.js"></script>
     <!--JavaScript-->
 

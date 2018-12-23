@@ -45,3 +45,21 @@
   padding-left: 25px;
   text-align: center;
 }
+
+// create workout navigation
+.ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active {
+  border: none;
+  background: none;
+}
+
+// create workout container
+.ui-widget.ui-widget-content {
+  border: none;
+}
+
+
+.fixed-dialog {
+  position: fixed;
+  top: 50px;
+  left: 50px;
+}

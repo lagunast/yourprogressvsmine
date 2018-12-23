@@ -15,7 +15,7 @@ include_once 'header.php';
       </div>
       <div class="logo"><img src="images/logo.png" alt="">
         <div class="signin">
-          <h2><a href="#modal">Sign In</a></h2>
+          <h2><a href="#signin">Sign In</a></h2>
         </div>
         <div class="signup">
           <h2><a href="#signup">Sign Up</a></h2>
@@ -23,24 +23,42 @@ include_once 'header.php';
       </div>
 
       <!--Floating Login Form-->
-      <div class="container" id="modal">
+      <div class="container" id="signin">
         <div class="login">
           <form action="include/login.php" method="post">
             <div class="uid">
               <label for="uid">Username:</label>
-              <input type="text" name="uid">
+              <input type="text" name="uid" required>
             </div>
             <div class="password">
               <label for="pwd">Password:</label>
-              <input type="password" name="pwd">
+              <input type="password" name="pwd" required>
             </div>
             <input type="submit" name="submit" value="Enter">
             <img src="images/signin.png" alt="">
           </form>
-          <a href="" class="forgotPassword"> Forgot Password?</a>
+          <a href="#reset" class="forgotPassword">Forgot Password?</a>
         </div>
       </div>
       <!--End Floating Login Form-->
+
+      <!--Floating Forgot Password-->
+      <div class="container" id="reset">
+        <div class="reset-password">
+          <form action="include/reset-request.php" method="post">
+            <input type="text" name="email" placeholder="Enter your email address...">
+            <input type="submit" name="reset-submit" value="Enter">
+          </form>
+<?php
+  if(isset($_GET['reset'])) {
+    if($_GET['reset'] == 'success') {
+      echo '<p>Check your email!</p>';
+    }
+  }
+?>
+        </div>
+      </div>
+      <!--End Floating Forgot Password-->
 
       <!--Floating Signup Form-->
       <div class="container" id="signup">
@@ -97,11 +115,11 @@ include_once 'header.php';
               </div>
               <div class="male">
                 <label for="gender">Male</label>
-                <input type="radio" name="gender" value="male">
+                <input type="radio" name="gender" value="male" required>
               </div>
               <div class="female">
                 <label for="gender">Female</label>
-                <input type="radio" name="gender" value="female">
+                <input type="radio" name="gender" value="female" required>
               </div>
             </div>
             <div class="password">

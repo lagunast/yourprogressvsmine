@@ -5,39 +5,70 @@ $('document').ready(function () {
   validForm();
   todayDate();
   chatBox();
+  drag();
 });
+
+function drag() {
+  $('.schedule').sortable();
+
+  $('#add_tab').tabs();
+}
 
 function showContainer() {
 
-  $('a').click(function () {
-    var linkPath = $(this).attr('href');
-    var titleName = [];
+  var width = $(window).width();
 
-    if (linkPath === '#modal') {
-      titleName = 'Sign In';
-    } else if (linkPath === '#signup') {
-      titleName = 'Sign Up';
-    } else if (linkPath === '#view') {
-      titleName = 'Workout Details';
-    } else if (linkPath === '#add') {
-      titleName = 'Create Workout';
-    } else if (linkPath === '#userPic') {
-      titleName = 'Upload Image';
-    }
+  if (width < 700) {
+    alert(width);
+  } else {
+    $('.profile_head a, .schedule a, .signin a, .signup a ').click(function () {
+      var linkPath = $(this).attr('href');
+      var titleName = [];
 
-    $(linkPath).dialog({
-      title: titleName,
-      autoOpen: true,
-      dialogClass: 'X',
-      draggable: false,
-      modal: true,
-      resizable: false,
-      width: 'auto'
+      if (linkPath === '#signin') {
+        titleName = 'Sign In';
+      } else if (linkPath === '#signup') {
+        titleName = 'Sign Up';
+      } else if (linkPath === '#view') {
+        titleName = 'Workout Details';
+      } else if (linkPath === '#add') {
+        titleName = 'Create Workout';
+      } else if (linkPath === '#userPic') {
+        titleName = 'Upload Image';
+      } else if (linkPath === '#reset') {
+        titleName = 'Reset Password';
+      }
+
+      $(linkPath).dialog({
+        title: titleName,
+        autoOpen: true,
+        dialogClass: 'fixed-dialog',
+        draggable: false,
+        modal: true,
+        resizable: false,
+        width: 'auto'
+      });
     });
-  });
+  }
 }
 
 function validForm() {
+  $('input').removeAttr('required');
+
+  $('.signup form').validate({
+    rules: {
+      uid: 'required',
+      first: 'required',
+      last: 'required',
+      dob: 'required',
+      email: 'required',
+      gender: 'required',
+      pwd: 'required',
+      pwd_one: 'required',
+      pwd_two: 'required'
+    }
+  });
+
   $('#pickDate').datepicker({
     buttonImageOnly: true,
     changeYear: true,
@@ -60,20 +91,13 @@ function todayDate() {
 
 function chatBox() {
 
-//  $('.chat-form textarea').keyup(function() {
-//    var chat = $('.chat-form textarea').val();
-//    $.post('chat.php', {
-//      message: chat
-//    }, function() {
-//      $('.chat-message').html(data);
-//    });
-//  })
-
   var chatCount = 1;
-   $('#btn').click(function() {
-     chatCount = chatCount +1;
-    $('.chat-message').load('include/chat.php', {
-      chatNewCount: chatCount
+  $('#btn').click(function (evt) {
+    evt.preventDefault();
+    var chat = $('.chat-form textarea').val();
+    $.post('include/chat.php', {
+      message: chat
     });
+    $('.chatlogs').load('include/chat.php');
   });
 }

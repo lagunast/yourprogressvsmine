@@ -39,12 +39,20 @@ if ( isset( $_POST[ 'submit' ] ) ) {
           exit();
         }
         else if ($pwdCheck == true) {
+
+          // Insert into login details table to check when user loged in
+          $userId = $row['user_id'];
+          $lastActivity = date('Y-m-d H:i:s', strtotime(date('h:i:sa')));
+          $loginDetails = ("INSERT INTO login_details (user_id, last_activity) VALUES ('$userId', '$lastActivity')");
+
+          mysqli_query( $conn, $loginDetails );
+
           // Sign user in
           session_start();
           $_SESSION[ 'u_id' ] = $row[ 'user_id' ];
           $_SESSION[ 'u_uid' ] = $row[ 'user_uid' ];
           $_SESSION[ 'u_first' ] = $row[ 'user_first' ];
-          $_SESSION[ 'u_last' ] = $row[ 'user_first' ];
+          $_SESSION[ 'u_last' ] = $row[ 'user_last' ];
           $_SESSION[ 'u_date' ] = $row[ 'user_date' ];
           $_SESSION[ 'u_goal' ] = $row[ 'user_goal' ];
           $_SESSION[ 'u_email' ] = $row[ 'user_email' ];

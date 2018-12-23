@@ -183,6 +183,18 @@ table {
   padding-left: 25px;
   text-align: center; }
 
+.ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active {
+  border: none;
+  background: none; }
+
+.ui-widget.ui-widget-content {
+  border: none; }
+
+.fixed-dialog {
+  position: fixed;
+  top: 50px;
+  left: 50px; }
+
 /* End Imports */
 /* Main Eliments */
 main {
@@ -447,16 +459,18 @@ header {
   width: 45px; }
 
 .forgotPassword {
-  color: #fff;
+  color: #bfc7d1 !important;
   float: left;
+  font-family: cityburn;
   font-size: 10pt;
+  letter-spacing: 3px;
   margin-top: 65px;
-  margin-left: 80px;
+  margin-left: 30px;
   text-decoration: none; }
 
 .forgotPassword:hover {
   text-decoration: underline;
-  color: white; }
+  color: #787878 !important; }
 
 /* End Floating Login Form */
 /* Floating Signup Form */
@@ -610,8 +624,8 @@ header {
 .qouted {
   align-items: center;
   display: grid;
-  padding: 0 20px;
-  text-align: center;
+  justify-content: center;
+  padding: 0 20px 0 30px;
   width: 100%; }
 
 /* End Head */
@@ -671,10 +685,10 @@ header {
   cursor: pointer; }
 
 .add_day {
-  height: 100%; }
+  height: 83%; }
   .add_day h1 {
     font-size: 120px;
-    padding-top: 45%; }
+    padding-top: 30%; }
 
 .rest_day h1 {
   padding-top: 40%; }
@@ -720,7 +734,8 @@ header {
   flex-flow: column;
   margin-right: 10px; }
   .info img {
-    border: 1px solid #bfc7d1;
+    border-bottom: 1px solid #bfc7d1;
+    border-right: 1px solid #bfc7d1;
     float: left;
     height: 120px;
     margin-right: 20px;
@@ -1016,7 +1031,6 @@ header {
   display: flex; }
 
 .view-icon {
-  border: 1px solid #bfc7d1;
   padding: 10px 0px; }
 
 .view-icon img {
@@ -1033,15 +1047,13 @@ header {
 /* Floating Add */
 .add {
   height: 400px;
-  left: 0px;
-  margin: 0;
   width: 630px;
   /* Submit */
   /* End Submit */ }
   .add .back a {
     color: #787878; }
   .add form {
-    padding: 20px; }
+    padding-top: 40px; }
   .add input {
     margin-left: 15px; }
   .add .name {
@@ -1055,13 +1067,11 @@ header {
     margin: 0 auto; }
   .add .add_heading {
     display: flex;
-    padding: 30px 0;
     text-align: center;
     width: 100%; }
     .add .add_heading .desc-h {
       border-right: 1px solid #bfc7d1;
-      padding: 0 40px;
-      text-shadow: 0 0 15px #bfc7d1; }
+      padding: 0 40px; }
     .add .add_heading .details {
       padding-left: 50px; }
   .add .add_top {
@@ -1087,90 +1097,63 @@ header {
 
 /* End Floating Add */
 /* Floating Add_Two */
-.add_two {
-  background: url(../images/background.jpg);
-  border: 5px solid rgba(105, 29, 6, 0.7);
-  bottom: 150px;
-  height: 410px;
-  left: 0px;
-  margin: auto;
-  position: absolute;
-  right: 0px;
-  top: 0px;
-  width: 630px;
-  z-index: 1;
+#details_tab {
   /* Submit */
   /* End Submit */ }
-  .add_two .next-page {
-    margin: auto;
-    width: 20%; }
-  .add_two .back a {
-    color: #787878; }
-  .add_two form {
+  #details_tab form {
     padding: 20px; }
-  .add_two input {
+  #details_tab input {
     margin-left: 15px; }
-  .add_two .name {
+  #details_tab .name {
     display: flex;
     padding-right: 20px; }
-    .add_two .name input {
+    #details_tab .name input {
       width: 60%; }
-  .add_two .equipment {
+  #details_tab .equipment {
     display: flex;
     padding-right: 20px; }
-    .add_two .equipment input {
+    #details_tab .equipment input {
       width: 60%; }
-  .add_two input[type=submit] {
+  #details_tab input[type=submit] {
     bottom: 80px;
     right: 20px; }
-  .add_two .add_heading {
-    display: flex;
-    padding: 30px 0;
-    text-align: center;
-    width: 100%; }
-    .add_two .add_heading .desc-h {
-      border-right: 1px solid #bfc7d1;
-      padding: 0 40px; }
-    .add_two .add_heading .details {
-      padding-left: 50px;
-      text-shadow: 0 0 15px #bfc7d1; }
-  .add_two .add_top {
+  #details_tab .add_top {
     display: flex; }
-  .add_two .workout {
-    height: 35%;
+  #details_tab .workout {
+    height: 150px;
     margin: 0 auto;
     overflow: scroll; }
-  .add_two .workout::-webkit-scrollbar {
+  #details_tab .workout::-webkit-scrollbar {
     width: 10px; }
-  .add_two .workout::-webkit-scrollbar-thumb {
+  #details_tab .workout::-webkit-scrollbar-thumb {
     background: rgba(255, 255, 255, 0.1);
     border-radius: 5px; }
-  .add_two table {
+  #details_tab table {
     border-collapse: collapse;
     margin: 0 auto;
     text-align: center;
     width: 90%; }
-  .add_two th {
+  #details_tab th {
     border: 0px;
     padding-bottom: 20px; }
-  .add_two td {
+  #details_tab td {
     border-right: 1px solid #bfc7d1;
     padding: 10px; }
-  .add_two tr {
+  #details_tab tr {
     border-bottom: 1px solid #bfc7d1; }
-  .add_two tr:first-child,
-  .add_two tr:last-child {
+  #details_tab tr:first-child,
+  #details_tab tr:last-child {
     border-bottom: 0px; }
-  .add_two table,
-  .add_two td:last-child,
-  .add_two th:last-child {
+  #details_tab table,
+  #details_tab td:last-child,
+  #details_tab th:last-child {
     border-right: 0px; }
-  .add_two th,
-  .add_two td:first-child {
+  #details_tab th,
+  #details_tab td:first-child {
     color: #bfc7d1;
     font-family: ACIDLABEL;
     font-weight: 40; }
-  .add_two .done {
+  #details_tab .done {
     display: flex;
     justify-content: center; }
 

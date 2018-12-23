@@ -186,18 +186,21 @@ header {
 }
 
 .forgotPassword {
-  color: #fff;
+  color: $txtcol !important;
   float: left;
+  font-family: cityburn;
   font-size: 10pt;
+  letter-spacing: 3px;
   margin-top: 65px;
-  margin-left: 80px;
+  margin-left: 30px;
   text-decoration: none;
 }
 
 
 .forgotPassword:hover {
   text-decoration: underline;
-  color: white;
+  color: $hover !important;
+
 }
 
 /* End Floating Login Form */

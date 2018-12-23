@@ -42,8 +42,8 @@
 .qouted {
   align-items: center;
   display: grid;
-  padding: 0 20px;
-  text-align: center;
+  justify-content: center;
+  padding: 0 20px 0 30px;
   width: 100%;
 }
 
@@ -122,11 +122,11 @@
 }
 
 .add_day {
-  height: 100%;
+  height: 83%;
 
   h1 {
     font-size: 120px;
-    padding-top: 45%;
+    padding-top: 30%;
   }
 }
 
@@ -186,7 +186,8 @@
   margin-right: 10px;
 
   img {
-    border: $border;
+    border-bottom: $border;
+    border-right: $border;
     float: left;
     height: 120px;
     margin-right: 20px;
@@ -605,7 +606,6 @@
 }
 
 .view-icon {
-  border: $border;
   padding: 10px 0px;
 }
 
@@ -627,8 +627,6 @@
 /* Floating Add */
 .add {
   height: 400px;
-  left: 0px;
-  margin: 0;
   width: 630px;
 
   .back a {
@@ -636,7 +634,7 @@
   }
 
   form {
-    padding: 20px;
+    padding-top: 40px;
   }
 
   input {
@@ -663,14 +661,12 @@
 
   .add_heading {
     display: flex;
-    padding: 30px 0;
     text-align: center;
     width: 100%;
 
     .desc-h {
       border-right: $border;
       padding: 0 40px;
-      text-shadow: 0 0 15px $txtcol;
     }
 
     .details {
@@ -715,27 +711,7 @@
 /* End Floating Add */
 
 /* Floating Add_Two */
-.add_two {
-  background: url(../images/background.jpg);
-  border: $border2;
-  bottom: 150px;
-  height: 410px;
-  left: 0px;
-  margin: auto;
-  position: absolute;
-  right: 0px;
-  top: 0px;
-  width: 630px;
-  z-index: 1;
-
-  .next-page {
-    margin: auto;
-    width: 20%;
-  }
-
-  .back a {
-    color: $hover;
-  }
+#details_tab {
 
   form {
     padding: 20px;
@@ -771,30 +747,12 @@
 
   /* End Submit */
 
-  .add_heading {
-    display: flex;
-    padding: 30px 0;
-    text-align: center;
-    width: 100%;
-
-    .desc-h {
-      border-right: $border;
-      padding: 0 40px;
-    }
-
-    .details {
-      padding-left: 50px;
-      text-shadow: 0 0 15px $txtcol;
-    }
-
-  }
-
   .add_top {
     display: flex;
   }
 
   .workout {
-    height: 35%;
+    height: 150px;
     margin: 0 auto;
     overflow: scroll;
   }
