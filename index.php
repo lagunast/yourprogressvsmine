@@ -25,16 +25,17 @@ include_once 'header.php';
       <!--Floating Login Form-->
       <div class="container" id="signin">
         <div class="login">
+          <div class="form-message"></div>
           <form action="include/login.php" method="post">
             <div class="uid">
               <label for="uid">Username:</label>
-              <input type="text" name="uid" required>
+              <input type="text" name="uid" autofocus>
             </div>
             <div class="password">
               <label for="pwd">Password:</label>
-              <input type="password" name="pwd" required>
+              <input type="password" name="pwd">
             </div>
-            <input type="submit" name="submit" value="Enter">
+            <input id="submit" type="submit" name="submit" value="Enter">
             <img src="images/signin.png" alt="">
           </form>
           <a href="#reset" class="forgotPassword">Forgot Password?</a>
@@ -63,31 +64,21 @@ include_once 'header.php';
       <!--Floating Signup Form-->
       <div class="container" id="signup">
         <div class="signup_form">
-          <?php
-//  if (isset($_GET['signup'])) {
-//    if ($_GET['signup']=='empty') {
-//      echo '<p>Fill in all fields!</p>';
-//    } else if ($_GET['signup']=='password') {
-//      echo '<p>Passwords do not match!</p>';
-//      }
-//  } else if ($_GET['signup']=='success') {
-//      echo '<p>Login succesful!</p>';
-//    }
-?>
+          <div class="form-message"></div>
           <form action="include/signup.php" method="post">
             <div class="uid">
               <label for="uid">Username:</label>
-              <input type="text" name="uid" required>
+              <input type="text" name="uid" autofocus>
             </div>
             <div class="name">
               <h3>Name:</h3>
               <div class="first">
                 <h4>First</h4>
-                <input type="text" name="first" required>
+                <input type="text" name="first">
               </div>
               <div class="last">
                 <h4>Last</h4>
-                <input type="text" name="last" required>
+                <input type="text" name="last">
               </div>
             </div>
             <div class="flex">
@@ -111,33 +102,33 @@ include_once 'header.php';
             <div class="flex">
               <div class="email">
                 <label for="email">Email:</label>
-                <input type="email" name="email" required>
+                <input type="text" name="email">
               </div>
               <div class="male">
                 <label for="gender">Male</label>
-                <input type="radio" name="gender" value="male" required>
+                <input type="radio" name="gender" value="male">
               </div>
               <div class="female">
                 <label for="gender">Female</label>
-                <input type="radio" name="gender" value="female" required>
+                <input type="radio" name="gender" value="female">
               </div>
             </div>
             <div class="password">
               <h3>PW:</h3>
               <div class="password_one">
                 <h4>Enter Password</h4>
-                <input type="password" name="pwd_one" required>
+                <input type="password" name="pwd_one">
               </div>
               <div class="password_two">
                 <h4>Password Again</h4>
-                <input type="password" name="pwd_two" required>
+                <input type="password" name="pwd_two">
               </div>
             </div>
             <div class="qoute">
               <label for="qoute">Qoute:</label>
               <textarea id="qoute" name="qoute"></textarea>
             </div>
-            <input type="submit" name="submit" value="Submit">
+            <input id="submit" type="submit" name="submit" value="Submit">
           </form>
         </div>
       </div>

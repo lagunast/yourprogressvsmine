@@ -7,15 +7,19 @@ if ( isset( $_POST[ 'submit' ] ) ) {
   $uid = mysqli_real_escape_string( $conn, $_POST[ 'uid' ] );
   $pwd = mysqli_real_escape_string( $conn, $_POST[ 'pwd' ] );
 
+  $errorEmpty = false;
+  $errorPassword = false;
+  $errorUser = false;
+
   //Error handler
   //check for empty fields
   if ( empty( $uid ) || empty( $pwd ) ) {
-    header( "Location: ../index.php?error=emptyfields" );
-    exit();
+    echo '<p>Please fill in all fields!</p>';
+    $errorEmpty = true;
   }
   //Login admin user
   else if (($_POST['uid'] == 'admin') && ($_POST['pwd'] == '123')) {
-    header( "Location: ../admin.php?admin=sucess" );
+    header( "Location: ../admin.php" );
     exit();
   }
   else {
@@ -24,8 +28,7 @@ if ( isset( $_POST[ 'submit' ] ) ) {
     $stmt = mysqli_stmt_init($conn);
     // Check if SQL connection fails
     if (!mysqli_stmt_prepare($stmt, $sql)) {
-      header( "Location: ../index.php?error=sqlerror" );
-      exit();
+      echo '<p>Connection error!</p>';
     }
     else {
       mysqli_stmt_bind_param($stmt, 'ss', $uid, $uid);
@@ -35,8 +38,8 @@ if ( isset( $_POST[ 'submit' ] ) ) {
       if ($row = mysqli_fetch_assoc($result)) {
         $pwdCheck = password_verify($pwd, $row['user_pwd']);
         if ($pwdCheck == false) {
-          header( "Location: ../index.php?error=wrongpwd1" );
-          exit();
+          echo '<p>Wrong Password!</p>';
+          $errorPassword = true;
         }
         else if ($pwdCheck == true) {
 
@@ -58,17 +61,17 @@ if ( isset( $_POST[ 'submit' ] ) ) {
           $_SESSION[ 'u_email' ] = $row[ 'user_email' ];
           $_SESSION[ 'u_gender' ] = $row[ 'user_gender' ];
           $_SESSION[ 'u_qoute' ] = $row[ 'user_qoute' ];
-          header( "Location: ../profile.php?login=success" );
+          header( "Location: ../profile.php" );
           exit();
         }
         else {
-          header( "Location: ../index.php?error=wrongpwd2" );
-          exit();
+          echo '<p>Wrong Password!</p>';
+          $errorPassword = true;
         }
       }
       else {
-        header( "Location: ../index.php?error=nouser" );
-        exit();
+          echo '<p>No User!</p>';
+          $errorUser = true;
       }
     }
   }
@@ -78,3 +81,23 @@ else {
   header( "Location: ../index.php?" );
   exit();
 }
+
+?>
+
+<script>
+  $('.uid input, .password input').removeClass('error');
+
+  var errorEmpty = '<?php echo $errorEmpty; ?>'
+  var errorPassword = '<?php echo $errorPassword; ?>';
+  var errorUser = '<?php echo $errorUser; ?>';
+
+  if (errorEmpty == true) {
+    $('.login .uid input, .login .password input').addClass('error');
+  }
+  if (errorPassword == true) {
+    $('.login .password input').addClass('error');
+  }
+  if (errorUser == true) {
+  $('.login .uid input').addClass('error');
+  }
+</script>

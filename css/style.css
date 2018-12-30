@@ -146,33 +146,9 @@ table {
   border-spacing: 0; }
 
 /* End CSS Reset */
-.ui-corner-all {
-  background: linear-gradient(rgba(42, 42, 42, 0.9), rgba(42, 42, 42, 0.9)), url(../images/background.jpg);
-  border: none; }
-
-.ui-button {
-  background: none; }
-
-.ui-button:hover {
+.ui-dialog-titlebar {
   background: none;
-  border: none;
-  color: white; }
-
-.ui-front {
-  background: linear-gradient(rgba(42, 42, 42, 0.9), rgba(42, 42, 42, 0.9)), url(../images/background.jpg);
-  border: 5px solid rgba(105, 29, 6, 0.7) !important; }
-
-.ui-button,
-.ui-button-icon-only,
-.ui-dialog-titlebar-close {
-  margin-top: -20px !important; }
-
-.ui-datepicker-month {
-  color: white;
-  font-family: ACIDLABEL;
-  font-size: 15px;
-  font-weight: 400;
-  line-height: 30px; }
+  border: none; }
 
 .ui-dialog-title {
   color: #bfc5d1;
@@ -183,17 +159,50 @@ table {
   padding-left: 25px;
   text-align: center; }
 
-.ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active {
+.ui-dialog-titlebar-close {
+  background: none;
   border: none;
-  background: none; }
+  margin-top: -20px !important; }
 
-.ui-widget.ui-widget-content {
+.ui-dialog-titlebar-close:hover {
+  background: none;
+  border: none;
+  color: white; }
+
+.ui-dialog {
+  background: linear-gradient(rgba(42, 42, 42, 0.9), rgba(42, 42, 42, 0.9)), url(../images/background.jpg);
+  border: 5px solid rgba(105, 29, 6, 0.7) !important; }
+
+.ui-datepicker {
+  background: linear-gradient(rgba(42, 42, 42, 0.9), rgba(42, 42, 42, 0.9)), url(../images/background.jpg); }
+
+.ui-datepicker-header {
+  background: none;
   border: none; }
+
+.ui-datepicker-month {
+  color: white;
+  font-family: ACIDLABEL;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 30px; }
 
 .fixed-dialog {
   position: fixed;
   top: 50px;
   left: 50px; }
+
+.form-message {
+  align-items: center;
+  display: grid;
+  justify-content: center;
+  margin-left: 20px; }
+  .form-message p {
+    color: #f00;
+    font-size: 18px; }
+
+.error {
+  box-shadow: inset 0 0 10px #f00; }
 
 /* End Imports */
 /* Main Eliments */
